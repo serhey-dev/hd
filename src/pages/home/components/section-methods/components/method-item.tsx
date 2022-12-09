@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 interface IMethodItemProps {
   name: string;
-  text: string;
+  content?: React.ReactNode;
   image: string;
   className?: string;
 }
@@ -13,7 +13,7 @@ export default function MethodItem(props: IMethodItemProps) {
       <Image src={props.image} alt="logo" width={300} height={300} />
       <div className="p-6">
         <h4 className="text-4xl font-serif text-black mb-4">{props.name}</h4>
-        <p className="font-sans italic text-black text-lg">{props.text}</p>
+        {props.content}
       </div>
     </li>
   );
