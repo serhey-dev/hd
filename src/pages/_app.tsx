@@ -9,7 +9,7 @@ export default function App(props: AppProps) {
   return (
     <>
       <Header />
-        <props.Component {...props.pageProps} />
+      <props.Component {...props.pageProps} />
       <Footer />
     </>
   );
