@@ -35,7 +35,7 @@ export default function Map() {
       {isReady && (
         <Script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCU1otOa8POOtlr-qxY2SfmXhq-dD1PcG4&callback=initMap&v=weekly" />
       )}
-      <div id={mapId} style={{ width: '600px', height: '400px' }} />
+      <div id={mapId} className="mx-auto" style={{ width: '100%', height: '600px' }} />
     </>
   );
 }

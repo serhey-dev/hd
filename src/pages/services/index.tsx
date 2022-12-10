@@ -7,7 +7,7 @@ export default function Services() {
     <main>
       <Head title="Services" description="Services" />
       <SectionServices />
-      <SectionCallback />
+      {/* <SectionCallback /> */}
     </main>
   );
 }
