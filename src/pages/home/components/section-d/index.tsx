@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 import ButtonLink from '@/components/button-link';
+import AnimateOnScroll from '@/components/animate-on-scroll';
 
 export default function SectionD() {
   return (
@@ -22,6 +23,14 @@ export default function SectionD() {
             Записуйся на консуонсультаці на консультацію! Записуйся на консультацію! Записуйся на
             консультацію!
           </p>
+          <AnimateOnScroll
+            className="duration-500"
+            notScrolledClassName="w-0"
+            scrolledClassName="w-1/2"
+            bottomOffsetToAnimate={200}
+          >
+            <div className="h-px w-full bg-black mb-8" />
+          </AnimateOnScroll>
           <ButtonLink href="/schedule" text="Записатись" />
         </div>
       </div>

@@ -2,12 +2,13 @@ import Image from 'next/image';
 
 import ButtonLink from '@/components/button-link';
 import ParallaxBackground from '@/components/parallax-background';
+import AnimateOnScroll from '@/components/animate-on-scroll';
 
 export default function SectionC() {
   return (
     <div className="min-h-screen relative border-t border-black">
       <ParallaxBackground className="bg-cover opacity-20" backgroundImage="/images/photos/77.png" />
-      <div className="z-50 relative min-h-screen flex flex-row items-center justify-between p-24 pt-36 mx-36">
+      <div className="z-50 flex min-h-screen flex-row items-center justify-between p-24 pt-36 mx-36">
         <Image
           src="/images/photos/77.png"
           alt="logo"
@@ -26,6 +27,14 @@ export default function SectionC() {
             Записуйся на консультацію! консультацію! Записуйся на консультацію! Записуйся на
             консультацію!
           </p>
+          <AnimateOnScroll
+            className="duration-500"
+            notScrolledClassName="w-0"
+            scrolledClassName="w-1/2"
+            bottomOffsetToAnimate={200}
+          >
+            <div className="h-px w-full bg-black mt-8" />
+          </AnimateOnScroll>
           <p className="font-sans italic text-black text-lg my-6">
             Записуйся на консуонсультаці на консультацію! Записуйся на консультацію! Записуйся на
             консультацію!

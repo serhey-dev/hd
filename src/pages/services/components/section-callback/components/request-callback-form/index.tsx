@@ -1,3 +1,4 @@
+import React from 'react';
 import { useFormik } from 'formik';
 
 import Button from '@/components/button';
@@ -27,24 +28,28 @@ function validate(values: typeof initialValues) {
   return errors;
 }
 
+interface IRequestCallbackFormHandles {
+  resetForm: () => void;
+}
+
 interface IRequestCallbackFormProps {
   onSubmit: (values: ICallbackInfo) => void;
 }
 
-export default function RequestCallbackForm(props: IRequestCallbackFormProps) {
-  function onSubmit(values: ICallbackInfo) {
-    props.onSubmit(values);
-    setTimeout(() => {
-      form.resetForm();
-    }, 800);
-  }
-
+const RequestCallbackForm = React.forwardRef<
+  IRequestCallbackFormHandles,
+  IRequestCallbackFormProps
+>(function RequestCallbackForm(props, ref) {
   const form = useFormik({
     initialValues,
     validateOnChange: false,
     validate,
-    onSubmit,
+    onSubmit: props.onSubmit,
   });
+
+  React.useImperativeHandle(ref, () => ({
+    resetForm: form.resetForm,
+  }));
 
   return (
     <form className="w-full" onSubmit={form.handleSubmit}>
@@ -85,4 +90,6 @@ export default function RequestCallbackForm(props: IRequestCallbackFormProps) {
       />
     </form>
   );
-}
+});
+
+export default RequestCallbackForm;

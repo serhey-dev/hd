@@ -1,26 +1,47 @@
 import React from 'react';
+import { FormikProps } from 'formik';
+
+import ResultModal from '@/components/modals/result-modal';
+import ConfirmModal from '@/components/modals/confirm-modal';
+import ParallaxBackground from '@/components/parallax-background';
 
 import { ICallbackInfo } from '@/types/callback-info';
-import ParallaxBackground from '@/components/parallax-background';
-import RequestCallbackForm from '@/pages/services/components/section-callback/components/request-callback-form';
-import RequestResultInfoModal from '@/pages/schedule/components/section-schedule/components/request-result-info-modal';
 import { requestCallback } from '@/services/request-appointment';
+import RequestCallbackForm from '@/pages/services/components/section-callback/components/request-callback-form';
 
 export default function SectionServices() {
+  const formRef = React.useRef<FormikProps<ICallbackInfo>>(null);
+
+  const [isConfirmModalOpen, setIsConfirmModalOpen] = React.useState(false);
   const [isResultModalOpen, setIsResultModalOpen] = React.useState(false);
   const [isRequestSuccess, setIsRequestSuccess] = React.useState(true);
+  const [callbackInfo, setCallbackInfo] = React.useState<ICallbackInfo | undefined>();
 
-  async function onSubmit(values: ICallbackInfo) {
-    try {
-      await requestCallback(values);
-      setIsResultModalOpen(true);
-      setIsRequestSuccess(true);
-    } catch (error) {
-      console.error('Failed to send bot message.');
-      console.error(error);
-      setIsResultModalOpen(true);
-      setIsRequestSuccess(false);
+  function onFormSubmit(values: ICallbackInfo) {
+    setIsConfirmModalOpen(true);
+    setCallbackInfo(values);
+  }
+
+  async function onConfirmModalSubmit() {
+    if (callbackInfo && formRef.current) {
+      setIsConfirmModalOpen(false);
+      try {
+        await requestCallback(callbackInfo);
+        setIsResultModalOpen(true);
+        setIsRequestSuccess(true);
+        formRef.current.resetForm();
+      } catch (error) {
+        console.error('Failed to send bot message.');
+        console.error(error);
+        setIsResultModalOpen(true);
+        setIsRequestSuccess(false);
+      }
     }
+  }
+
+  function onConfirmModalClose() {
+    setIsConfirmModalOpen(false);
+    setCallbackInfo(undefined);
   }
 
   function onResultInfoModalClose() {
@@ -39,13 +60,29 @@ export default function SectionServices() {
           Позвоніть мені і все буде добре. Позвоніть мені і все буде добре. Позвоніть мені і все
           буде добре.
         </p>
-        <RequestCallbackForm onSubmit={onSubmit} />
+        <RequestCallbackForm ref={formRef} onSubmit={onFormSubmit} />
       </div>
-      <RequestResultInfoModal
+      <ResultModal
         isOpen={isResultModalOpen}
         isSuccess={isRequestSuccess}
         onClose={onResultInfoModalClose}
       />
+      {!!callbackInfo && (
+        <ConfirmModal
+          isOpen={isConfirmModalOpen}
+          onClose={onConfirmModalClose}
+          onConfirm={onConfirmModalSubmit}
+        >
+          <>
+            <p className="text-md text-center font-sans text-black mb-2">
+              Ім'я: {callbackInfo.name}
+            </p>
+            <p className="text-md text-center font-sans text-black mb-2">
+              Телефон: {callbackInfo.phone}
+            </p>
+          </>
+        </ConfirmModal>
+      )}
     </div>
   );
 }

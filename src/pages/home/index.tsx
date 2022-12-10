@@ -1,4 +1,4 @@
-import Head from '@/components/head';
+import Head from '@/components/layout/head';
 import SectionHero from '@/pages/home/components/section-hero';
 import SectionMethods from '@/pages/home/components/section-methods';
 import SectionFeedback from '@/pages/home/components/section-feedback';

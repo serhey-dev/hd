@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-import FooterLink from '@/components/footer/components/footer-link';
+import FooterLink from '@/components/layout/footer/components/footer-link';
 
 import Instagram from '@/components/icons/instagram';
 import Telegram from '@/components/icons/telegram';

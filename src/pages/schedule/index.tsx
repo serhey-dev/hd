@@ -1,4 +1,4 @@
-import Head from '@/components/head';
+import Head from '@/components/layout/head';
 import SectionSchedule from '@/pages/schedule/components/section-schedule';
 
 export default function Schedule() {

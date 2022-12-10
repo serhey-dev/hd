@@ -3,6 +3,7 @@ import Image from 'next/image';
 import ButtonLink from '@/components/button-link';
 import Circle from '@/components/icons/circle';
 import ParallaxBackground from '@/components/parallax-background';
+import AnimateOnScroll from '@/components/animate-on-scroll';
 
 export default function SectionHero() {
   return (
@@ -32,6 +33,13 @@ export default function SectionHero() {
             Записуйся на консультацію і ми разом <br />
             вирішимо твої проблеми!
           </h2>
+          <AnimateOnScroll
+            className="duration-500"
+            notScrolledClassName="w-0"
+            scrolledClassName="w-1/3"
+          >
+            <div className="h-px w-full bg-black mb-8" />
+          </AnimateOnScroll>
           <ButtonLink href="/schedule" text="Записатись" />
         </div>
       </div>

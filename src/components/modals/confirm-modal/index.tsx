@@ -1,22 +1,21 @@
 import ReactModal from 'react-modal';
 
 import Button from '@/components/button';
-import { IAppointmentInfo } from '@/types/appointment-info';
-import AppointmentInfo from '@/pages/schedule/components/section-schedule/components/appointment-into';
 
-interface IRequestAppointmentConfirmModalProps {
+interface IConfirmModalProps {
   isOpen: boolean;
   onClose: () => void;
   onConfirm: () => void;
-  appointmentInfo: IAppointmentInfo;
+  title?: string;
+  subtitle?: string;
+  children: React.ReactNode;
 }
 
-export default function RequestAppointmentConfirmModal(
-  props: IRequestAppointmentConfirmModalProps,
-) {
+export default function ConfirmModal(props: IConfirmModalProps) {
   return (
     <ReactModal
       isOpen={props.isOpen}
+      ariaHideApp={false}
       shouldCloseOnOverlayClick={true}
       onRequestClose={props.onClose}
       style={{
@@ -35,13 +34,13 @@ export default function RequestAppointmentConfirmModal(
       }}
     >
       <div className="bg-white p-4 rounded">
-        <p className="text-4xl text-center mb-3 font-serif text-black">
-          Будь-ласка перевірте ваші дані!
+        <p className="text-4xl text-center mb-4 font-serif text-black">
+          {props.title || 'Будь-ласка перевірте ваші дані!'}
         </p>
-        <p className="text-md text-center font-sans text-black mb-6">
-          Ви не зможете відмінити запит на сесію.
-        </p>
-        <AppointmentInfo appointmentInfo={props.appointmentInfo} />
+        {!!props.subtitle && (
+          <p className="text-md text-center font-sans text-black mb-5">{props.subtitle}</p>
+        )}
+        <div className="mt-4">{props.children}</div>
         <div className="flex flex-row mt-8">
           <Button
             onClick={props.onConfirm}

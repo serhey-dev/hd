@@ -1,4 +1,4 @@
-import Head from '@/components/head';
+import Head from '@/components/layout/head';
 import SectionContacts from '@/pages/contacts/components/section-contacts';
 
 export default function Contacts() {

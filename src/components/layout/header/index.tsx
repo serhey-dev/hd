@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-import HeaderLink from '@/components/header/components/header-link';
+import HeaderLink from '@/components/layout/header/components/header-link';
 
 export default function Header() {
   return (

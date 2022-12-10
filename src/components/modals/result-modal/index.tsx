@@ -2,16 +2,17 @@ import ReactModal from 'react-modal';
 
 import Button from '@/components/button';
 
-interface IRequestResultInfoModalProps {
+interface IResultModalProps {
   isOpen: boolean;
   onClose: () => void;
   isSuccess: boolean;
 }
 
-export default function RequestResultInfoModal(props: IRequestResultInfoModalProps) {
+export default function ResultModal(props: IResultModalProps) {
   return (
     <ReactModal
       isOpen={props.isOpen}
+      ariaHideApp={false}
       shouldCloseOnOverlayClick={true}
       onRequestClose={props.onClose}
       style={{
@@ -47,7 +48,11 @@ export default function RequestResultInfoModal(props: IRequestResultInfoModalPro
             </p>
           </>
         )}
-        <Button onClick={props.onClose} text="Ок" className="mx-auto w-48" />
+        <Button
+          onClick={props.onClose}
+          text="Ок"
+          className="mx-auto w-48 border-0 bg-green-light"
+        />
       </div>
     </ReactModal>
   );

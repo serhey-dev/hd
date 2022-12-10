@@ -1,15 +1,16 @@
 import React from 'react';
 
+import ResultModal from '@/components/modals/result-modal';
+import ConfirmModal from '@/components/modals/confirm-modal';
+import AnimateOnScroll from '@/components/animate-on-scroll';
+
 import AppointmentInfo from '@/pages/schedule/components/section-schedule/components/appointment-into';
 import RequestAppointmentForm from '@/pages/schedule/components/section-schedule/components/request-appointment-form';
-import RequestResultInfoModal from '@/pages/schedule/components/section-schedule/components/request-result-info-modal';
-import RequestAppointmentConfirmModal from '@/pages/schedule/components/section-schedule/components/request-appointment-confirm-modal';
 
 import { formatDateWithDots } from '@/helpers/date';
 import { IAppointmentInfo } from '@/types/appointment-info';
 import { requestAppointment } from '@/services/request-appointment';
 import { useAppointmentInfoContoller } from '@/hooks/use-appointment-info';
-import ParallaxBackground from '@/components/parallax-background';
 
 export default function SectionSchedule() {
   const [isConfirmModalOpen, setIsConfirmModalOpen] = React.useState(false);
@@ -50,37 +51,46 @@ export default function SectionSchedule() {
     setAppointmentInfo(undefined);
   }
 
-  function onResultInfoModalClose() {
+  function onResultModalClose() {
     setIsResultModalOpen(false);
   }
 
   return (
     <div className="min-h-screen bg-white flex items-center justify-center relative">
       {!!appointmentInfo && (
-        <RequestAppointmentConfirmModal
+        <ConfirmModal
           isOpen={isConfirmModalOpen}
           onClose={onConfirmModalClose}
           onConfirm={onConfirmModalSubmit}
-          appointmentInfo={appointmentInfo}
-        />
+          subtitle="Ви не зможете змінити дані запису пізніше."
+        >
+          <AppointmentInfo appointmentInfo={appointmentInfo} />
+        </ConfirmModal>
       )}
-      <RequestResultInfoModal
+      <ResultModal
         isOpen={isResultModalOpen}
-        onClose={onResultInfoModalClose}
+        onClose={onResultModalClose}
         isSuccess={isRequestSuccess}
       />
       <div className="container w-1/2 my-36">
-        <h1 className="text-6xl text-center mb-3 font-serif text-black">Тут запис</h1>
         {appointmentInfoController.appointmentInfo ? (
           <>
             <h2 className="text-xl text-center font-sans text-black mb-2">Ви вже записались!</h2>
             <p className="text-xl text-center font-sans text-black mb-6">
               Буду з нетерпінням чекати нашої зустрічі
             </p>
+            <AnimateOnScroll
+              className="duration-500 mx-auto"
+              notScrolledClassName="w-0"
+              scrolledClassName="w-36"
+            >
+              <div className="h-px w-full bg-black mb-5" />
+            </AnimateOnScroll>
             <AppointmentInfo appointmentInfo={appointmentInfoController.appointmentInfo} />
           </>
         ) : (
           <>
+            <h1 className="text-6xl text-center mb-3 font-serif text-black">Тут запис</h1>
             <h2 className="text-xl text-center font-sans text-black mb-6">
               Записуйся на консультацію!
             </h2>

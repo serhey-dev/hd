@@ -15,6 +15,7 @@ export default function SectionServices() {
               name="Індивідуальна консультація"
               price="1000 грн. / год."
               text="Ніяк особо не зробиш робиш,е зробиш,Ніяк особо не зробиш,Ніяк особо не зробиш."
+              timeout={300}
             />
           </div>
           <div className="flex flex-row items-center justify-center">
@@ -22,11 +23,13 @@ export default function SectionServices() {
               name="Групова терапія"
               price="1000 грн. / год."
               text="Ніяк особо не зробиш робиш,е зробиш,Ніяк особо не зробиш,Ніяк особо не зробиш."
+              timeout={600}
             />
             <ServiceItem
               name="Коучинг сесія"
               price="1000 грн. / год."
               text="Ніяк особо не зробиш робиш,е зробиш,Ніяк  asd asd asd asd asd asd asd asd asd."
+              timeout={900}
             />
           </div>
         </ul>

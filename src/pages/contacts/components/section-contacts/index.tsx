@@ -7,6 +7,7 @@ import Telegram from '@/components/icons/telegram';
 import Facebook from '@/components/icons/facebook';
 
 import Map from '@/pages/contacts/components/section-contacts/components/map';
+import AnimateOnScroll from '@/components/animate-on-scroll';
 
 export default function SectionContacts() {
   return (
@@ -20,7 +21,15 @@ export default function SectionContacts() {
         <p className="font-sans text-lg text-black">
           Записуйся і так і сяк. к. Записуйся і так і сяк. Записуйся і так і сяк.{' '}
         </p>
-        <p className="font-sans text-lg text-black mt-8">
+        <AnimateOnScroll
+          className="duration-500"
+          notScrolledClassName="w-0"
+          scrolledClassName="w-36 mx-auto"
+          bottomOffsetToAnimate={200}
+        >
+          <div className="h-px w-full bg-black mt-4" />
+        </AnimateOnScroll>
+        <p className="font-sans text-lg text-black mt-4">
           Записуйся і так і сяк. Записуйся і так і сяк. Записуйся і так і сякписуйся і так і сяк:
         </p>
         <div className="flex items-center justify-center mt-4">
@@ -64,10 +73,19 @@ export default function SectionContacts() {
             info@hd-psychologist.com.ua
           </Link>
         </div>
-        <p className="font-sans text-lg text-black mt-8 mb-3">
+        <AnimateOnScroll
+          className="duration-500"
+          notScrolledClassName="w-0"
+          scrolledClassName="w-1/6 mx-auto"
+          bottomOffsetToAnimate={200}
+          timeout={300}
+        >
+          <div className="h-px w-full bg-black mt-4" />
+        </AnimateOnScroll>
+        <p className="font-sans text-lg text-black mt-4 mb-3">
           Записуйся і так і сяк. Записуйся і так і сяк. Записуйся і так і сякписуйся і так і сяк:
         </p>
-        <div className="flex justify-center">
+        <div className="flex justify-center mt-8">
           <ButtonLink href="/schedule" text="Записатись" className="mx-auto" />
         </div>
         <p className="font-sans text-lg text-black mt-8 mb-4">
