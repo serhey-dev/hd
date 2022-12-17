@@ -8,7 +8,7 @@ import AppointmentInfo from '@/pages/schedule/components/section-schedule/compon
 import RequestAppointmentForm from '@/pages/schedule/components/section-schedule/components/request-appointment-form';
 
 import { formatDateWithDots } from '@/helpers/date';
-import { IAppointmentInfo } from '@/types/appointment-info';
+import { IAppointmentInfo } from '@/types';
 import { requestAppointment } from '@/services/request-appointment';
 import { useAppointmentInfoContoller } from '@/hooks/use-appointment-info';
 
@@ -72,28 +72,35 @@ export default function SectionSchedule() {
         onClose={onResultModalClose}
         isSuccess={isRequestSuccess}
       />
-      <div className="container w-1/2 my-36">
+      <div className="container w-1/2 my-32">
         {appointmentInfoController.appointmentInfo ? (
           <>
             <h2 className="text-xl text-center font-sans text-black mb-2">Ви вже записались!</h2>
             <p className="text-xl text-center font-sans text-black mb-6">
-              Буду з нетерпінням чекати нашої зустрічі
+              Найближчим часом я обовʼязково з вами звʼяжусь.
             </p>
+            <p className="text-xl text-center font-sans text-black mb-6">Дякую за довіру!</p>
             <AnimateOnScroll
               className="duration-500 mx-auto"
               notScrolledClassName="w-0"
               scrolledClassName="w-36"
             >
-              <div className="h-px w-full bg-black mb-5" />
+              <div className="h-0.5 w-full bg-black mb-5" />
             </AnimateOnScroll>
             <AppointmentInfo appointmentInfo={appointmentInfoController.appointmentInfo} />
           </>
         ) : (
           <>
-            <h1 className="text-6xl text-center mb-3 font-serif text-black">Тут запис</h1>
-            <h2 className="text-xl text-center font-sans text-black mb-6">
-              Записуйся на консультацію!
-            </h2>
+            <h1 className="text-6xl text-center font-serif text-black mb-8">
+              Запис на консультацію
+            </h1>
+            <p className="text-lg mb-2 text-center font-sans text-black">
+              Після відправки форми я обовʼязково з вами звʼяжусь, уточню деталі та підтверджу
+              запис. Якщо вам зручніше спілкування у месенджері - оберіть відповідну опцію.
+            </p>
+            <p className="text-lg mb-4 text-center font-sans text-black">
+              У місті Дніпро є можливість для проведення оффлайн консультації.
+            </p>
             <RequestAppointmentForm onSubmit={onFormSubmit} />
           </>
         )}

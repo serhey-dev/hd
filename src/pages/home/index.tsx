@@ -3,7 +3,7 @@ import SectionHero from '@/pages/home/components/section-hero';
 import SectionMethods from '@/pages/home/components/section-methods';
 import SectionFeedback from '@/pages/home/components/section-feedback';
 import SectionD from '@/pages/home/components/section-d';
-import SectionCallback from '@/pages/services/components/section-callback';
+import SectionCallback from '@/pages/home/components/section-callback';
 
 export default function Home() {
   return (

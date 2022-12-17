@@ -6,12 +6,8 @@ export default function SectionCertifications() {
   return (
     <div className="min-h-screen border-t border-black">
       <div className="container flex flex-col items-center justify-center">
-        <h1 className="text-6xl text-center font-serif text-black mt-16">Освіта</h1>
-        <h1 className="text-lg text-center font-sans text-black mb-16 mt-4 w-2/3">
-           Обучалась тому сему всему тому. Обучалась тому сему всему тому. Обучалась тому сему всему
-          тому. Обучалась тому сему всему тому. Обучалась тому сему всему тому.
-        </h1>
-        <div style={{ height: '500px', width: '750px' }}>
+        <h1 className="text-6xl text-center font-serif text-black mt-16 mb-20">Освіта</h1>
+        <div className="border border-black" style={{ height: '500px', width: '750px' }}>
           <Slider
             keyName="certifications"
             slides={[

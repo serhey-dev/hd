@@ -29,7 +29,7 @@ export default function SectionD() {
             scrolledClassName="w-1/2"
             bottomOffsetToAnimate={200}
           >
-            <div className="h-px w-full bg-black mb-8" />
+            <div className="h-0.5 w-full bg-black mb-8" />
           </AnimateOnScroll>
           <ButtonLink href="/schedule" text="Записатись" />
         </div>

@@ -4,12 +4,8 @@ import QuestionItem from '@/pages/faq/components/section-faq/components/question
 export default function SectionFAQ() {
   return (
     <div className="relative min-h-screen">
-      {/* <ParallaxBackground
-        className="bg-contain opacity-20"
-        backgroundImage="/images/photos/56.png"
-      /> */}
       <div className="container relative z-10 p-24 pt-16">
-        <h1 className="text-6xl mb-6 text-center font-serif text-black mb-12 mt-24">
+        <h1 className="text-6xl mb-6 text-center font-serif text-black mb-8 mt-16">
           Питання та відповіді
         </h1>
         <ul>

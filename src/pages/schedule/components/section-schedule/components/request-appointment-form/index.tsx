@@ -1,12 +1,17 @@
 import { useFormik } from 'formik';
 
 import Button from '@/components/button';
-import InputText from '@/components/input-text';
-import InputDate from '@/components/input-date';
-import InputTime from '@/components/input-time';
-import InputTextArea from '@/components/input-textarea';
+import InputText from '@/components/form-inputs/input-text';
+import InputDate from '@/components/form-inputs/input-date';
+import InputTime from '@/components/form-inputs/input-time';
+import InputTextArea from '@/components/form-inputs/input-textarea';
+import InputRadio from '@/components/form-inputs/input-radio';
 import { getDatePlusDays, formatDateToISO } from '@/helpers/date';
-import { IAppointmentInfo } from '@/types/appointment-info';
+import { IAppointmentInfo } from '@/types';
+import { Messengers } from '@/helpers/messengers';
+
+import Telegram from '@/components/icons/telegram';
+import Facebook from '@/components/icons/facebook';
 
 const minDate = getDatePlusDays(1);
 const maxDate = getDatePlusDays(30);
@@ -17,6 +22,7 @@ const initialValues: IAppointmentInfo = {
   date: '',
   time: '10:00',
   request: '',
+  messenger: undefined,
 };
 
 function validate(values: IAppointmentInfo) {
@@ -29,8 +35,8 @@ function validate(values: IAppointmentInfo) {
     errors.name = "Ім'я занадто коротке";
   }
 
-  const phone = values.phone.trim();
-  if (!phone || phone.length !== 19) {
+  const phone = values.phone.trim().replaceAll(' ', '');
+  if (!phone || phone.length !== 17) {
     errors.phone = 'Будь-ласка введіть ваш номер телефону';
   }
 
@@ -101,6 +107,38 @@ export default function RequestAppointmentForm(props: IRequestAppointmentFormPro
         error={!!form.errors.phone}
       />
       {!!form.errors.phone && <p className="text-red font-sans mt-1">{form.errors.phone}</p>}
+      {/* Messengers */}
+      <label className="block mb-px font-sans mt-3">Мессенджер:</label>
+      <InputRadio
+        value={form.values.messenger}
+        options={[
+          {
+            value: Messengers.Telegram,
+            content: (
+              <div className="flex flex-row items-center">
+                <p className="pt-1 ml-2 mr-2 font-sans text-black">Telegram</p>
+                <Telegram className="fill-black" />
+              </div>
+            ),
+          },
+          {
+            value: Messengers.Viber,
+            content: (
+              <div className="flex flex-row items-center">
+                <p className="pt-1 ml-2 mr-2 font-sans text-black">Viber</p>
+                <Facebook className="fill-black" />
+              </div>
+            ),
+          },
+          {
+            value: undefined,
+            content: <p className="ml-2 font-sans text-black">Передзвонити</p>,
+          },
+        ]}
+        onChange={(value) => {
+          form.setFieldValue('messenger', value);
+        }}
+      />
       {/* Date */}
       <label className="block mb-px font-sans mt-3" htmlFor="date">
         Дата та час<span className="text-red font-sans">*</span>:
@@ -138,7 +176,7 @@ export default function RequestAppointmentForm(props: IRequestAppointmentFormPro
       <InputTextArea name="request" value={form.values.request} onChange={form.handleChange} />
       <Button
         type="submit"
-        className="mt-8 mx-auto"
+        className="mt-8 mx-auto px-8"
         onClick={form.handleSubmit}
         text="Записатись"
       />

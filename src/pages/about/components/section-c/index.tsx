@@ -8,7 +8,7 @@ export default function SectionC() {
   return (
     <div className="min-h-screen relative border-t border-black">
       <ParallaxBackground className="bg-cover opacity-20" backgroundImage="/images/photos/77.png" />
-      <div className="z-50 flex min-h-screen flex-row items-center justify-between p-24 pt-36 mx-36">
+      <div className="z-50 relative flex min-h-screen flex-row items-center justify-between p-24 pt-36 mx-36">
         <Image
           src="/images/photos/77.png"
           alt="logo"
@@ -19,27 +19,25 @@ export default function SectionC() {
         <div className="ml-24 w-2/3">
           <h3 className="text-3xl font-serif text-black mb-6">Записуйся на консультацію!</h3>
           <p className="font-sans italic text-black text-lg">
-            консультацію! Записуйся на консультаціюа консультацію! Записуйся на консультацію!
-            Записуйся на консультацію!Записуйся на консультацію! Записуйся на консультацію!
-            Записуйся
+            Мій шлях в психологію почався в 2011 році, і триває досі. Цей шлях включав в себе
+            закінчення вишу, міжнародного університету з коучингу та купу різноманітних додаткових
+            курсів та майстер класів. Наразі я навчаюсь на психотерапевта, що дозволить мені
+            надавати ще глибиннішу допомогу.
           </p>
-          <p className="font-sans italic text-black text-lg mt-5">
-            Записуйся на консультацію! консультацію! Записуйся на консультацію! Записуйся на
-            консультацію!
-          </p>
-          <AnimateOnScroll
+
+          {/* <AnimateOnScroll
             className="duration-500"
             notScrolledClassName="w-0"
             scrolledClassName="w-1/2"
             bottomOffsetToAnimate={200}
           >
-            <div className="h-px w-full bg-black mt-8" />
+            <div className="h-0.5 w-full bg-black mt-8" />
           </AnimateOnScroll>
           <p className="font-sans italic text-black text-lg my-6">
             Записуйся на консуонсультаці на консультацію! Записуйся на консультацію! Записуйся на
             консультацію!
-          </p>
-          <ButtonLink href={'/schedule'} text="Записатись" />
+          </p> */}
+          <ButtonLink href={'/schedule'} className="mt-8" text="Записатись" />
         </div>
       </div>
     </div>

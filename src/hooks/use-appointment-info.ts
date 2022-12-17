@@ -1,5 +1,5 @@
 import React from 'react';
-import { IAppointmentInfo } from '@/types/appointment-info';
+import { IAppointmentInfo } from '@/types';
 
 const APPOINTMENT_INFO_KEY = 'APPOINTMENT_INFO';
 

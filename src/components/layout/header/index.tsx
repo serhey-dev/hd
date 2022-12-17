@@ -13,8 +13,8 @@ export default function Header() {
         <div className="flex flex-row items-center">
           <HeaderLink href="/services" text="Послуги" />
           <HeaderLink href="/about" text="Про мене" />
-          <HeaderLink href="/faq" text="Питання" />
           <HeaderLink href="/contacts" text="Контакти" />
+          <HeaderLink href="/faq" text="Питання" />
           <HeaderLink href="/schedule" text="Запис" />
         </div>
       </div>

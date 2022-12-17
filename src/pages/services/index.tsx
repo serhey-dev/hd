@@ -1,5 +1,5 @@
 import Head from '@/components/layout/head';
-import SectionServices from '@/pages/services/components/section-sevices';
+import SectionServices from '@/pages/services/components/section-services';
 
 export default function Services() {
   return (

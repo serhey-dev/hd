@@ -2,12 +2,18 @@ import React from 'react';
 import { useFormik } from 'formik';
 
 import Button from '@/components/button';
-import InputText from '@/components/input-text';
-import { ICallbackInfo } from '@/types/callback-info';
+import InputText from '@/components/form-inputs/input-text';
+import InputRadio from '@/components/form-inputs/input-radio';
+import { ICallbackInfo } from '@/types';
+import { Messengers } from '@/helpers/messengers';
+
+import Telegram from '@/components/icons/telegram';
+import Facebook from '@/components/icons/facebook';
 
 const initialValues: ICallbackInfo = {
   name: '',
   phone: '',
+  messenger: undefined,
 };
 
 function validate(values: typeof initialValues) {
@@ -20,8 +26,8 @@ function validate(values: typeof initialValues) {
     errors.name = "Ім'я занадто коротке";
   }
 
-  const phone = values.phone.trim();
-  if (!phone || phone.length !== 19) {
+  const phone = values.phone.trim().replaceAll(' ', '');
+  if (!phone || phone.length !== 17) {
     errors.phone = 'Будь-ласка введіть ваш номер телефону';
   }
 
@@ -82,11 +88,43 @@ const RequestCallbackForm = React.forwardRef<
         error={!!form.errors.phone}
       />
       {!!form.errors.phone && <p className="text-red font-sans mt-1">{form.errors.phone}</p>}
+      {/* Messengers */}
+      <label className="block mb-px font-sans mt-3">Мессенджер:</label>
+      <InputRadio
+        value={form.values.messenger}
+        options={[
+          {
+            value: Messengers.Telegram,
+            content: (
+              <div className="flex flex-row items-center">
+                <p className="pt-1 ml-2 mr-2 font-sans text-black">Telegram</p>
+                <Telegram className="fill-black" />
+              </div>
+            ),
+          },
+          {
+            value: Messengers.Viber,
+            content: (
+              <div className="flex flex-row items-center">
+                <p className="pt-1 ml-2 mr-2 font-sans text-black">Viber</p>
+                <Facebook className="fill-black" />
+              </div>
+            ),
+          },
+          {
+            value: undefined,
+            content: <p className="ml-2 font-sans text-black">Передзвонити</p>,
+          },
+        ]}
+        onChange={(value) => {
+          form.setFieldValue('messenger', value);
+        }}
+      />
       <Button
         type="submit"
         className="mt-8 mx-auto"
         onClick={form.handleSubmit}
-        text="Передзвонити"
+        text={!!form.values.messenger ? 'Написати' : 'Передзвонити'}
       />
     </form>
   );

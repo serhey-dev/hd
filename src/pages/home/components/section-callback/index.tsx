@@ -5,9 +5,10 @@ import ResultModal from '@/components/modals/result-modal';
 import ConfirmModal from '@/components/modals/confirm-modal';
 import ParallaxBackground from '@/components/parallax-background';
 
-import { ICallbackInfo } from '@/types/callback-info';
+import { ICallbackInfo } from '@/types';
+import { getMessengerInfo } from '@/helpers/messengers';
 import { requestCallback } from '@/services/request-appointment';
-import RequestCallbackForm from '@/pages/services/components/section-callback/components/request-callback-form';
+import RequestCallbackForm from '@/pages/home/components/section-callback/components/request-callback-form';
 
 export default function SectionServices() {
   const formRef = React.useRef<FormikProps<ICallbackInfo>>(null);
@@ -54,13 +55,15 @@ export default function SectionServices() {
         backgroundImage="/images/photos/5.jpg"
         className="bg-center opacity-20 bg-cover"
       />
-      <div className="container w-1/3 my-36 z-50">
-        <h1 className="text-6xl mb-4 text-center font-serif text-black">Зворотній дзвінок</h1>
-        <p className="text-lg mb-8 text-center font-sans text-black">
-          Позвоніть мені і все буде добре. Позвоніть мені і все буде добре. Позвоніть мені і все
-          буде добре.
+      <div className="container my-36 z-50">
+        <h1 className="text-6xl mb-4 text-center font-serif text-black">Зворотній звʼязок</h1>
+        <p className="text-lg mb-8 text-center font-sans text-black px-72">
+          Заповніть форму і я обовʼязково з вами звʼяжусь. Якщо вам зручніше спілкування у
+          месенджері - оберіть відповідну опцію.
         </p>
-        <RequestCallbackForm ref={formRef} onSubmit={onFormSubmit} />
+        <div className="w-1/3 mx-auto">
+          <RequestCallbackForm ref={formRef} onSubmit={onFormSubmit} />
+        </div>
       </div>
       <ResultModal
         isOpen={isResultModalOpen}
@@ -80,6 +83,11 @@ export default function SectionServices() {
             <p className="text-md text-center font-sans text-black mb-2">
               Телефон: {callbackInfo.phone}
             </p>
+            {!!callbackInfo.messenger && (
+              <p className="text-md text-center font-sans text-black mb-2">
+                {getMessengerInfo(callbackInfo)}
+              </p>
+            )}
           </>
         </ConfirmModal>
       )}
