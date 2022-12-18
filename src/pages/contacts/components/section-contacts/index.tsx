@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Instagram from '@/components/icons/instagram';
 import Telegram from '@/components/icons/telegram';
 import Facebook from '@/components/icons/facebook';
+import Viber from '@/components/icons/viber';
 
 import Map from '@/pages/contacts/components/section-contacts/components/map';
 import AnimateOnScroll from '@/components/animate-on-scroll';
@@ -34,14 +35,10 @@ export default function SectionContacts() {
             <Telegram />
             <span className="font-serif text-2xl ml-2">Telegram</span>
           </Link>
-          <Link
-            className="flex items-center text-black duration-300 fill-black hover:fill-green hover:text-green mr-5"
-            target="_blank"
-            href="https://t.me/hanna_dynda"
-          >
-            <Telegram />
+          <div className="flex items-center text-black fill-black mr-5">
+            <Viber />
             <span className="font-serif text-2xl ml-2">Viber</span>
-          </Link>
+          </div>
           <Link
             className="flex items-center text-black duration-300 fill-black hover:fill-green hover:text-green mr-5"
             target="_blank"

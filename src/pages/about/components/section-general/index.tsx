@@ -4,13 +4,13 @@ import ParallaxBackground from '@/components/parallax-background';
 export default function SectionGeneral() {
   return (
     <div className="min-h-screen">
-      <ParallaxBackground
+      {/* <ParallaxBackground
         style={{
           backgroundPosition: 'right 1px bottom -530px',
         }}
         className="bg-cover opacity-20"
         backgroundImage="/images/photos/77.png"
-      />
+      /> */}
 
       {/* <ParallaxBackground
         style={{

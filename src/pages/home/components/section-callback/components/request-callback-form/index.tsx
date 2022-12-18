@@ -8,7 +8,7 @@ import { ICallbackInfo } from '@/types';
 import { Messengers } from '@/helpers/messengers';
 
 import Telegram from '@/components/icons/telegram';
-import Facebook from '@/components/icons/facebook';
+import Viber from '@/components/icons/viber';
 
 const initialValues: ICallbackInfo = {
   name: '',
@@ -107,7 +107,7 @@ const RequestCallbackForm = React.forwardRef<
             content: (
               <div className="flex flex-row items-center">
                 <p className="pt-1 ml-2 mr-2 font-sans text-black">Viber</p>
-                <Facebook className="fill-black" />
+                <Viber className="fill-black" />
               </div>
             ),
           },

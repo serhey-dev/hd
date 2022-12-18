@@ -98,6 +98,13 @@ export default function SectionSchedule() {
               Після відправки форми я обовʼязково з вами звʼяжусь, уточню деталі та підтверджу
               запис. Якщо вам зручніше спілкування у месенджері - оберіть відповідну опцію.
             </p>
+            <AnimateOnScroll
+              className="duration-500 mx-auto"
+              notScrolledClassName="w-0"
+              scrolledClassName="w-36"
+            >
+              <div className="h-0.5 w-full bg-black my-3" />
+            </AnimateOnScroll>
             <p className="text-lg mb-4 text-center font-sans text-black">
               У місті Дніпро є можливість для проведення оффлайн консультації.
             </p>

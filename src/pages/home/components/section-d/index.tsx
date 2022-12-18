@@ -26,7 +26,7 @@ export default function SectionD() {
           <AnimateOnScroll
             className="duration-500"
             notScrolledClassName="w-0"
-            scrolledClassName="w-1/2"
+            scrolledClassName="w-36"
             bottomOffsetToAnimate={200}
           >
             <div className="h-0.5 w-full bg-black mb-8" />

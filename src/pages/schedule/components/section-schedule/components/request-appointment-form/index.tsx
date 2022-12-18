@@ -11,7 +11,7 @@ import { IAppointmentInfo } from '@/types';
 import { Messengers } from '@/helpers/messengers';
 
 import Telegram from '@/components/icons/telegram';
-import Facebook from '@/components/icons/facebook';
+import Viber from '@/components/icons/viber';
 
 const minDate = getDatePlusDays(1);
 const maxDate = getDatePlusDays(30);
@@ -65,7 +65,6 @@ interface IRequestAppointmentFormProps {
   onSubmit: (values: IAppointmentInfo) => void;
 }
 
-// TODO - highlight valid field
 export default function RequestAppointmentForm(props: IRequestAppointmentFormProps) {
   const form = useFormik({
     initialValues,
@@ -126,7 +125,7 @@ export default function RequestAppointmentForm(props: IRequestAppointmentFormPro
             content: (
               <div className="flex flex-row items-center">
                 <p className="pt-1 ml-2 mr-2 font-sans text-black">Viber</p>
-                <Facebook className="fill-black" />
+                <Viber className="fill-black" />
               </div>
             ),
           },

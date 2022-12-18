@@ -92,7 +92,7 @@ export default function Slider(props: ISliderProps) {
         onKeyDown={onPreviousSlideClick}
         className="p-8 w-fit fill-green opacity-30 hover:opacity-100 duration-300 absolute -left-64 top-1/2 -translate-y-1/2"
       >
-        <Chevron className="-rotate-90 w-20 h-20" />
+        <Chevron className="-rotate-90 w-40 h-40" />
       </div>
       <div
         tabIndex={0}
@@ -101,7 +101,7 @@ export default function Slider(props: ISliderProps) {
         onKeyDown={onNextSlideClick}
         className="p-8 w-fit fill-green opacity-30 hover:opacity-100 duration-300 absolute -right-64 top-1/2 -translate-y-1/2"
       >
-        <Chevron className="rotate-90 w-20 h-20" />
+        <Chevron className="rotate-90 w-40 h-40" />
       </div>
     </div>
   );
