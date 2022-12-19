@@ -45,8 +45,7 @@ export default function SectionHero() {
           <h2 className="font-sans italic text-xl text-black mb-6 leading-8">
             Записуйся на консультацію і ми разом знайдемо рішення!
           </h2>
-
-          <ButtonLink href="/schedule" text="Записатись" className="mx-auto" />
+          <ButtonLink href="/schedule" text="Записатись" />
         </div>
       </div>
     </div>

@@ -9,6 +9,7 @@
     "format": "prettier --write tailwind.config.js './src/**/*.{js,jsx,ts,tsx,css,md,json}'"
   },
   "dependencies": {
+    "@react-google-maps/api": "^2.17.1",
     "formik": "^2.2.9",
     "next": "13.0.3",
     "react": "18.2.0",

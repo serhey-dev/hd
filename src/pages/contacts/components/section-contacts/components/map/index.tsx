@@ -1,41 +1,26 @@
 import React from 'react';
+import { GoogleMap, Marker, useJsApiLoader } from '@react-google-maps/api';
 
-import Script from 'next/script';
+const containerStyle = {
+  width: '100%',
+  height: '600px',
+};
 
-const mapId = 'id-map';
-
-function initMap() {
-  const position = { lat: 48.4582069, lng: 35.0691383 };
-  // @ts-ignore
-  const map = new window.google.maps.Map(document.getElementById(mapId), {
-    zoom: 16,
-    center: position,
-    fullscreenControl: false,
-    streetViewControl: false,
-    mapTypeControl: false,
-  });
-  // @ts-ignore
-  new window.google.maps.Marker({
-    position,
-    map,
-  });
-}
+const position = { lat: 48.4582069, lng: 35.0691383 };
 
 export default function Map() {
-  const [isReady, setIsReady] = React.useState(false);
+  const { isLoaded } = useJsApiLoader({
+    id: 'google-map-script',
+    googleMapsApiKey: 'AIzaSyCU1otOa8POOtlr-qxY2SfmXhq-dD1PcG4',
+  });
 
-  React.useEffect(() => {
-    // @ts-ignore
-    window.initMap = initMap;
-    setIsReady(true);
-  }, []);
+  if (!isLoaded) {
+    return null;
+  }
 
   return (
-    <>
-      {isReady && (
-        <Script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCU1otOa8POOtlr-qxY2SfmXhq-dD1PcG4&callback=initMap&v=weekly" />
-      )}
-      <div id={mapId} className="mx-auto" style={{ width: '100%', height: '600px' }} />
-    </>
+    <GoogleMap mapContainerStyle={containerStyle} center={position} zoom={15}>
+      <Marker position={position} />
+    </GoogleMap>
   );
 }
