@@ -2,11 +2,16 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import HeaderLink from '@/components/layout/header/components/header-link';
+import MobileMenu from '@/components/layout/header/components/mobile-menu';
+import useWindowDimensions from '@/hooks/use-window-dimensions';
+import { MD_BREAKPOINT } from '@/helpers/layout';
 
 export default function Header() {
-  return (
+  const windowDimensions = useWindowDimensions();
+
+  return windowDimensions.width > MD_BREAKPOINT ? (
     <div className="w-full absolute z-20">
-      <div className="container flex flex-row items-center pb-4 pt-6">
+      <div className="flex flex-row items-center container pb-4 pt-6">
         <Link href="/">
           <Image src="/images/logo.png" alt="logo" width={120} height={1} />
         </Link>
@@ -19,5 +24,7 @@ export default function Header() {
         </div>
       </div>
     </div>
+  ) : (
+    <MobileMenu />
   );
 }
