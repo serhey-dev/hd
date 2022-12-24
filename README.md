@@ -21,6 +21,7 @@ TODO (before refactoring and mobile optimization):
   - читати далі (послуги)
 - About
     - Освіта текст
+    - Освіта нові сертифікати
     - 3 секція текст
     - головна фото
 - Contacts
