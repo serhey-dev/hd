@@ -4,12 +4,14 @@ export default function useWindowDimensions() {
   function getWindowDimensions() {
     if (typeof window !== 'undefined') {
       return {
+        isLoaded: true,
         height: window.innerHeight,
         width: window.innerWidth,
       };
     }
 
     return {
+      isLoaded: false,
       width: 0,
       height: 0,
     };

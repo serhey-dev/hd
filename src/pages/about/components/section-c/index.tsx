@@ -7,10 +7,13 @@ import AnimateOnScroll from '@/components/animate-on-scroll';
 export default function SectionC() {
   return (
     <div className="min-h-screen relative border-t border-black">
-      <ParallaxBackground className="bg-cover opacity-20" backgroundImage="/images/photos/77.png" />
+      <ParallaxBackground
+        className="bg-cover opacity-20"
+        backgroundImage="/images/photos/about-c.png"
+      />
       <div className="z-50 relative flex min-h-screen flex-row items-center justify-between p-24 pt-36 mx-36">
         <Image
-          src="/images/photos/77.png"
+          src="/images/photos/about-c.png"
           alt="logo"
           className="block max-w-full rounded-full border border-black object-cover mx-auto"
           width={400}

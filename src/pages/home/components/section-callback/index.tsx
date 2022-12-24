@@ -52,7 +52,7 @@ export default function SectionServices() {
   return (
     <div className="min-h-screen border-t border-black flex items-center justify-center relative">
       <ParallaxBackground
-        backgroundImage="/images/photos/5.jpg"
+        backgroundImage="/images/photos/home-callback.jpg"
         className="bg-center opacity-20 bg-cover"
       />
       <div className="container my-36 z-50">

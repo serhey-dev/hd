@@ -11,6 +11,7 @@ import { formatDateWithDots } from '@/helpers/date';
 import { IAppointmentInfo } from '@/types';
 import { requestAppointment } from '@/services/request-appointment';
 import { useAppointmentInfoContoller } from '@/hooks/use-appointment-info';
+import ParallaxBackground from '@/components/parallax-background';
 
 export default function SectionSchedule() {
   const [isConfirmModalOpen, setIsConfirmModalOpen] = React.useState(false);
@@ -57,6 +58,10 @@ export default function SectionSchedule() {
 
   return (
     <div className="min-h-screen bg-white flex items-center justify-center relative">
+      <ParallaxBackground
+        className="bg-cover opacity-20 bg-right"
+        backgroundImage="/images/photos/schedule-hero.jpg"
+      />
       {!!appointmentInfo && (
         <ConfirmModal
           isOpen={isConfirmModalOpen}
@@ -72,7 +77,7 @@ export default function SectionSchedule() {
         onClose={onResultModalClose}
         isSuccess={isRequestSuccess}
       />
-      <div className="container w-1/2 my-32">
+      <div className="container w-1/2 my-32 z-50">
         {appointmentInfoController.appointmentInfo ? (
           <>
             <h2 className="text-xl text-center font-sans text-black mb-2">Ви вже записались!</h2>

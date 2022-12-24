@@ -4,9 +4,13 @@ import Slider from '@/components/slider';
 
 export default function SectionCertifications() {
   return (
-    <div className="min-h-screen border-t border-black">
+    <div className="min-h-screen relative border-t border-black">
       <div className="container flex flex-col items-center justify-center">
-        <h1 className="text-6xl text-center font-serif text-black mt-16 mb-20">Освіта</h1>
+        <h1 className="text-6xl text-center font-serif text-black mt-16 mb-4">Освіта</h1>
+        <p className="font-sans italic text-black text-lg mt-3 mb-16 px-72 text-center">
+          Працювати в цій сфері - моє покликання! Я з великим задоволенням ділюся своїми знаннями та
+          досвідом на наших консультаціях.
+        </p>
         <div className="border border-black" style={{ height: '500px', width: '750px' }}>
           <Slider
             keyName="certifications"

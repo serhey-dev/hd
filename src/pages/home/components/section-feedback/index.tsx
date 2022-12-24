@@ -5,7 +5,7 @@ import ParallaxBackground from '@/components/parallax-background';
 export default function SectionFeedback() {
   return (
     <div className="relative overflow-hidden min-h-screen border-t border-black pb-36">
-      <ParallaxBackground backgroundImage="/images/photos/66.png" />
+      <ParallaxBackground backgroundImage="/images/photos/home-feedback.png" />
       <div className="container flex flex-col justify-center items-center px-24">
         <h1 className="text-6xl mb-6 text-center font-serif text-black mb-24 mt-16">Відгуки</h1>
         <div className="w-1/2">

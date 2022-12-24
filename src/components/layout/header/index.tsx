@@ -9,8 +9,8 @@ import { MD_BREAKPOINT } from '@/helpers/layout';
 export default function Header() {
   const windowDimensions = useWindowDimensions();
 
-  return windowDimensions.width > MD_BREAKPOINT ? (
-    <div className="w-full absolute z-20">
+  return !windowDimensions.isLoaded || windowDimensions.width > MD_BREAKPOINT ? (
+    <div className="w-full pb-4 absolute z-30">
       <div className="flex flex-row items-center container pb-4 pt-6">
         <Link href="/">
           <Image src="/images/logo.png" alt="logo" width={120} height={1} />

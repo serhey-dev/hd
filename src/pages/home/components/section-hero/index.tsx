@@ -1,29 +1,12 @@
 import Image from 'next/image';
 
 import ButtonLink from '@/components/button-link';
-import Circle from '@/components/icons/circle';
 import ParallaxBackground from '@/components/parallax-background';
-import AnimateOnScroll from '@/components/animate-on-scroll';
 
 export default function SectionHero() {
   return (
     <div className="h-screen flex items-center justify-center relative">
-      <ParallaxBackground backgroundImage="/images/photos/22.png" />
-      {/* <div style={{ left: '110px', width: '800px'}} className="absolute mx-auto mt-4 bottom-12">
-        <Circle className="fill-black" />
-        <div className=" top-16 pt-2">
-          <p className="font-serif text-4xl text-black text-center pt-2 mb-3">
-            Перша консультація - за донат!{' '}
-          </p>
-          <p className="font-sans text-black text-center text-lg mb-2">
-            (при навності скріну будь-якого донату <br /> на користь Армії/Волонтерів)
-          </p>
-          <div className="flex items-center justify-center">
-            <p className="font-serif text-4xl text-black mr-4">Слава Україні!</p>
-            <Image className="mt-2" src="/icons/ukraine.png" alt="ukraine" width={35} height={1} />
-          </div>
-        </div>
-      </div> */}
+      <ParallaxBackground backgroundImage="/images/photos/home-hero.png" />
       <div
         style={{ left: '210px' }}
         className="absolute mx-auto mt-4 bottom-12 flex flex-row items-center"

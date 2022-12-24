@@ -7,8 +7,8 @@ export default function SectionD() {
   return (
     <div className="min-h-screen border-t border-black h-full flex justify-center">
       <div className="flex container flex-row items-center justify-center">
-        <Image src="/images/1.jpeg" alt="logo" width={450} height={1} />
-        <div className="w-1/3 ml-36">
+        <Image src="/images/photos/home-d.jpg" alt="logo" width={450} height={1} />
+        <div className="w-1/3 ml-24">
           <h3 className="text-3xl font-serif text-black mb-6">Приклади причин для звернення</h3>
           <ul>
             <li>
