@@ -11,3 +11,23 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+TODO (before refactoring and mobile optimization):
+- Home:
+    - Напрямки - фото
+    - Відгуки - фото
+    - Приклади причин для звернення
+- Methods:
+  - читати далі (послуги)
+- About
+    - Освіта текст
+    - 3 секція текст
+    - головна фото
+- Contacts
+    - Номер + пошта
+    - Facebook
+    - Адреса
+- Questions
+    - Коли треба звертатись за допомогою до психолога?
+    - Коли треба звертатись до коуча?
+- Schedule - done
