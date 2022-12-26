@@ -1,4 +1,5 @@
 import { ChangeEvent } from 'react';
+import { mergeClasses } from '@/helpers/layout';
 
 interface IInputDateProps {
   name: string;
@@ -11,16 +12,6 @@ interface IInputDateProps {
 }
 
 export default function InputDate(props: IInputDateProps) {
-  function getStyles() {
-    let styles = `font-sans h-14 px-4 block w-full border border-black rounded outline-black ${props.className}`;
-
-    if (props.error) {
-      styles += ' text-red border-red outline-red';
-    }
-
-    return styles;
-  }
-
   return (
     <>
       <input
@@ -32,7 +23,11 @@ export default function InputDate(props: IInputDateProps) {
         min="10:00"
         max="19:00"
         type="time"
-        className={getStyles()}
+        className={mergeClasses(
+          'font-sans h-14 px-4 block w-full border border-black rounded outline-black',
+          props.error ? 'text-red border-red outline-red' : '',
+          props.className,
+        )}
       />
       <datalist id={props.timeListName}>
         <option value="10:00" />

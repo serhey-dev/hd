@@ -1,6 +1,6 @@
 import ReactModal from 'react-modal';
 
-import Button from '@/components/button';
+import Button from '@/components/buttons/button';
 
 interface IConfirmModalProps {
   isOpen: boolean;

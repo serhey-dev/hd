@@ -1,5 +1,5 @@
 import React from 'react';
-import Telegram from '@/components/icons/telegram';
+import { mergeClasses } from '@/helpers/layout';
 
 interface IRadioOption {
   value?: string;
@@ -15,7 +15,7 @@ interface IInputRadioProps {
 
 export default function InputRadio(props: IInputRadioProps) {
   return (
-    <div className={`flex flex-row items-center ${props.className}`}>
+    <div className={mergeClasses('flex flex-row items-center', props.className)}>
       {props.options.map((option) => (
         <div key={option.value || 'empty'} className="flex flex-row items-center mr-6">
           <div
@@ -26,14 +26,16 @@ export default function InputRadio(props: IInputRadioProps) {
             className="pr-4 py-1 duration-500 flex flex-row items-center"
           >
             <div
-              className={`w-8 h-8 border rounded-full duration-200 flex items-center justify-center ${
-                props.value ? 'bg-white' : 'bg-white'
-              }`}
+              className={mergeClasses(
+                'w-8 h-8 border rounded-full duration-200 flex items-center justify-center',
+                props.value ? 'bg-white' : 'bg-white',
+              )}
             >
               <div
-                className={`w-5 h-5 bg-green rounded-full duration-200 ${
-                  props.value === option.value ? 'opacity-100' : 'opacity-0'
-                }`}
+                className={mergeClasses(
+                  'w-5 h-5 bg-green rounded-full duration-200',
+                  props.value === option.value ? 'opacity-100' : 'opacity-0',
+                )}
               />
             </div>
             <div>{option.content}</div>

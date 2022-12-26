@@ -1,6 +1,6 @@
 import { useFormik } from 'formik';
 
-import Button from '@/components/button';
+import Button from '@/components/buttons/button';
 import InputText from '@/components/form-inputs/input-text';
 import InputDate from '@/components/form-inputs/input-date';
 import InputTime from '@/components/form-inputs/input-time';

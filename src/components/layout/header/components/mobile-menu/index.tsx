@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactModal from 'react-modal';
-
 import Link from 'next/link';
 import Image from 'next/image';
-import HeaderLink from '@/components/layout/header/components/header-link';
 import { useRouter } from 'next/router';
+
+import HeaderLink from '@/components/layout/header/components/header-link';
 
 export default function MobileMenu() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -26,11 +26,13 @@ export default function MobileMenu() {
     <>
       <div
         onClick={onOpen}
-        className="cursor-pointer z-20 fixed right-8 top-8 p-4 flex-col justify-center items-center"
+        className="cursor-pointer z-30 fixed right-8 top-8 flex justify-center items-center rounded-full w-12 h-12 bg-white shadow"
       >
-        <div className="h-1 w-8 mb-1 bg-black rounded-full" />
-        <div className="h-1 w-8 mb-1 bg-black rounded-full" />
-        <div className="h-1 w-8 bg-black rounded-full" />
+        <div>
+          <div className="h-1 w-7 mb-1 bg-black rounded-full" />
+          <div className="h-1 w-7 mb-1 bg-black rounded-full" />
+          <div className="h-1 w-7 bg-black rounded-full" />
+        </div>
       </div>
       <ReactModal
         closeTimeoutMS={200}
@@ -54,10 +56,12 @@ export default function MobileMenu() {
         <div className="bg-white p-4 h-full relative">
           <div
             onClick={onClose}
-            className="absolute cursor-pointer z-20 right-8 top-9 p-4 flex-col justify-center items-center"
+            className="absolute cursor-pointer z-50 right-8 top-8 w-12 h-12 flex justify-center items-center"
           >
-            <div className="h-1 translate-y-1 w-8 rotate-45 bg-black rounded-full" />
-            <div className="h-1 w-8 -rotate-45 bg-black rounded-full" />
+            <div>
+              <div className="h-1 translate-y-1 w-7 rotate-45 bg-black rounded-full" />
+              <div className="h-1 w-7 -rotate-45 bg-black rounded-full" />
+            </div>
           </div>
           <div className="flex flex-col items-center mt-12">
             <Link href="/">

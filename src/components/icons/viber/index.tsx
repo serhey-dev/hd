@@ -1,3 +1,5 @@
+import { mergeClasses } from '@/helpers/layout';
+
 interface IViberProps {
   className?: string;
 }
@@ -5,7 +7,7 @@ interface IViberProps {
 export default function Viber(props: IViberProps) {
   return (
     <svg
-      className={`${props.className} mt-px`}
+      className={mergeClasses('mt-px', props.className)}
       fill="#000000"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 52.511 52.511"

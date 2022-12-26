@@ -1,6 +1,8 @@
 import { ChangeEvent } from 'react';
 import InputMask from 'react-input-mask';
 
+import { mergeClasses } from '@/helpers/layout';
+
 interface IInputTextProps {
   name: string;
   mask?: string;
@@ -11,17 +13,6 @@ interface IInputTextProps {
 }
 
 export default function InputText(props: IInputTextProps) {
-  function getStyles() {
-    let styles =
-      'font-sans h-14 px-4 block w-full border border-black rounded outline-black bg-white';
-
-    if (props.error) {
-      styles += ' text-red border-red outline-red';
-    }
-
-    return styles;
-  }
-
   return props.mask ? (
     <InputMask
       name={props.name}
@@ -30,7 +21,10 @@ export default function InputText(props: IInputTextProps) {
       onChange={props.onChange}
       mask={props.mask}
       maskChar=" "
-      className={getStyles()}
+      className={mergeClasses(
+        'font-sans h-14 px-4 block w-full border border-black rounded outline-black bg-white',
+        props.error ? 'text-red border-red outline-red' : '',
+      )}
     />
   ) : (
     <input
@@ -39,7 +33,10 @@ export default function InputText(props: IInputTextProps) {
       value={props.value}
       placeholder={props.placeholder}
       onChange={props.onChange}
-      className={getStyles()}
+      className={mergeClasses(
+        'font-sans h-14 px-4 block w-full border border-black rounded outline-black bg-white',
+        props.error ? 'text-red border-red outline-red' : '',
+      )}
     />
   );
 }

@@ -1,9 +1,11 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { mergeClasses } from '@/helpers/layout';
 
 interface IFooterLinkProps {
   href: string;
   text: string;
+  className?: string;
 }
 
 export default function FooterLink(props: IFooterLinkProps) {
@@ -13,9 +15,11 @@ export default function FooterLink(props: IFooterLinkProps) {
   return (
     <Link
       href={props.href}
-      className={`block text-xl mb-3 font-serif text-black hover:text-green duration-300 ${
-        isActive ? 'text-green' : ''
-      }`}
+      className={mergeClasses(
+        'block whitespace-nowrap text-2xl font-serif text-black hover:text-green duration-300',
+        isActive ? 'text-green' : '',
+        props.className,
+      )}
     >
       {props.text}
     </Link>

@@ -1,4 +1,5 @@
 import { MouseEvent } from 'react';
+import { mergeClasses } from '@/helpers/layout';
 
 interface IButtonProps {
   onClick: () => void;
@@ -16,7 +17,10 @@ export default function Button(props: IButtonProps) {
   return (
     <button
       type={props.type || 'button'}
-      className={`block px-8 py-2 font-serif text-black border-black text-3xl border-2 rounded-md duration-300 hover:bg-green hover:border-green hover:text-white outline-green ${props.className}`}
+      className={mergeClasses(
+        'block px-8 py-2 font-serif text-black border-black text-3xl border-2 rounded-md duration-300 hover:bg-green hover:border-green hover:text-white outline-green',
+        props.className,
+      )}
       onClick={onClick}
     >
       {props.text}

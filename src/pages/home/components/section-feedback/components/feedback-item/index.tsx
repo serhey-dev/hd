@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { mergeClasses } from '@/helpers/layout';
 
 interface IFeedbackItemProps {
   className?: string;
@@ -9,7 +10,12 @@ interface IFeedbackItemProps {
 
 export default function FeedbackItem(props: IFeedbackItemProps) {
   return (
-    <li className={`flex flex-col items-center justify-center rounded-lg py-4 ${props.className}`}>
+    <li
+      className={mergeClasses(
+        'flex flex-col items-center justify-center rounded-lg py-4',
+        props.className,
+      )}
+    >
       <Image
         className="rounded-full border-black border"
         src={props.photo}

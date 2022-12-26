@@ -10,10 +10,10 @@ export default function Home() {
     <main>
       <Head title="Home" description="Home" />
       <SectionHero />
-      <SectionMethods />
+      {/* <SectionMethods />
       <SectionFeedback />
       <SectionD />
-      <SectionCallback />
+      <SectionCallback /> */}
     </main>
   );
 }

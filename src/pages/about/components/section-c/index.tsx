@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import ButtonLink from '@/components/button-link';
+import ButtonLink from '@/components/buttons/button-link';
 import ParallaxBackground from '@/components/parallax-background';
 import AnimateOnScroll from '@/components/animate-on-scroll';
 
@@ -22,10 +22,9 @@ export default function SectionC() {
         <div className="ml-24 w-2/3">
           <h3 className="text-3xl font-serif text-black mb-6">Записуйся на консультацію!</h3>
           <p className="font-sans italic text-black text-lg">
-            Мій шлях в психологію почався в 2011 році, і триває досі. Цей шлях включав в себе
-            закінчення вишу, міжнародного університету з коучингу та купу різноманітних додаткових
-            курсів та майстер класів. Наразі я навчаюсь на психотерапевта, що дозволить мені
-            надавати ще глибиннішу допомогу.
+            Працювати в цій сфері - моє покликання! Я з великим задоволенням ділюся своїми знаннями
+            та досвідом на наших консультаціях. Тож якщо Ви відчуваєте що вам потрібна допомога - не
+            зволікайте!
           </p>
 
           {/* <AnimateOnScroll

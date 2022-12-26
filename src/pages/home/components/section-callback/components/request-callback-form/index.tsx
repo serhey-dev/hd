@@ -1,7 +1,7 @@
 import React from 'react';
 import { useFormik } from 'formik';
 
-import Button from '@/components/button';
+import Button from '@/components/buttons/button';
 import InputText from '@/components/form-inputs/input-text';
 import InputRadio from '@/components/form-inputs/input-radio';
 import { ICallbackInfo } from '@/types';

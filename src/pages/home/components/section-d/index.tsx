@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import ButtonLink from '@/components/button-link';
+import ButtonLink from '@/components/buttons/button-link';
 import AnimateOnScroll from '@/components/animate-on-scroll';
 
 export default function SectionD() {

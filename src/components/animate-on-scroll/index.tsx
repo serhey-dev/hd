@@ -1,4 +1,5 @@
 import React from 'react';
+import { mergeClasses } from '@/helpers/layout';
 
 interface IButtonProps {
   children: React.ReactNode;
@@ -38,9 +39,10 @@ export default function AnimateOnScroll(props: IButtonProps) {
   return (
     <div
       ref={ref}
-      className={`${props.className} ${
-        isScrolledTo ? props.scrolledClassName : props.notScrolledClassName
-      }`}
+      className={mergeClasses(
+        isScrolledTo ? props.scrolledClassName : props.notScrolledClassName,
+        props.className,
+      )}
     >
       {props.children}
     </div>

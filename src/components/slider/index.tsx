@@ -1,5 +1,6 @@
 import React, { TransitionEvent } from 'react';
 import Chevron from '@/components/icons/chevron';
+import { mergeClasses } from '@/helpers/layout';
 
 interface ISliderProps {
   keyName: string;
@@ -63,12 +64,12 @@ export default function Slider(props: ISliderProps) {
   React.useEffect(cancelJumping, [activeSlide, slides.length]);
 
   return (
-    <div className={`h-full relative ${props.className}`}>
+    <div className={mergeClasses('h-full relative', props.className)}>
       <div className="h-full relative overflow-hidden">
         <div
           ref={containerRef}
           onTransitionEnd={onSliderTransitionEnd}
-          className={`h-full flex items-center ${!isMoving ? 'duration-1000' : ''}`}
+          className={mergeClasses('h-full flex items-center', !isMoving ? 'duration-1000' : '')}
           style={{
             transform: `translateX(-${activeSlide * (containerRef.current?.clientWidth || 0)}px)`,
           }}
@@ -76,9 +77,10 @@ export default function Slider(props: ISliderProps) {
           {slides.map((slide, index) => (
             <div
               key={`slide-${props.keyName}-${index}`}
-              className={`min-w-full h-full relative flex justify-center duration-500 ${
-                props.hidePrevSlide && slideToHide === index ? 'opacity-0' : 'opacity-100'
-              }`}
+              className={mergeClasses(
+                'min-w-full h-full relative flex justify-center duration-500',
+                props.hidePrevSlide && slideToHide === index ? 'opacity-0' : 'opacity-100',
+              )}
             >
               {slide}
             </div>
