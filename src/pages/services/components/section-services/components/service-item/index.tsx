@@ -22,8 +22,9 @@ export default function ServiceItem(props: IServiceItemProps) {
           notScrolledClassName="w-0"
           scrolledClassName="w-36"
           timeout={props.timeout}
+          bottomOffsetToAnimate={200}
         >
-          <div className="h-0.5 w-full bg-black mx-auto" />
+          <div className="h-0.5 w-full bg-black" />
         </AnimateOnScroll>
         <p className="font-sans text-black text-lg pt-4 text-center mx-auto">
           {props.text}..

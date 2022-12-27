@@ -21,12 +21,12 @@ export default function MethodItem(props: IMethodItemProps) {
       <div className="mx-0 md:mx-6 md:mt-0 mt-6">
         <h4 className="text-4xl font-serif text-black mb-4">{props.name}</h4>
         <AnimateOnScroll
-          className="duration-500"
+          className="duration-500 mb-4"
           notScrolledClassName="w-0"
           scrolledClassName="w-36"
           bottomOffsetToAnimate={200}
         >
-          <div className="h-0.5 w-full bg-black mb-4" />
+          <div className="h-0.5 w-full bg-black" />
         </AnimateOnScroll>
         {props.content}
       </div>

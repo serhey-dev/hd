@@ -68,11 +68,11 @@ export default function SectionReasons() {
               </li>
             </ul>
             <AnimateOnScroll
-              className="duration-500"
+              className="duration-500 my-8"
               notScrolledClassName="w-0"
               scrolledClassName="w-36"
             >
-              <div className="h-0.5 w-full bg-black my-8" />
+              <div className="h-0.5 w-full bg-black" />
             </AnimateOnScroll>
             <ButtonLink href="/schedule" text="Записатись" />
           </div>

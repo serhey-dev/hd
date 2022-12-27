@@ -14,16 +14,16 @@ export default function AnimateOnScroll(props: IButtonProps) {
   const ref = React.useRef<HTMLDivElement>(null);
   const [isScrolledTo, setIsScrolledTo] = React.useState(false);
 
-  function scrollListener() {
-    if (ref.current) {
-      setIsScrolledTo(
-        ref.current.getBoundingClientRect().top <
-          window.innerHeight - (props.bottomOffsetToAnimate || 0),
-      );
-    }
-  }
-
   React.useEffect(() => {
+    function scrollListener() {
+      if (ref.current) {
+        setIsScrolledTo(
+          ref.current.getBoundingClientRect().top <
+            window.innerHeight - (props.bottomOffsetToAnimate || 0),
+        );
+      }
+    }
+
     if (props.timeout) {
       setTimeout(scrollListener, props.timeout);
     } else {
@@ -34,7 +34,7 @@ export default function AnimateOnScroll(props: IButtonProps) {
     return () => {
       window.removeEventListener('scroll', scrollListener);
     };
-  }, []);
+  }, [props.timeout, props.bottomOffsetToAnimate]);
 
   return (
     <div

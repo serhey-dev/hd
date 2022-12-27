@@ -18,11 +18,11 @@ export default function SectionContacts() {
           зручний для вас спосіб щоб звʼязатись зі мною або записатись до мене на консультацію:
         </p>
         <AnimateOnScroll
-          className="duration-500"
+          className="duration-500 sm:my-8 my-4"
           notScrolledClassName="w-0"
           scrolledClassName="w-36 mx-auto"
         >
-          <div className="h-0.5 w-full bg-black sm:my-8 my-4" />
+          <div className="h-0.5 w-full bg-black" />
         </AnimateOnScroll>
         <p className="font-sans text-lg text-black">Соціальні мережі та месенджери:</p>
         <div className="flex flex-row flex-wrap items-center justify-center mt-2">
@@ -83,12 +83,12 @@ export default function SectionContacts() {
           </Link>
         </div>
         <AnimateOnScroll
-          className="duration-500"
+          className="duration-500 sm:my-8 my-4"
           notScrolledClassName="w-0"
           scrolledClassName="w-36 mx-auto"
           timeout={400}
         >
-          <div className="h-0.5 w-full bg-black sm:my-8 my-4" />
+          <div className="h-0.5 w-full bg-black" />
         </AnimateOnScroll>
         <p className="font-sans text-lg text-black mb-8 px-4">
           Якщо ви шукаєте психолога у місті Дніпро - у нас є можливість зустрітись оффлайн за

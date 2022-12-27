@@ -87,11 +87,11 @@ export default function SectionSchedule() {
               </p>
               <p className="text-xl text-center font-sans text-black mb-6">Дякую за довіру!</p>
               <AnimateOnScroll
-                className="duration-500 mx-auto"
+                className="duration-500 mx-auto mb-5"
                 notScrolledClassName="w-0"
                 scrolledClassName="w-36"
               >
-                <div className="h-0.5 w-full bg-black mb-5" />
+                <div className="h-0.5 w-full bg-black" />
               </AnimateOnScroll>
               <AppointmentInfo appointmentInfo={appointmentInfoController.appointmentInfo} />
             </div>
@@ -105,11 +105,11 @@ export default function SectionSchedule() {
                 запис. Якщо вам зручніше спілкування у месенджері - оберіть відповідну опцію.
               </p>
               <AnimateOnScroll
-                className="duration-500 mx-auto"
+                className="duration-500 mx-auto my-3"
                 notScrolledClassName="w-0"
                 scrolledClassName="w-36"
               >
-                <div className="h-0.5 w-full bg-black my-3" />
+                <div className="h-0.5 w-full bg-black" />
               </AnimateOnScroll>
               <p className="text-lg mb-4 text-center font-sans text-black">
                 У місті Дніпро є можливість для проведення оффлайн консультації.

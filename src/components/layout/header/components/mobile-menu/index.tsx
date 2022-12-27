@@ -26,7 +26,7 @@ export default function MobileMenu() {
     <>
       <div
         onClick={onOpen}
-        className="cursor-pointer z-30 fixed right-8 top-8 flex justify-center items-center rounded-full w-12 h-12 bg-white shadow"
+        className="md:hidden cursor-pointer z-30 fixed right-8 top-8 flex justify-center items-center rounded-full w-12 h-12 bg-white shadow"
       >
         <div>
           <div className="h-1 w-7 mb-1 bg-black rounded-full" />

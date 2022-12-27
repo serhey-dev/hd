@@ -1,21 +1,16 @@
-import { MD_BREAKPOINT } from '@/helpers/layout';
-import useWindowDimensions from '@/hooks/use-window-dimensions';
-
 import AnimateOnScroll from '@/components/animate-on-scroll';
 import ParallaxBackground from '@/components/parallax-background';
 
 export default function SectionHero() {
-  const windowDimensions = useWindowDimensions();
-
   return (
     <div className="min-h-screen relative">
       <ParallaxBackground
-        className="bg-cover bg-center md:bg-right opacity-30"
-        backgroundImage={
-          windowDimensions.width > MD_BREAKPOINT
-            ? '/images/photos/about-hero.jpg'
-            : '/images/photos/about-hero-mobile.jpg'
-        }
+        className="bg-cover bg-right opacity-30 hidden md:block"
+        backgroundImage="/images/photos/about-hero.jpg"
+      />
+      <ParallaxBackground
+        className="bg-cover bg-center opacity-30 md:hidden"
+        backgroundImage="/images/photos/about-hero-mobile.jpg"
       />
       <div className="container z-20 relative py-16 flex flex-row items-center min-h-screen">
         <div className="xl:w-1/2 lg:w-2/3 w-full px-2">

@@ -5,7 +5,7 @@ import HeaderLink from '@/components/layout/header/components/header-link';
 
 export default function DesktopMenu() {
   return (
-    <div className="w-full absolute z-50">
+    <div className="w-full absolute z-50 hidden md:block">
       <div className="flex flex-row items-center container p-6">
         <Link href="/">
           <Image src="/images/logo.png" alt="logo" width={120} height={1} />
