@@ -14,7 +14,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 Development:
 - Slider mobile - Review
-- Images review
+- Revisit appointment services/hooks naming
+- Images review + change import
 - Devices testing and fixes
 - SEO
 - optimization Google tool

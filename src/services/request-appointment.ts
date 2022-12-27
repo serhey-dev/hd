@@ -19,6 +19,7 @@ function sendMessage(text: string) {
 interface IRequestAppointmentPayload extends IAppointmentInfo {}
 
 export function requestAppointment(payload: IRequestAppointmentPayload) {
+  // DEV
   // return sendMessage(
   //   `Новий запис на зустріч! Ім'я: ${payload.name}. Телефон: ${payload.phone}. ${getMessengerText(
   //     payload,
@@ -29,6 +30,7 @@ export function requestAppointment(payload: IRequestAppointmentPayload) {
 interface IRequestCallPayload extends ICallbackInfo {}
 
 export function requestCallback(payload: IRequestCallPayload) {
+  // DEV
   // return sendMessage(
   //   `Новий запит на дзвінок! Ім'я: ${payload.name}. Телефон: ${payload.phone}. ${getMessengerText(
   //     payload,

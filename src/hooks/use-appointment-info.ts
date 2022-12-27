@@ -30,6 +30,7 @@ export function useAppointmentInfoContoller() {
 
   React.useEffect(initialFetch, []);
 
+  // DEV
   // React.useEffect(() => {
   //   localStorage.removeItem(APPOINTMENT_INFO_KEY);
   // }, []);

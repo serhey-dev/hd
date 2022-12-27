@@ -132,7 +132,7 @@ export default function Slider(props: ISliderProps) {
           <div
             key={`slide-indicator-${props.keyName}-${index}`}
             className={mergeClasses(
-              'w-3 h-3 mx-1  rounded-full flex-none duration-200 md:w-4 md:h-4 md:mx-2',
+              'w-3 h-3 mx-1  rounded-full flex-none duration-300 md:w-4 md:h-4 md:mx-2',
               activeSlide - 1 === index ? 'bg-green' : 'bg-green-light',
             )}
           />

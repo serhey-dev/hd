@@ -14,11 +14,11 @@ export default function SectionInfo() {
         <Image
           src="/images/photos/about-info.png"
           alt="logo"
-          className="block max-w-full rounded-full border border-black object-cover mx-auto w-72 lg:w-[400px]"
+          className="flex-none rounded-full border border-black w-72 lg:w-[400px] md:mr-12"
           width={400}
           height={400}
         />
-        <div className="w-full px-5 text-center sm:w-3/4 md:w-1/2 mt-6 md:mt-0 md:text-left">
+        <div className="px-5 text-center mt-6 w-full sm:w-3/4 md:w-1/2 xl:w-[40%] md:mt-0 md:text-left">
           <h3 className="text-3xl font-serif text-black mb-6">Записуйся на консультацію!</h3>
           <p className="font-sans italic text-black text-lg">
             Працювати в цій сфері - моє покликання! Я з великим задоволенням ділюся своїми знаннями
