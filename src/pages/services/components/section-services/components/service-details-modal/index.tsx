@@ -24,7 +24,7 @@ export default function ServiceDetails(props: IServiceDetailsProps) {
           bottom: 'auto',
           marginRight: '-50%',
           transform: 'translate(-50%, -50%)',
-          width: '50%',
+          maxWidth: '90%',
         },
         overlay: {
           zIndex: 50,
@@ -32,7 +32,7 @@ export default function ServiceDetails(props: IServiceDetailsProps) {
         },
       }}
     >
-      <div className="bg-white p-4 rounded">
+      <div className="bg-white p-4 rounded max-w-[800px] mx-6">
         <p className="text-4xl text-center mb-3 font-serif text-black">{props.name}</p>
         <p className="text-md text-center font-sans text-black mb-6">{props.details}</p>
         <Button

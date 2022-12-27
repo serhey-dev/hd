@@ -5,18 +5,15 @@ import QuestionItem from '@/pages/faq/components/section-faq/components/question
 export default function SectionFAQ() {
   return (
     <div className="relative min-h-screen">
-      <div className="container relative z-10 p-24 pt-16">
-        <h1 className="text-6xl mb-6 text-center font-serif text-black mb-12 mt-16">
-          Питання та відповіді
-        </h1>
-        <div className="flex flex-row justify-between">
-          <div className="pr-24">
-            <h2 className="text-4xl text-center font-serif text-black mb-2">Загальні питання</h2>
+      <div className="container md:pt-32 py-16">
+        <h1 className="text-6xl text-center font-serif text-black mb-12">Питання та відповіді</h1>
+        <div className="flex flex-col lg:flex-row justify-between px-5 xl:px-24">
+          <div className="mb-8 lg:mr-8 lg:mb-0">
+            <h2 className="text-4xl text-center font-serif text-black mb-3">Загальні питання</h2>
             <AnimateOnScroll
-              className="duration-500 mb-3"
+              className="duration-500 mb-2"
               notScrolledClassName="w-0"
               scrolledClassName="w-36 mx-auto"
-              bottomOffsetToAnimate={200}
             >
               <div className="h-0.5 w-full bg-black" />
             </AnimateOnScroll>
@@ -44,14 +41,13 @@ export default function SectionFAQ() {
             </ul>
           </div>
           <div>
-            <h2 className="text-4xl text-center font-serif text-black mb-2">
+            <h2 className="text-4xl text-center font-serif text-black mb-3">
               Стосовно консультацій
             </h2>
             <AnimateOnScroll
-              className="duration-500 mb-3"
+              className="duration-500 mb-2"
               notScrolledClassName="w-0"
               scrolledClassName="w-36 mx-auto"
-              bottomOffsetToAnimate={200}
               timeout={400}
             >
               <div className="h-0.5 w-full bg-black" />

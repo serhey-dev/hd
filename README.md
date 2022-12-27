@@ -17,6 +17,7 @@ TODO (before refactoring and mobile optimization):
     - Напрямки - фото
     - Відгуки - фото
     - Приклади причин для звернення
+    - Slider mobile
 - Methods:
   - читати далі (послуги)
 - About

@@ -14,9 +14,9 @@ interface IServiceItemProps {
 
 export default function ServiceItem(props: IServiceItemProps) {
   return (
-    <li className={mergeClasses('mb-12 w-1/2', props.className)}>
-      <div className="mx-6 px-12">
-        <h4 className="font-serif text-3xl text-black mb-4 text-center py-2 pb-0">{props.name}</h4>
+    <li className={mergeClasses('mb-8 md:mb-12 w-full lg:w-1/2', props.className)}>
+      <div className="mx-6 md:px-12">
+        <h4 className="font-serif text-3xl text-black mb-4 text-center">{props.name}</h4>
         <AnimateOnScroll
           className="duration-500 mx-auto"
           notScrolledClassName="w-0"
@@ -27,7 +27,7 @@ export default function ServiceItem(props: IServiceItemProps) {
         </AnimateOnScroll>
         <p className="font-sans text-black text-lg pt-4 text-center mx-auto">
           {props.text}..
-          <span onClick={props.onClickDetails} className="cursor-pointer text-green">
+          <span tabIndex={0} onClick={props.onClickDetails} className="cursor-pointer text-green">
             {' '}
             читати далі
           </span>

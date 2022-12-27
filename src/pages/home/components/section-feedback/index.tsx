@@ -4,11 +4,14 @@ import ParallaxBackground from '@/components/parallax-background';
 
 export default function SectionFeedback() {
   return (
-    <div className="relative overflow-hidden min-h-screen border-t border-black pb-36">
-      <ParallaxBackground backgroundImage="/images/photos/home-feedback.png" />
-      <div className="container flex flex-col justify-center items-center px-24">
-        <h1 className="text-6xl mb-6 text-center font-serif text-black mb-24 mt-16">Відгуки</h1>
-        <div className="w-1/2">
+    <div className="relative overflow-hidden min-h-screen border-t border-black flex items-center justify-center">
+      <ParallaxBackground
+        backgroundImage="/images/photos/home-feedback.png"
+        className="lg:bg-contain lg:bg-right-bottom bg-cover bg-center"
+      />
+      <div className="relative z-20 container py-16 flex flex-col items-center lg:mb-24 mb-12">
+        <h1 className="text-6xl font-serif text-black text-center mb-24">Відгуки</h1>
+        <div className="lg:w-[800px] sm:w-3/4 ">
           <Slider
             keyName="feedback"
             hidePrevSlide

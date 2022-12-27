@@ -2,7 +2,7 @@ import Head from '@/components/layout/head';
 import SectionHero from '@/pages/home/components/section-hero';
 import SectionMethods from '@/pages/home/components/section-methods';
 import SectionFeedback from '@/pages/home/components/section-feedback';
-import SectionD from '@/pages/home/components/section-d';
+import SectionReasons from '@/pages/home/components/section-reasons';
 import SectionCallback from '@/pages/home/components/section-callback';
 
 export default function Home() {
@@ -10,10 +10,10 @@ export default function Home() {
     <main>
       <Head title="Home" description="Home" />
       <SectionHero />
-      {/* <SectionMethods />
+      <SectionMethods />
       <SectionFeedback />
-      <SectionD />
-      <SectionCallback /> */}
+      <SectionReasons />
+      <SectionCallback />
     </main>
   );
 }

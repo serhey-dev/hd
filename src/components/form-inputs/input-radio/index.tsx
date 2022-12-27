@@ -15,7 +15,7 @@ interface IInputRadioProps {
 
 export default function InputRadio(props: IInputRadioProps) {
   return (
-    <div className={mergeClasses('flex flex-row items-center', props.className)}>
+    <div className={mergeClasses('flex flex-col sm:items-center sm:flex-row', props.className)}>
       {props.options.map((option) => (
         <div key={option.value || 'empty'} className="flex flex-row items-center mr-6">
           <div

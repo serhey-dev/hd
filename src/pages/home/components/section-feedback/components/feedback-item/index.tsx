@@ -23,9 +23,9 @@ export default function FeedbackItem(props: IFeedbackItemProps) {
         width={100}
         height={100}
       />
-      <div className="w-full px-8">
+      <div className="w-full md:px-8 px-3">
         <h3 className="text-3xl font-serif text-green mb-2 text-center mt-8">{props.name}</h3>
-        <p className="font-sans italic text-black text-md text-center">{props.text}</p>
+        <p className="font-sans italic text-black sm:text-md text-center">{props.text}</p>
       </div>
     </li>
   );

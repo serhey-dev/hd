@@ -50,18 +50,18 @@ export default function SectionServices() {
   }
 
   return (
-    <div className="min-h-screen border-t border-black flex items-center justify-center relative">
+    <div className="relative min-h-screen border-t border-black flex items-center justify-center">
       <ParallaxBackground
         backgroundImage="/images/photos/home-callback.jpg"
         className="bg-center opacity-20 bg-cover"
       />
-      <div className="container my-36 z-50">
-        <h1 className="text-6xl mb-4 text-center font-serif text-black">Зворотній звʼязок</h1>
-        <p className="text-lg mb-8 text-center font-sans text-black px-72">
+      <div className="container z-20 py-16">
+        <h1 className="text-6xl text-center font-serif text-black mb-7">Зворотній звʼязок</h1>
+        <p className="text-lg font-sans text-black text-center mb-8 xl:px-72">
           Заповніть форму і я обовʼязково з вами звʼяжусь. Якщо вам зручніше спілкування у
           месенджері - оберіть відповідну опцію.
         </p>
-        <div className="w-1/3 mx-auto">
+        <div className="xl:w-[40%] md:w-2/3 mx-auto px-5 xm:px-0">
           <RequestCallbackForm ref={formRef} onSubmit={onFormSubmit} />
         </div>
       </div>

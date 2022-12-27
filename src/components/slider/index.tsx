@@ -64,7 +64,7 @@ export default function Slider(props: ISliderProps) {
   React.useEffect(cancelJumping, [activeSlide, slides.length]);
 
   return (
-    <div className={mergeClasses('h-full relative', props.className)}>
+    <div className={mergeClasses('w-full h-full relative', props.className)}>
       <div className="h-full relative overflow-hidden">
         <div
           ref={containerRef}
@@ -92,18 +92,19 @@ export default function Slider(props: ISliderProps) {
         role="button"
         onClick={onPreviousSlideClick}
         onKeyDown={onPreviousSlideClick}
-        className="p-8 w-fit fill-green opacity-30 hover:opacity-100 duration-300 absolute -left-64 top-1/2 -translate-y-1/2"
+        className="p-8 w-fit fill-green opacity-30 hover:opacity-100 duration-300 absolute xl:-left-64 -left-48 top-1/2 -translate-y-1/2"
       >
-        <Chevron className="-rotate-90 w-40 h-40" />
+        <Chevron className="-rotate-90 w-40 h-40 ml-8" />
+        {/*  hidden sm:block */}
       </div>
       <div
         tabIndex={0}
         role="button"
         onClick={onNextSlideClick}
         onKeyDown={onNextSlideClick}
-        className="p-8 w-fit fill-green opacity-30 hover:opacity-100 duration-300 absolute -right-64 top-1/2 -translate-y-1/2"
+        className="p-8 w-fit fill-green opacity-30 hover:opacity-100 duration-300 absolute xl:-right-64 -right-48 top-1/2 -translate-y-1/2"
       >
-        <Chevron className="rotate-90 w-40 h-40" />
+        <Chevron className="rotate-90 w-40 h-40 mr-8" />
       </div>
     </div>
   );

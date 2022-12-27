@@ -150,7 +150,7 @@ export default function RequestAppointmentForm(props: IRequestAppointmentFormPro
             form.handleChange(event);
             form.setErrors({ ...form.errors, date: undefined });
           }}
-          className="w-3/4"
+          className="w-1/2 sm:w-3/4"
           min={formatDateToISO(minDate)}
           max={formatDateToISO(maxDate)}
           error={!!form.errors.date}
@@ -163,7 +163,7 @@ export default function RequestAppointmentForm(props: IRequestAppointmentFormPro
             form.setErrors({ ...form.errors, time: undefined });
           }}
           timeListName="appointment-time"
-          className="w-1/4 ml-4"
+          className="w-1/2 sm:w-1/4 ml-4"
           error={!!form.errors.time}
         />
       </div>

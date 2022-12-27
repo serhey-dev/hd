@@ -1,15 +1,15 @@
 import Head from '@/components/layout/head';
-import SectionGeneral from '@/pages/about/components/section-general';
-import SectionC from '@/pages/about/components/section-c';
+import SectionHero from '@/pages/about/components/section-hero';
+import SectionInfo from '@/pages/about/components/section-info';
 import SectionCertifications from '@/pages/about/components/section-certifications';
 
 export default function About() {
   return (
     <main>
       <Head title="About" description="About" />
-      <SectionGeneral />
+      <SectionHero />
       <SectionCertifications />
-      <SectionC />
+      <SectionInfo />
     </main>
   );
 }

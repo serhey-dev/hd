@@ -1,20 +1,13 @@
-import AnimateOnScroll from '@/components/animate-on-scroll';
 import MethodItem from '@/pages/home/components/section-methods/components/method-item';
 
 export default function SectionMethods() {
   return (
-    <div className="relative overflow-hidden min-h-screen border-t border-black py-16">
+    <div className="min-h-screen border-t border-black py-16">
       <div className="container">
-        <h1 className="text-6xl mb-6 text-center font-serif text-black mb-16">
-          Напрямки та підходи
+        <h1 className="text-6xl mb-6 text-center font-serif text-black mb-10">
+          Напрями та підходи
         </h1>
         <ul className="flex flex-col items-center w-full">
-          {/* <AnimateOnScroll
-            className="flex flex-col items-center duration-500"
-            notScrolledClassName="opacity-0 translate-x-0"
-            scrolledClassName="opacity-100 -translate-x-6"
-            bottomOffsetToAnimate={200}
-          > */}
           <MethodItem
             name="Когнітивно-поведінкова терапія (КПТ)"
             image="/images/2.jpeg"
@@ -36,18 +29,12 @@ export default function SectionMethods() {
                 </p>
               </>
             }
+            className="md:flex-row"
           />
-          {/* </AnimateOnScroll> */}
-          {/* <AnimateOnScroll
-            className="flex flex-col items-center duration-500"
-            notScrolledClassName="opacity-0 translate-x-0"
-            scrolledClassName="opacity-100 translate-x-6"
-            bottomOffsetToAnimate={200}
-          > */}
           <MethodItem
             name="Гештальт терапія"
             image="/images/2.jpeg"
-            className="flex-row-reverse"
+            className="md:flex-row-reverse"
             content={
               <>
                 <p className="font-sans italic text-black text-lg">
@@ -64,13 +51,6 @@ export default function SectionMethods() {
               </>
             }
           />
-          {/* </AnimateOnScroll>
-          <AnimateOnScroll
-            className="flex flex-col items-center duration-500"
-            notScrolledClassName="opacity-0 translate-x-0"
-            scrolledClassName="opacity-100 -translate-x-6"
-            bottomOffsetToAnimate={200}
-          > */}
           <MethodItem
             name="АРТ-терапія"
             content={
@@ -90,14 +70,8 @@ export default function SectionMethods() {
               </>
             }
             image="/images/2.jpeg"
+            className="md:flex-row"
           />
-          {/* </AnimateOnScroll>
-          <AnimateOnScroll
-            className="flex flex-col items-center duration-500"
-            notScrolledClassName="opacity-0 translate-x-0"
-            scrolledClassName="opacity-100 translate-x-6"
-            bottomOffsetToAnimate={200}
-          > */}
           <MethodItem
             name="Коучинг"
             content={
@@ -114,9 +88,8 @@ export default function SectionMethods() {
               </>
             }
             image="/images/2.jpeg"
-            className="flex-row-reverse"
+            className="md:flex-row-reverse mb-0"
           />
-          {/* </AnimateOnScroll> */}
         </ul>
       </div>
     </div>

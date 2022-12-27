@@ -5,15 +5,15 @@ import Slider from '@/components/slider';
 export default function SectionCertifications() {
   return (
     <div className="min-h-screen relative border-t border-black">
-      <div className="container flex flex-col items-center justify-center">
-        <h1 className="text-6xl text-center font-serif text-black mt-16 mb-4">Освіта</h1>
-        <p className="font-sans italic text-black text-lg mt-3 mb-8 px-36 text-center">
+      <div className="container min-h-screen flex flex-col items-center justify-center">
+        <h1 className="text-6xl text-center font-serif text-black mb-7">Освіта</h1>
+        <p className="font-sans italic text-black text-lg mb-8 px-5 md:px-12 xl:px-36 text-center">
           Мій шлях в психологію почався в 2011 році, і триває досі. Цей шлях включав в себе
           закінчення ВНЗ, міжнародного університету з коучингу та купу різноманітних додаткових
           курсів та майстер класів. Наразі я навчаюсь на психотерапевта, що дозволить мені надавати
           ще більш глибинну допомогу.
         </p>
-        <div className="border border-black" style={{ height: '500px', width: '750px' }}>
+        <div className="border border-black xl:w-[750px] xl:h-[500px] md:w-[450px] md:h-[300px]">
           <Slider
             keyName="certifications"
             slides={[
