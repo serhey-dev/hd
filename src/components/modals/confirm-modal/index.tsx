@@ -42,7 +42,7 @@ export default function ConfirmModal(props: IConfirmModalProps) {
           <p className="text-md text-center font-sans text-black mb-5">{props.subtitle}</p>
         )}
         <div className="mt-4">{props.children}</div>
-        <div className="flex flex-col sm:flex-row mt-8">
+        <div className="mt-8 flex flex-col sm:flex-row">
           <Button
             onClick={props.onConfirm}
             text="Так, все вірно."
@@ -51,7 +51,7 @@ export default function ConfirmModal(props: IConfirmModalProps) {
           <Button
             onClick={props.onClose}
             text="Ні, дані не вірні."
-            className="mx-auto mt-4 sm:mt-0 sm:ml-12 border-0 hover:bg-red bg-red-light outline-red"
+            className="mx-auto mt-4 border-0 hover:bg-red bg-red-light outline-red sm:mt-0 sm:ml-12"
           />
         </div>
       </div>

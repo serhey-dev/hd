@@ -14,8 +14,7 @@ export function formatDateToISO(date?: string | Date) {
   return new Date(date).toISOString().split('T')[0];
 }
 
-// TODO rename
-export function getDatePlusDays(days: number) {
+export function getDateWithExtraDays(days: number) {
   const date = new Date();
   date.setDate(date.getDate() + days);
   date.setUTCHours(0, 0, 0, 0);

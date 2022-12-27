@@ -1,13 +1,14 @@
 import Link from 'next/link';
+
 import AnimateOnScroll from '@/components/animate-on-scroll';
 import QuestionItem from '@/pages/faq/components/section-faq/components/question-item';
 
 export default function SectionFAQ() {
   return (
     <div className="relative min-h-screen">
-      <div className="container md:pt-32 py-16">
+      <div className="container py-16 md:pt-32">
         <h1 className="text-6xl text-center font-serif text-black mb-12">Питання та відповіді</h1>
-        <div className="flex flex-col lg:flex-row justify-between px-5 xl:px-24">
+        <div className="flex flex-col justify-between px-5 lg:flex-row xl:px-24">
           <div className="mb-8 lg:mr-8 lg:mb-0">
             <h2 className="text-4xl text-center font-serif text-black mb-3">Загальні питання</h2>
             <AnimateOnScroll

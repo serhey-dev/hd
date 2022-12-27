@@ -1,29 +1,31 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-import FooterLink from '@/components/layout/footer/components/footer-link';
+import Condig from '@/config';
+import { formatPhoneNumber } from '@/helpers/ui';
 
-import Instagram from '@/components/icons/instagram';
+import Viber from '@/components/icons/viber';
 import Telegram from '@/components/icons/telegram';
 import Facebook from '@/components/icons/facebook';
-import Viber from '@/components/icons/viber';
+import Instagram from '@/components/icons/instagram';
+import FooterLink from '@/components/layout/footer/components/footer-link';
 
 export default function Footer() {
   return (
     <footer className="bg-white border-t border-black">
       <div className="container flex flex-wrap flex-row items-center justify-center py-8">
         <Link
-          className="font-serif text-lg text-black hover:text-green whitespace-nowrap duration-300 md:mr-0 mr-8 order-2 md:order-1"
-          href="tel:+380990375009"
+          className="font-serif text-lg text-black hover:text-green whitespace-nowrap duration-300 mr-8 order-2 md:mr-0  md:order-1"
+          href={`tel:${Condig.CONTACT_PHONE_NUMBER}`}
         >
-          +38(099)-03-75-009
+          {formatPhoneNumber(Condig.CONTACT_PHONE_NUMBER)}
         </Link>
-        <div className="flex flex-row items-center justify-center flex-wrap lg:mx-20 mx-10 order-1 md:order-2 min-w-full md:min-w-fit mb-8 md:mb-0">
+        <div className="flex flex-row items-center justify-center flex-wrap order-1 mb-8 mx-10 min-w-full lg:mx-20 md:order-2 md:min-w-fit md:mb-0">
           <div>
             <FooterLink href="/services" text="Послуги" className="mb-3" />
             <FooterLink href="/about" text="Про мене" />
           </div>
-          <Link href="/" className="lg:mx-20 mx-8">
+          <Link href="/" className="mx-8 lg:mx-20">
             <Image src="/images/logo.png" alt="logo" width={90} height={1} />
           </Link>
           <div>

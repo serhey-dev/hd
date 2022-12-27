@@ -1,6 +1,7 @@
-import React, { TransitionEvent } from 'react';
+import React from 'react';
+
 import Chevron from '@/components/icons/chevron';
-import { mergeClasses } from '@/helpers/layout';
+import { mergeClasses } from '@/helpers/ui';
 
 interface ISliderProps {
   keyName: string;
@@ -33,7 +34,7 @@ export default function Slider(props: ISliderProps) {
     }
   }
 
-  function onSliderTransitionEnd(event: TransitionEvent) {
+  function onSliderTransitionEnd(event: React.TransitionEvent) {
     if (event.propertyName === 'transform') {
       if (activeSlide === slides.length - 1) {
         setIsMoving(true);
@@ -92,17 +93,16 @@ export default function Slider(props: ISliderProps) {
         role="button"
         onClick={onPreviousSlideClick}
         onKeyDown={onPreviousSlideClick}
-        className="p-8 w-fit fill-green opacity-30 hover:opacity-100 duration-300 absolute xl:-left-64 -left-48 top-1/2 -translate-y-1/2"
+        className="p-8 w-fit fill-green opacity-30 hover:opacity-100 duration-300 absolute top-1/2 -translate-y-1/2 xl:-left-64 -left-48"
       >
         <Chevron className="-rotate-90 w-40 h-40 ml-8" />
-        {/*  hidden sm:block */}
       </div>
       <div
         tabIndex={0}
         role="button"
         onClick={onNextSlideClick}
         onKeyDown={onNextSlideClick}
-        className="p-8 w-fit fill-green opacity-30 hover:opacity-100 duration-300 absolute xl:-right-64 -right-48 top-1/2 -translate-y-1/2"
+        className="p-8 w-fit fill-green opacity-30 hover:opacity-100 duration-300 absolute top-1/2 -translate-y-1/2 xl:-right-64 -right-48"
       >
         <Chevron className="rotate-90 w-40 h-40 mr-8" />
       </div>

@@ -1,7 +1,8 @@
 import React from 'react';
+
+import { mergeClasses } from '@/helpers/ui';
 import Circle from '@/components/icons/circle';
 import AnimateOnScroll from '@/components/animate-on-scroll';
-import { mergeClasses } from '@/helpers/layout';
 
 interface IServiceItemProps {
   name: string;
@@ -14,7 +15,7 @@ interface IServiceItemProps {
 
 export default function ServiceItem(props: IServiceItemProps) {
   return (
-    <li className={mergeClasses('mb-8 md:mb-12 w-full lg:w-1/2', props.className)}>
+    <li className={mergeClasses('mb-8 w-full lg:w-1/2 md:mb-12', props.className)}>
       <div className="mx-6 md:px-12">
         <h4 className="font-serif text-3xl text-black mb-4 text-center">{props.name}</h4>
         <AnimateOnScroll

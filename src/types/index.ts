@@ -1,4 +1,7 @@
-import { Messengers } from '@/helpers/messengers';
+export enum Messengers {
+  Telegram = 'Telegram',
+  Viber = 'Viber',
+}
 
 export interface IAppointmentInfo {
   name: string;

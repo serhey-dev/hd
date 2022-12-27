@@ -1,17 +1,17 @@
 import Slider from '@/components/slider';
-import FeedbackItem from '@/pages/home/components/section-feedback/components/feedback-item';
 import ParallaxBackground from '@/components/parallax-background';
+import FeedbackItem from '@/pages/home/components/section-feedback/components/feedback-item';
 
 export default function SectionFeedback() {
   return (
     <div className="relative overflow-hidden min-h-screen border-t border-black flex items-center justify-center">
       <ParallaxBackground
         backgroundImage="/images/photos/home-feedback.png"
-        className="lg:bg-contain lg:bg-right-bottom bg-cover bg-center"
+        className="bg-cover bg-center lg:bg-contain lg:bg-right-bottom"
       />
       <div className="relative z-20 container py-16 flex flex-col items-center lg:mb-24 mb-12">
         <h1 className="text-6xl font-serif text-black text-center mb-24">Відгуки</h1>
-        <div className="lg:w-[800px] sm:w-3/4 ">
+        <div className="lg:w-[800px] sm:w-3/4">
           <Slider
             keyName="feedback"
             hidePrevSlide

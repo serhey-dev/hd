@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-import { mergeClasses } from '@/helpers/layout';
+import { mergeClasses } from '@/helpers/ui';
 
 interface IHeaderLinkProps {
   href: string;

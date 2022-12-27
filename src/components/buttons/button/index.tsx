@@ -1,5 +1,6 @@
 import { MouseEvent } from 'react';
-import { mergeClasses } from '@/helpers/layout';
+
+import { mergeClasses } from '@/helpers/ui';
 
 interface IButtonProps {
   onClick: () => void;

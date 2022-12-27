@@ -1,6 +1,6 @@
-import { formatDateWithDots } from '@/helpers/date';
-import { getMessengerInfo } from '@/helpers/messengers';
 import { IAppointmentInfo } from '@/types';
+import { getMessengerText } from '@/helpers/ui';
+import { formatDateWithDots } from '@/helpers/date';
 
 interface IAppointmentInfoProps {
   appointmentInfo: IAppointmentInfo;
@@ -17,7 +17,7 @@ export default function AppointmentInfo(props: IAppointmentInfoProps) {
       </p>
       {!!props.appointmentInfo.messenger && (
         <p className="text-md text-center font-sans text-black mb-2">
-          {getMessengerInfo(props.appointmentInfo)}
+          {getMessengerText(props.appointmentInfo)}
         </p>
       )}
       <p className="text-md text-center font-sans text-black mb-2">

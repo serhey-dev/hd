@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "next build && next export -o build",
-    "start": "next dev",
+    "dev": "next dev",
     "lint": "next lint",
     "format": "prettier --write tailwind.config.js './src/**/*.{js,jsx,ts,tsx,css,md,json}'"
   },

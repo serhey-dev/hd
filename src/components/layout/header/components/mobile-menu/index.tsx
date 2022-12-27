@@ -18,15 +18,13 @@ export default function MobileMenu() {
     setIsOpen(false);
   }
 
-  React.useEffect(() => {
-    onClose();
-  }, [router.pathname]);
+  React.useEffect(onClose, [router.pathname]);
 
   return (
     <>
       <div
         onClick={onOpen}
-        className="md:hidden cursor-pointer z-30 fixed right-8 top-8 flex justify-center items-center rounded-full w-12 h-12 bg-white shadow"
+        className="cursor-pointer z-30 fixed right-8 top-8 flex justify-center items-center rounded-full w-12 h-12 bg-white shadow md:hidden"
       >
         <div>
           <div className="h-1 w-7 mb-1 bg-black rounded-full" />

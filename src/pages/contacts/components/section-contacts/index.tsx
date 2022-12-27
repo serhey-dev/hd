@@ -1,24 +1,26 @@
 import Link from 'next/link';
 
-import Instagram from '@/components/icons/instagram';
-import Telegram from '@/components/icons/telegram';
-import Facebook from '@/components/icons/facebook';
-import Viber from '@/components/icons/viber';
+import Condig from '@/config';
+import { formatPhoneNumber } from '@/helpers/ui';
 
-import Map from '@/pages/contacts/components/section-contacts/components/map';
+import Viber from '@/components/icons/viber';
+import Facebook from '@/components/icons/facebook';
+import Telegram from '@/components/icons/telegram';
+import Instagram from '@/components/icons/instagram';
 import AnimateOnScroll from '@/components/animate-on-scroll';
+import Map from '@/pages/contacts/components/section-contacts/components/map';
 
 export default function SectionContacts() {
   return (
     <div className="min-h-screen">
-      <div className="container md:pt-32 pt-16 text-center">
+      <div className="container text-center pt-16 md:pt-32">
         <h1 className="text-6xl font-serif text-black mb-8">Контакти</h1>
         <p className="font-sans text-lg text-black px-4">
           Я з радістю вам допоможу або відповім на ваші запитання (10:00 - 19:00). Оберіть будь-який
           зручний для вас спосіб щоб звʼязатись зі мною або записатись до мене на консультацію:
         </p>
         <AnimateOnScroll
-          className="duration-500 sm:my-8 my-4"
+          className="duration-500 my-4 sm:my-8"
           notScrolledClassName="w-0"
           scrolledClassName="w-36 mx-auto"
         >
@@ -26,7 +28,7 @@ export default function SectionContacts() {
         </AnimateOnScroll>
         <p className="font-sans text-lg text-black">Соціальні мережі та месенджери:</p>
         <div className="flex flex-row flex-wrap items-center justify-center mt-2">
-          <div className="md:w-1/2 w-full flex items-center justify-center md:justify-end">
+          <div className="w-full flex items-center justify-center md:w-1/2 md:justify-end">
             <div className="flex items-center justify-center">
               <Link
                 className="flex items-center text-black duration-300 fill-black hover:fill-green hover:text-green mr-5"
@@ -44,7 +46,7 @@ export default function SectionContacts() {
               </div>
             </div>
           </div>
-          <div className="md:w-1/2 w-full flex items-center justify-center md:justify-start mt-2 md:mt-0">
+          <div className="w-full flex items-center justify-center mt-2 md:w-1/2  md:justify-start md:mt-0">
             <div className="flex items-center justify-center">
               <Link
                 className="flex items-center text-black duration-300 fill-black hover:fill-green hover:text-green mr-5"
@@ -68,22 +70,22 @@ export default function SectionContacts() {
           </div>
         </div>
         <p className="font-sans text-lg text-black mt-8 mb-2">Телефон або пошта:</p>
-        <div className="flex flex-col md:flex-row items-center justify-center">
+        <div className="flex flex-col items-center justify-center md:flex-row">
           <Link
-            className="font-sans text-black text-lg hover:text-green duration-300 link-underline link-underline-hover mr-4"
-            href="tel:+380990375009"
+            className="font-sans text-lg text-green mt-2 md:mt-0 md:mr-4"
+            href={`tel:${Condig.CONTACT_PHONE_NUMBER}`}
           >
-            +38(099)-03-75-009
+            {formatPhoneNumber(Condig.CONTACT_PHONE_NUMBER)}
           </Link>
           <Link
-            className="mt-2 md:mt-0 font-sans text-black text-lg hover:text-green duration-300 link-underline link-underline-hover"
-            href="mailto:info@hd-psychologist.com.ua"
+            className="font-sans text-lg text-green mt-2 md:mt-0"
+            href={`mailto:${Condig.CONTACT_EMAIL}`}
           >
-            info@hd-psychologist.com.ua
+            {Condig.CONTACT_EMAIL}
           </Link>
         </div>
         <AnimateOnScroll
-          className="duration-500 sm:my-8 my-4"
+          className="duration-500 my-4 sm:my-8"
           notScrolledClassName="w-0"
           scrolledClassName="w-36 mx-auto"
           timeout={400}

@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import { mergeClasses } from '@/helpers/layout';
+
+import { mergeClasses } from '@/helpers/ui';
 
 interface IFeedbackItemProps {
   className?: string;
@@ -23,9 +24,9 @@ export default function FeedbackItem(props: IFeedbackItemProps) {
         width={100}
         height={100}
       />
-      <div className="w-full md:px-8 px-3">
+      <div className="w-full px-3 md:px-8">
         <h3 className="text-3xl font-serif text-green mb-2 text-center mt-8">{props.name}</h3>
-        <p className="font-sans italic text-black sm:text-md text-center">{props.text}</p>
+        <p className="font-sans italic text-black text-center sm:text-md">{props.text}</p>
       </div>
     </li>
   );

@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { mergeClasses } from '@/helpers/layout';
+
+import { mergeClasses } from '@/helpers/ui';
 
 interface IButtonLinkProps {
   href: string;

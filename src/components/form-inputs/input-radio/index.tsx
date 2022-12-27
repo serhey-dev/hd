@@ -1,5 +1,6 @@
 import React from 'react';
-import { mergeClasses } from '@/helpers/layout';
+
+import { mergeClasses } from '@/helpers/ui';
 
 interface IRadioOption {
   value?: string;
@@ -14,6 +15,10 @@ interface IInputRadioProps {
 }
 
 export default function InputRadio(props: IInputRadioProps) {
+  function onSelect(option: IRadioOption) {
+    props.onChange(option.value);
+  }
+
   return (
     <div className={mergeClasses('flex flex-col sm:items-center sm:flex-row', props.className)}>
       {props.options.map((option) => (
@@ -21,8 +26,8 @@ export default function InputRadio(props: IInputRadioProps) {
           <div
             tabIndex={0}
             role="button"
-            onClick={() => props.onChange(option.value)}
-            onKeyDown={() => props.onChange(option.value)}
+            onClick={() => onSelect(option)}
+            onKeyDown={() => onSelect(option)}
             className="pr-4 py-1 duration-500 flex flex-row items-center"
           >
             <div

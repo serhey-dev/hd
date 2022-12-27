@@ -1,5 +1,5 @@
-import { ChangeEvent } from 'react';
-import { mergeClasses } from '@/helpers/layout';
+import React from 'react';
+import { mergeClasses } from '@/helpers/ui';
 
 interface IInputDateProps {
   name: string;
@@ -8,7 +8,7 @@ interface IInputDateProps {
   className?: string;
   timeListName: string;
   error?: boolean;
-  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export default function InputDate(props: IInputDateProps) {

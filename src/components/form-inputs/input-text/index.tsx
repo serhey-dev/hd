@@ -1,7 +1,7 @@
-import { ChangeEvent } from 'react';
+import React from 'react';
 import InputMask from 'react-input-mask';
 
-import { mergeClasses } from '@/helpers/layout';
+import { mergeClasses } from '@/helpers/ui';
 
 interface IInputTextProps {
   name: string;
@@ -9,7 +9,7 @@ interface IInputTextProps {
   value: string;
   placeholder?: string;
   error?: boolean;
-  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export default function InputText(props: IInputTextProps) {

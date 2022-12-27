@@ -1,5 +1,6 @@
-import React, { ChangeEvent } from 'react';
-import { mergeClasses } from '@/helpers/layout';
+import React from 'react';
+
+import { mergeClasses } from '@/helpers/ui';
 import { formatDateWithDots } from '@/helpers/date';
 
 interface IInputDateProps {
@@ -10,11 +11,19 @@ interface IInputDateProps {
   error?: boolean;
   max?: string;
   min?: string;
-  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export default function InputDate(props: IInputDateProps) {
   const [isFocused, setIsFocused] = React.useState(false);
+
+  function onFocus() {
+    setIsFocused(true);
+  }
+
+  function onBlur() {
+    setIsFocused(false);
+  }
 
   return (
     <input
@@ -25,8 +34,8 @@ export default function InputDate(props: IInputDateProps) {
       type={isFocused ? 'date' : 'text'}
       value={isFocused ? props.value : formatDateWithDots(props.value)}
       onChange={props.onChange}
-      onFocus={() => setIsFocused(true)}
-      onBlur={() => setIsFocused(false)}
+      onFocus={onFocus}
+      onBlur={onBlur}
       className={mergeClasses(
         'font-sans h-14 px-4 block w-full border border-black rounded outline-black',
         props.error ? 'text-red border-red outline-red' : '',

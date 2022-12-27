@@ -1,14 +1,13 @@
 import React from 'react';
 import { useFormik } from 'formik';
 
+import { ICallbackInfo, Messengers } from '@/types';
+
+import Viber from '@/components/icons/viber';
 import Button from '@/components/buttons/button';
+import Telegram from '@/components/icons/telegram';
 import InputText from '@/components/form-inputs/input-text';
 import InputRadio from '@/components/form-inputs/input-radio';
-import { ICallbackInfo } from '@/types';
-import { Messengers } from '@/helpers/messengers';
-
-import Telegram from '@/components/icons/telegram';
-import Viber from '@/components/icons/viber';
 
 const initialValues: ICallbackInfo = {
   name: '',

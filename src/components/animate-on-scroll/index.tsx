@@ -1,5 +1,6 @@
 import React from 'react';
-import { mergeClasses } from '@/helpers/layout';
+
+import { mergeClasses } from '@/helpers/ui';
 
 interface IButtonProps {
   children: React.ReactNode;
@@ -14,7 +15,7 @@ export default function AnimateOnScroll(props: IButtonProps) {
   const ref = React.useRef<HTMLDivElement>(null);
   const [isScrolledTo, setIsScrolledTo] = React.useState(false);
 
-  React.useEffect(() => {
+  function subscribeOnScoll() {
     function scrollListener() {
       if (ref.current) {
         setIsScrolledTo(
@@ -34,7 +35,9 @@ export default function AnimateOnScroll(props: IButtonProps) {
     return () => {
       window.removeEventListener('scroll', scrollListener);
     };
-  }, [props.timeout, props.bottomOffsetToAnimate]);
+  }
+
+  React.useEffect(subscribeOnScoll, [props.timeout, props.bottomOffsetToAnimate]);
 
   return (
     <div

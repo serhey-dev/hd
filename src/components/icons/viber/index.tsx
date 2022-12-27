@@ -1,4 +1,4 @@
-import { mergeClasses } from '@/helpers/layout';
+import { mergeClasses } from '@/helpers/ui';
 
 interface IViberProps {
   className?: string;

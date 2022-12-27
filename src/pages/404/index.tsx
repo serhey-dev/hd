@@ -1,5 +1,5 @@
-import ButtonLink from '@/components/buttons/button-link';
 import Head from '@/components/layout/head';
+import ButtonLink from '@/components/buttons/button-link';
 
 export default function Page404() {
   return (

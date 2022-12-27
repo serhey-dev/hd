@@ -1,13 +1,13 @@
 import React from 'react';
 import { FormikProps } from 'formik';
 
+import { ICallbackInfo } from '@/types';
+import { getMessengerText } from '@/helpers/ui';
+import { requestCallback } from '@/services/request-appointment';
+
 import ResultModal from '@/components/modals/result-modal';
 import ConfirmModal from '@/components/modals/confirm-modal';
 import ParallaxBackground from '@/components/parallax-background';
-
-import { ICallbackInfo } from '@/types';
-import { getMessengerInfo } from '@/helpers/messengers';
-import { requestCallback } from '@/services/request-appointment';
 import RequestCallbackForm from '@/pages/home/components/section-callback/components/request-callback-form';
 
 export default function SectionServices() {
@@ -61,7 +61,7 @@ export default function SectionServices() {
           Заповніть форму і я обовʼязково з вами звʼяжусь. Якщо вам зручніше спілкування у
           месенджері - оберіть відповідну опцію.
         </p>
-        <div className="xl:w-[40%] md:w-2/3 mx-auto px-5 xm:px-0">
+        <div className="mx-auto px-5 sm:px-0 xl:w-[40%] md:w-2/3">
           <RequestCallbackForm ref={formRef} onSubmit={onFormSubmit} />
         </div>
       </div>
@@ -85,7 +85,7 @@ export default function SectionServices() {
             </p>
             {!!callbackInfo.messenger && (
               <p className="text-md text-center font-sans text-black mb-2">
-                {getMessengerInfo(callbackInfo)}
+                {getMessengerText(callbackInfo)}
               </p>
             )}
           </>

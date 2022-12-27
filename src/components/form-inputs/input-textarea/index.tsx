@@ -1,10 +1,10 @@
-import { ChangeEvent } from 'react';
+import React from 'react';
 
 interface IInputTextAreaProps {
   name: string;
   value: string;
   placeholder?: string;
-  onChange: (event: ChangeEvent<HTMLTextAreaElement>) => void;
+  onChange: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
 }
 
 export default function InputTextArea(props: IInputTextAreaProps) {

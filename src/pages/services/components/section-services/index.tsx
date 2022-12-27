@@ -1,4 +1,5 @@
 import React from 'react';
+
 import ServiceItem from '@/pages/services/components/section-services/components/service-item';
 import ServiceDetailsModal from '@/pages/services/components/section-services/components/service-details-modal';
 
@@ -68,7 +69,7 @@ export default function SectionServices() {
           details={selectedService.details}
         />
       )}
-      <div className="container md:pt-32 pt-16 pb-12">
+      <div className="container pt-16 pb-12 md:pt-32">
         <h1 className="text-6xl text-center font-serif text-black mb-10">Послуги</h1>
         <ul>
           <div className="flex flex-row flex-wrap items-center justify-center">

@@ -1,20 +1,19 @@
 import { useFormik } from 'formik';
 
+import { IAppointmentInfo, Messengers } from '@/types';
+import { getDateWithExtraDays, formatDateToISO } from '@/helpers/date';
+
+import Viber from '@/components/icons/viber';
+import Telegram from '@/components/icons/telegram';
 import Button from '@/components/buttons/button';
 import InputText from '@/components/form-inputs/input-text';
 import InputDate from '@/components/form-inputs/input-date';
 import InputTime from '@/components/form-inputs/input-time';
-import InputTextArea from '@/components/form-inputs/input-textarea';
 import InputRadio from '@/components/form-inputs/input-radio';
-import { getDatePlusDays, formatDateToISO } from '@/helpers/date';
-import { IAppointmentInfo } from '@/types';
-import { Messengers } from '@/helpers/messengers';
+import InputTextArea from '@/components/form-inputs/input-textarea';
 
-import Telegram from '@/components/icons/telegram';
-import Viber from '@/components/icons/viber';
-
-const minDate = getDatePlusDays(1);
-const maxDate = getDatePlusDays(30);
+const minDate = getDateWithExtraDays(1);
+const maxDate = getDateWithExtraDays(30);
 
 const initialValues: IAppointmentInfo = {
   name: '',

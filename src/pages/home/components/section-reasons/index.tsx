@@ -7,12 +7,12 @@ export default function SectionReasons() {
   return (
     <div className="min-h-screen border-t border-black py-16">
       <div className="container">
-        <h1 className="text-6xl mb-6 text-center font-serif text-black lg:mb-16 mb-10">
+        <h1 className="text-6xl mb-6 text-center font-serif text-black mb-10 lg:mb-16">
           Коли звертатись до психолога?
         </h1>
-        <div className="flex flex-col lg:flex-row items-center justify-center md:px-0 px-5">
+        <div className="flex flex-col items-center justify-center px-5 lg:flex-row md:px-0">
           <Image src="/images/photos/home-d.jpg" alt="Reasons" width={400} height={1} />
-          <div className="xl:w-1/3 lg:w-1/2 w-full lg:ml-16 mt-8 lg:mt-0">
+          <div className="w-full mt-8 xl:w-1/3 lg:w-1/2 lg:ml-16 lg:mt-0">
             <ul>
               <li>
                 <p className="font-sans italic text-black text-md">

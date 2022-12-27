@@ -1,5 +1,6 @@
-import { mergeClasses } from '@/helpers/layout';
 import React from 'react';
+
+import { mergeClasses } from '@/helpers/ui';
 
 interface IQuestionItemProps {
   question: string;

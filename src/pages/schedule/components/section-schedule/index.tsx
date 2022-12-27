@@ -1,17 +1,16 @@
 import React from 'react';
 
+import { IAppointmentInfo } from '@/types';
+import { formatDateWithDots } from '@/helpers/date';
+import { requestAppointment } from '@/services/request-appointment';
+import { useAppointmentInfoContoller } from '@/hooks/use-appointment-info';
+
 import ResultModal from '@/components/modals/result-modal';
 import ConfirmModal from '@/components/modals/confirm-modal';
 import AnimateOnScroll from '@/components/animate-on-scroll';
-
+import ParallaxBackground from '@/components/parallax-background';
 import AppointmentInfo from '@/pages/schedule/components/section-schedule/components/appointment-into';
 import RequestAppointmentForm from '@/pages/schedule/components/section-schedule/components/request-appointment-form';
-
-import { formatDateWithDots } from '@/helpers/date';
-import { IAppointmentInfo } from '@/types';
-import { requestAppointment } from '@/services/request-appointment';
-import { useAppointmentInfoContoller } from '@/hooks/use-appointment-info';
-import ParallaxBackground from '@/components/parallax-background';
 
 export default function SectionSchedule() {
   const [isConfirmModalOpen, setIsConfirmModalOpen] = React.useState(false);
@@ -77,8 +76,8 @@ export default function SectionSchedule() {
         onClose={onResultModalClose}
         isSuccess={isRequestSuccess}
       />
-      <div className="container min-h-screen relative z-20 flex flex-col justify-center items-center md:pt-32 py-16">
-        <div className="lg:w-1/2 md:w-2/3 w-full px-5">
+      <div className="container min-h-screen relative z-20 flex flex-col justify-center items-center py-16 md:pt-32">
+        <div className="px-5 w-full lg:w-1/2 md:w-2/3">
           {appointmentInfoController.appointmentInfo ? (
             <div>
               <h2 className="text-xl text-center font-sans text-black mb-2">Ви вже записались!</h2>

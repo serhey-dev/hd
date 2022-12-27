@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { IAppointmentInfo } from '@/types';
 
 const APPOINTMENT_INFO_KEY = 'APPOINTMENT_INFO';
@@ -23,10 +24,15 @@ export function useAppointmentInfoContoller() {
     return localStorage.setItem(APPOINTMENT_INFO_KEY, JSON.stringify(appointmentInfo));
   }
 
-  React.useEffect(() => {
+  function initialFetch() {
     refetchInfo();
-    // localStorage.removeItem(APPOINTMENT_INFO_KEY);
-  }, []);
+  }
+
+  React.useEffect(initialFetch, []);
+
+  // React.useEffect(() => {
+  //   localStorage.removeItem(APPOINTMENT_INFO_KEY);
+  // }, []);
 
   return {
     refetchInfo,
