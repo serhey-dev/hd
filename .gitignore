@@ -28,4 +28,4 @@ yarn-error.log*
 next-env.d.ts
 
 # config
-/src/config
+/src/config/index.ts
