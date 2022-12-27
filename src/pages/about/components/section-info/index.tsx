@@ -10,7 +10,7 @@ export default function SectionInfo() {
         className="bg-cover opacity-20 bg-center md:bg-right-bottom"
         backgroundImage="/images/photos/about-info.png"
       />
-      <div className="z-20 relative container min-h-screen flex flex-col items-center justify-center md:flex-row">
+      <div className="z-20 relative container min-h-screen py-12 flex flex-col items-center justify-center md:flex-row">
         <Image
           src="/images/photos/about-info.png"
           alt="logo"

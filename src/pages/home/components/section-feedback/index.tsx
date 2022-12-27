@@ -9,9 +9,9 @@ export default function SectionFeedback() {
         backgroundImage="/images/photos/home-feedback.png"
         className="bg-cover bg-center lg:bg-contain lg:bg-right-bottom"
       />
-      <div className="relative z-20 container py-16 flex flex-col items-center lg:mb-24 mb-12">
-        <h1 className="text-6xl font-serif text-black text-center mb-24">Відгуки</h1>
-        <div className="lg:w-[800px] sm:w-3/4">
+      <div className="relative z-20 container py-16 flex flex-col items-center lg:mb-24">
+        <h1 className="text-6xl font-serif text-black text-center mb-8 md:mb-10">Відгуки</h1>
+        <div className="xl:w-[750px] xl:h-[500px] lg:w-[600px] lg:h-[400px] w-full">
           <Slider
             keyName="feedback"
             hidePrevSlide

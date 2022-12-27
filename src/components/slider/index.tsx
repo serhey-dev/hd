@@ -1,13 +1,14 @@
 import React from 'react';
 
-import Chevron from '@/components/icons/chevron';
 import { mergeClasses } from '@/helpers/ui';
+import Arrow from '@/components/slider/components/arrow';
 
 interface ISliderProps {
   keyName: string;
   hidePrevSlide?: boolean;
   slides: React.ReactNode[];
   className?: string;
+  withArrowsBackground?: boolean;
 }
 
 export default function Slider(props: ISliderProps) {
@@ -64,48 +65,79 @@ export default function Slider(props: ISliderProps) {
   React.useEffect(cloneSlides, [props.slides]);
   React.useEffect(cancelJumping, [activeSlide, slides.length]);
 
+  const [touchStart, setTouchStart] = React.useState(0);
+  const [touchEnd, setTouchEnd] = React.useState(0);
+
+  function onTouchStart(event: React.TouchEvent) {
+    setTouchStart(event.targetTouches[0].clientX);
+  }
+
+  function onTouchMove(event: React.TouchEvent) {
+    setTouchEnd(event.targetTouches[0].clientX);
+  }
+
+  function onTouchEnd() {
+    if (touchStart - touchEnd > 80) {
+      onNextSlideClick();
+    }
+    if (touchStart - touchEnd < -80) {
+      onPreviousSlideClick();
+    }
+  }
+
   return (
-    <div className={mergeClasses('w-full h-full relative', props.className)}>
-      <div className="h-full relative overflow-hidden">
+    <>
+      <div className={mergeClasses('w-full h-full relative', props.className)}>
         <div
-          ref={containerRef}
-          onTransitionEnd={onSliderTransitionEnd}
-          className={mergeClasses('h-full flex items-center', !isMoving ? 'duration-1000' : '')}
-          style={{
-            transform: `translateX(-${activeSlide * (containerRef.current?.clientWidth || 0)}px)`,
-          }}
+          className="h-full relative overflow-hidden"
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
         >
-          {slides.map((slide, index) => (
-            <div
-              key={`slide-${props.keyName}-${index}`}
-              className={mergeClasses(
-                'min-w-full h-full relative flex justify-center duration-500',
-                props.hidePrevSlide && slideToHide === index ? 'opacity-0' : 'opacity-100',
-              )}
-            >
-              {slide}
-            </div>
-          ))}
+          <div
+            ref={containerRef}
+            onTransitionEnd={onSliderTransitionEnd}
+            className={mergeClasses('h-full flex items-center', !isMoving ? 'duration-1000' : '')}
+            style={{
+              transform: `translateX(-${activeSlide * (containerRef.current?.clientWidth || 0)}px)`,
+            }}
+          >
+            {slides.map((slide, index) => (
+              <div
+                key={`slide-${props.keyName}-${index}`}
+                className={mergeClasses(
+                  'min-w-full h-full relative flex justify-center duration-500',
+                  props.hidePrevSlide && slideToHide === index ? 'opacity-0' : 'opacity-100',
+                )}
+              >
+                {slide}
+              </div>
+            ))}
+          </div>
         </div>
+        <Arrow
+          withBackground={props.withArrowsBackground}
+          onClick={onPreviousSlideClick}
+          className="xl:-left-64 lg:-left-52 left-0"
+          iconClassName="-rotate-180"
+        />
+        <Arrow
+          withBackground={props.withArrowsBackground}
+          onClick={onNextSlideClick}
+          className="xl:-right-64 lg:-right-52 right-0"
+        />
       </div>
-      <div
-        tabIndex={0}
-        role="button"
-        onClick={onPreviousSlideClick}
-        onKeyDown={onPreviousSlideClick}
-        className="p-8 w-fit fill-green opacity-30 hover:opacity-100 duration-300 absolute top-1/2 -translate-y-1/2 xl:-left-64 -left-48"
-      >
-        <Chevron className="-rotate-90 w-40 h-40 ml-8" />
+      <div className="flex flex-row items-center justify-center mt-4 lg:mt-8">
+        {props.slides.map((slide, index) => (
+          <div
+            key={`slide-indicator-${props.keyName}-${index}`}
+            className={mergeClasses(
+              'w-3 h-3 mx-1  rounded-full flex-none duration-200 md:w-4 md:h-4 md:mx-2',
+              activeSlide - 1 === index ? 'bg-green' : 'bg-green-light',
+            )}
+          />
+        ))}
       </div>
-      <div
-        tabIndex={0}
-        role="button"
-        onClick={onNextSlideClick}
-        onKeyDown={onNextSlideClick}
-        className="p-8 w-fit fill-green opacity-30 hover:opacity-100 duration-300 absolute top-1/2 -translate-y-1/2 xl:-right-64 -right-48"
-      >
-        <Chevron className="rotate-90 w-40 h-40 mr-8" />
-      </div>
-    </div>
+    </>
   );
 }
