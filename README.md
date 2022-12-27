@@ -12,19 +12,23 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+Development:
+- Slider mobile
+- Images review
+- Devices testing and fixes
+- SEO
+
+Product:
 - Home:
     - Напрямки - фото
     - Відгуки - фото
     - Приклади причин для звернення
-    - Slider mobile
 - Methods:
   - читати далі (послуги)
 - About
     - Освіта нові сертифікати
 - Contacts
     - Номер + пошта
-    - Facebook
-    - Адреса
 - Questions
     - Коли треба звертатись за допомогою до психолога?
     - Коли треба звертатись до коуча?

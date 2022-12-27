@@ -1,14 +1,12 @@
+import Config from '@/config';
 // import { getMessengerText } from '@/helpers/ui';
 import { ICallbackInfo, IAppointmentInfo } from '@/types';
 
-const BOT_TOKEN = '5780320327:AAGkbAm1vsxfGu53xRwlz6zSL1hSdudUveQ';
-const CHAT_ID = '468482416';
-
 function sendMessage(text: string) {
-  return fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+  return fetch(`https://api.telegram.org/bot${Config.TELEGRAM_API_BOT_TOKEN}/sendMessage`, {
     method: 'POST',
     body: JSON.stringify({
-      chat_id: CHAT_ID,
+      chat_id: Config.TELEGRAM_API_CHAT_ID,
       text: text,
     }),
     headers: {

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-import Condig from '@/config';
+import Config from '@/config';
 import { formatPhoneNumber } from '@/helpers/ui';
 
 import Viber from '@/components/icons/viber';
@@ -16,9 +16,9 @@ export default function Footer() {
       <div className="container flex flex-wrap flex-row items-center justify-center py-8">
         <Link
           className="font-serif text-lg text-black hover:text-green whitespace-nowrap duration-300 mr-8 order-2 md:mr-0  md:order-1"
-          href={`tel:${Condig.CONTACT_PHONE_NUMBER}`}
+          href={`tel:${Config.CONTACT_PHONE_NUMBER}`}
         >
-          {formatPhoneNumber(Condig.CONTACT_PHONE_NUMBER)}
+          {formatPhoneNumber(Config.CONTACT_PHONE_NUMBER)}
         </Link>
         <div className="flex flex-row items-center justify-center flex-wrap order-1 mb-8 mx-10 min-w-full lg:mx-20 md:order-2 md:min-w-fit md:mb-0">
           <div>
@@ -34,14 +34,14 @@ export default function Footer() {
           </div>
         </div>
         <div className="flex flex-row items-center order-3">
-          <Link target="_blank" href="https://t.me/hanna_dynda">
+          <Link target="_blank" href={Config.LINK_TELEGRAM}>
             <Telegram className="fill-black hover:fill-green duration-300 mr-3" />
           </Link>
           <Viber className="fill-black mr-3" />
-          <Link target="_blank" href="https://instagram.com/hanna_dynda?igshid=MTg0ZDhmNDA=">
+          <Link target="_blank" href={Config.LINK_ISNTAGRAM}>
             <Instagram className="fill-black hover:fill-green duration-300 mr-3" />
           </Link>
-          <Link target="_blank" href="https://instagram.com/hanna_dynda?igshid=MTg0ZDhmNDA=">
+          <Link target="_blank" href={Config.LINK_FACEBOOK}>
             <Facebook className="fill-black hover:fill-green duration-300" />
           </Link>
         </div>

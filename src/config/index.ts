@@ -1,7 +1,14 @@
 const config = {
-  CONTACT_PHONE_NUMBER: '+380990375009',
-  CONTACT_EMAIL: 'info@hd-psychologist.com.ua',
-  GOOGLE_MAPS_API_KEY: 'AIzaSyCU1otOa8POOtlr-qxY2SfmXhq-dD1PcG4',
+  CONTACT_PHONE_NUMBER: '',
+  CONTACT_EMAIL: '',
+  GOOGLE_MAPS_API_KEY: '',
+  OFFICE_LOCATION_ADDRESS: '',
+  OFFICE_LOCATION_COORDINATES: { lat: 0, lng: 0 },
+  LINK_FACEBOOK: '',
+  LINK_ISNTAGRAM: '',
+  LINK_TELEGRAM: '',
+  TELEGRAM_API_BOT_TOKEN: '',
+  TELEGRAM_API_CHAT_ID: '',
 };
 
 export default config;

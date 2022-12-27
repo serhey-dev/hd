@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import Condig from '@/config';
+import Config from '@/config';
 import { formatPhoneNumber } from '@/helpers/ui';
 
 import Viber from '@/components/icons/viber';
@@ -33,7 +33,7 @@ export default function SectionContacts() {
               <Link
                 className="flex items-center text-black duration-300 fill-black hover:fill-green hover:text-green mr-5"
                 target="_blank"
-                href="https://t.me/hanna_dynda"
+                href={Config.LINK_TELEGRAM}
               >
                 <Telegram />
                 <span className="font-serif text-2xl ml-2">Telegram</span>
@@ -51,7 +51,7 @@ export default function SectionContacts() {
               <Link
                 className="flex items-center text-black duration-300 fill-black hover:fill-green hover:text-green mr-5"
                 target="_blank"
-                href="https://instagram.com/hanna_dynda?igshid=MTg0ZDhmNDA="
+                href={Config.LINK_ISNTAGRAM}
               >
                 <Instagram />
                 <span className="font-serif text-2xl ml-2">Instagram</span>
@@ -61,7 +61,7 @@ export default function SectionContacts() {
               <Link
                 className="flex items-center text-black duration-300 fill-black hover:fill-green hover:text-green"
                 target="_blank"
-                href="https://instagram.com/hanna_dynda?igshid=MTg0ZDhmNDA="
+                href={Config.LINK_FACEBOOK}
               >
                 <Facebook />
                 <span className="font-serif text-2xl ml-2">Facebook</span>
@@ -73,15 +73,15 @@ export default function SectionContacts() {
         <div className="flex flex-col items-center justify-center md:flex-row">
           <Link
             className="font-sans text-lg text-green mt-2 md:mt-0 md:mr-4"
-            href={`tel:${Condig.CONTACT_PHONE_NUMBER}`}
+            href={`tel:${Config.CONTACT_PHONE_NUMBER}`}
           >
-            {formatPhoneNumber(Condig.CONTACT_PHONE_NUMBER)}
+            {formatPhoneNumber(Config.CONTACT_PHONE_NUMBER)}
           </Link>
           <Link
             className="font-sans text-lg text-green mt-2 md:mt-0"
-            href={`mailto:${Condig.CONTACT_EMAIL}`}
+            href={`mailto:${Config.CONTACT_EMAIL}`}
           >
-            {Condig.CONTACT_EMAIL}
+            {Config.CONTACT_EMAIL}
           </Link>
         </div>
         <AnimateOnScroll
@@ -94,7 +94,7 @@ export default function SectionContacts() {
         </AnimateOnScroll>
         <p className="font-sans text-lg text-black mb-8 px-4">
           Якщо ви шукаєте психолога у місті Дніпро - у нас є можливість зустрітись оффлайн за
-          адресою Івана Акінфєєва, 25:
+          адресою {Config.OFFICE_LOCATION_ADDRESS}:
         </p>
       </div>
       <Map />

@@ -8,8 +8,6 @@ const containerStyle = {
   height: '550px',
 };
 
-const position = { lat: 48.4582069, lng: 35.0691383 };
-
 export default function Map() {
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
@@ -21,8 +19,12 @@ export default function Map() {
   }
 
   return (
-    <GoogleMap mapContainerStyle={containerStyle} center={position} zoom={15}>
-      <Marker position={position} />
+    <GoogleMap
+      mapContainerStyle={containerStyle}
+      center={Config.OFFICE_LOCATION_COORDINATES}
+      zoom={15}
+    >
+      <Marker position={Config.OFFICE_LOCATION_COORDINATES} />
     </GoogleMap>
   );
 }
