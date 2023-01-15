@@ -3,7 +3,7 @@ import { FormikProps } from 'formik';
 
 import { ICallbackInfo } from '@/types';
 import { getMessengerText } from '@/helpers/ui';
-import { requestCallback } from '@/services/request-appointment';
+import * as Telegram from '@/services/telegram';
 
 import ResultModal from '@/components/modals/result-modal';
 import ConfirmModal from '@/components/modals/confirm-modal';
@@ -21,6 +21,15 @@ export default function SectionServices() {
   function onFormSubmit(values: ICallbackInfo) {
     setIsConfirmModalOpen(true);
     setCallbackInfo(values);
+  }
+
+  function requestCallback(payload: ICallbackInfo) {
+    // DEV
+    // return Telegram.sendMessage(
+    //   `Новий запит на дзвінок! Ім'я: ${payload.name}. Телефон: ${payload.phone}. ${getMessengerText(
+    //     payload,
+    //   )}`,
+    // );
   }
 
   async function onConfirmModalSubmit() {

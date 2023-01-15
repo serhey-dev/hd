@@ -77,10 +77,10 @@ export default function Slider(props: ISliderProps) {
   }
 
   function onTouchEnd() {
-    if (touchStart - touchEnd > 80) {
+    if (touchStart - touchEnd > 40) {
       onNextSlideClick();
     }
-    if (touchStart - touchEnd < -80) {
+    if (touchStart - touchEnd < -40) {
       onPreviousSlideClick();
     }
   }

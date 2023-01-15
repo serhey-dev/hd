@@ -1,8 +1,9 @@
 import React from 'react';
 
 import { IAppointmentInfo } from '@/types';
+import * as Telegram from '@/services/telegram';
+import { getMessengerText } from '@/helpers/ui';
 import { formatDateWithDots } from '@/helpers/date';
-import { requestAppointment } from '@/services/request-appointment';
 import { useAppointmentInfoContoller } from '@/hooks/use-appointment-info';
 
 import ResultModal from '@/components/modals/result-modal';
@@ -23,6 +24,15 @@ export default function SectionSchedule() {
   function onFormSubmit(values: IAppointmentInfo) {
     setIsConfirmModalOpen(true);
     setAppointmentInfo(values);
+  }
+
+  function requestAppointment(payload: IAppointmentInfo) {
+    // DEV
+    // return Telegram.sendMessage(
+    //   `Новий запис на зустріч! Ім'я: ${payload.name}. Телефон: ${payload.phone}. ${getMessengerText(
+    //     payload,
+    //   )} Дата: ${payload.date}. Час: ${payload.time}. Запит: ${payload.request || 'Не заповнений'}.`,
+    // );
   }
 
   async function onConfirmModalSubmit() {

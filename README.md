@@ -13,8 +13,6 @@ yarn dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 Development:
-- Slider mobile - Review
-- Revisit appointment services/hooks naming
 - Images review + change import
 - Devices testing and fixes
 - SEO
