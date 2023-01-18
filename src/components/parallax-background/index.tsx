@@ -10,7 +10,7 @@ export default function ParallaxBackground(props: IParallaxBackgroundProps) {
   return (
     <div
       className={mergeClasses(
-        'absolute z-10 w-full h-full opacity-30 bg-fixed bg-no-repeat bg-right-bottom bg-contain',
+        'absolute z-10 w-full h-full opacity-30 bg-scroll md:bg-fixed bg-no-repeat bg-right-bottom bg-contain',
         props.className,
       )}
       style={{

@@ -8,7 +8,7 @@ import LogoImage from '@/images/logo.png';
 export default function DesktopMenu() {
   return (
     <div className="w-full absolute z-50 hidden md:block">
-      <div className="flex flex-row items-center container p-6">
+      <div className="flex flex-row items-center container p-6 xl:pl-24">
         <Link href="/">
           <Image src={LogoImage} alt="Ганна Динда Психолог Дніпро" width={120} />
         </Link>

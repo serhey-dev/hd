@@ -1,7 +1,4 @@
-import React from 'react';
-
-import { mergeClasses } from '@/helpers/ui';
-import { formatDateWithDots } from '@/helpers/date';
+import { mergeClasses, isAndroid, isIPhone } from '@/helpers/ui';
 
 interface IInputDateProps {
   name: string;
@@ -15,30 +12,20 @@ interface IInputDateProps {
 }
 
 export default function InputDate(props: IInputDateProps) {
-  const [isFocused, setIsFocused] = React.useState(false);
-
-  function onFocus() {
-    setIsFocused(true);
-  }
-
-  function onBlur() {
-    setIsFocused(false);
-  }
-
   return (
     <input
       max={props.max}
       min={props.min}
       name={props.name}
       placeholder={props.placeholder}
-      type={isFocused ? 'date' : 'text'}
-      value={isFocused ? props.value : formatDateWithDots(props.value)}
+      type="date"
+      value={props.value}
       onChange={props.onChange}
-      onFocus={onFocus}
-      onBlur={onBlur}
       className={mergeClasses(
-        'font-sans h-14 px-4 block w-full border border-black rounded outline-black',
+        'font-sans h-14 bg-white leading-[3.25rem] px-4 block border border-black rounded outline-black flex-1',
         props.error ? 'text-red border-red outline-red' : '',
+        isAndroid() ? 'pt-[18px]' : '',
+        isIPhone() ? 'leading-[3.6rem]' : '',
         props.className,
       )}
     />

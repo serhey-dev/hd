@@ -20,7 +20,7 @@ export default function SectionHero() {
         </p>
       </div>
       <div className="relative z-20 container w-full">
-        <div className="max-w-[700px] px-3 xl:pb-32 xl:pt-0 lg:pl-12">
+        <div className="max-w-[700px] px-3 xl:pb-16 lg:pl-24">
           <h1 className="font-serif text-black leading-[4rem] mb-3 md:text-7xl text-6xl md:leading-[5rem]">
             Ганна Динда - психолог, який тобі допоможе!
           </h1>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { mergeClasses } from '@/helpers/ui';
+import { mergeClasses, isAndroid, isIPhone } from '@/helpers/ui';
 
 interface IInputDateProps {
   name: string;
@@ -24,8 +24,10 @@ export default function InputDate(props: IInputDateProps) {
         max="19:00"
         type="time"
         className={mergeClasses(
-          'font-sans h-14 px-4 block w-full border border-black rounded outline-black',
+          'font-sans bg-white px-4 h-14 leading-[3.25rem] block w-full border border-black rounded outline-black flex-1',
           props.error ? 'text-red border-red outline-red' : '',
+          isAndroid() ? 'pt-[18px]' : '',
+          isIPhone() ? 'leading-[3.6rem]' : '',
           props.className,
         )}
       />

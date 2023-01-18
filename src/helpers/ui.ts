@@ -17,3 +17,17 @@ export function formatPhoneNumber(phoneNumber: string) {
 export function mergeClasses(...classes: (string | undefined)[]) {
   return classes.reduce((acc, c) => (!!c ? acc + ` ${c}` : acc), '');
 }
+
+export function isAndroid() {
+  if (typeof window === 'undefined') {
+    return false;
+  }
+  return window.navigator.userAgent.indexOf('Android') > -1;
+}
+
+export function isIPhone() {
+  if (typeof window === 'undefined') {
+    return false;
+  }
+  return window.navigator.userAgent.indexOf('iPhone') > -1;
+}

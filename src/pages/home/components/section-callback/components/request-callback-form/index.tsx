@@ -15,7 +15,7 @@ const initialValues: ICallbackInfo = {
   messenger: undefined,
 };
 
-function validate(values: typeof initialValues) {
+function validate(values: ICallbackInfo) {
   const errors: { name?: string; phone?: string } = {};
 
   const name = values.name.trim();

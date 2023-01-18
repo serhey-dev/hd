@@ -18,7 +18,7 @@ const maxDate = getDateWithExtraDays(30);
 const initialValues: IAppointmentInfo = {
   name: '',
   phone: '',
-  date: '',
+  date: formatDateToISO(minDate),
   time: '10:00',
   request: '',
   messenger: undefined,

@@ -13,9 +13,9 @@ yarn dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 Development:
-- Devices testing and fixes
 - SEO
 - optimization Google tool
+- analytics
 
 Product:
 - Home:
@@ -28,3 +28,8 @@ Product:
 - Contacts - done
 - Questions - done
 - Schedule - done
+
+TODO later:
+- (UI) Android date/time input right padding
+- (UX) iPhone date/time picker min/max
+- (UX) iPhone map marker
