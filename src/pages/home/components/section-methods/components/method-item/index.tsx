@@ -6,7 +6,7 @@ import AnimateOnScroll from '@/components/animate-on-scroll';
 interface IMethodItemProps {
   name: string;
   content?: React.ReactNode;
-  image: string;
+  image: React.ReactNode;
   className?: string;
 }
 
@@ -18,7 +18,7 @@ export default function MethodItem(props: IMethodItemProps) {
         props.className,
       )}
     >
-      <Image src={props.image} alt="logo" width={300} height={300} />
+      {props.image}
       <div className="mx-0 mt-6 md:mx-6 md:mt-0">
         <h4 className="text-4xl font-serif text-black mb-4">{props.name}</h4>
         <AnimateOnScroll

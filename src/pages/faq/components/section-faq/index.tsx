@@ -25,7 +25,7 @@ export default function SectionFAQ() {
               />
               <QuestionItem
                 question="Коли треба звертатись за допомогою до психолога?"
-                answer={
+                answerContent={
                   <>
                     <p className="font-sans text-black text-lg">
                       Звертатися до спеціаліста необхідно у разі емоційних, поведінкових або
@@ -36,40 +36,40 @@ export default function SectionFAQ() {
                     </p>
                     <ul className="list-disc ml-3">
                       <li>
-                        <p className="font-sans text-black text-md">
+                        <span className="font-sans text-black text-md">
                           Якщо у вас підвищена тревожність і ви за все хвилюєтесь
-                        </p>
+                        </span>
                       </li>
                       <li>
-                        <p className="font-sans text-black text-md">
+                        <span className="font-sans text-black text-md">
                           У вас з'явились панічні атаки або напади агресії
-                        </p>
+                        </span>
                       </li>
                       <li>
-                        <p className="font-sans text-black text-md">
+                        <span className="font-sans text-black text-md">
                           У вас є фобія, яка заважає вам будувати своє життя
-                        </p>
+                        </span>
                       </li>
                       <li>
-                        <p className="font-sans text-black text-md">
+                        <span className="font-sans text-black text-md">
                           Ви маєте труднощі у стосунках з оточуючими (партнер, батьки, дитина,
                           друзі, колеги, тощо)
-                        </p>
+                        </span>
                       </li>
                       <li>
-                        <p className="font-sans text-black text-md">
+                        <span className="font-sans text-black text-md">
                           Ви пережили психотравмуючу подію
-                        </p>
+                        </span>
                       </li>
                       <li>
-                        <p className="font-sans text-black text-md">
+                        <span className="font-sans text-black text-md">
                           Ви відчуваєте хронічну втому або у вас є ознаки депресивного стану
-                        </p>
+                        </span>
                       </li>
                       <li>
-                        <p className="font-sans text-black text-md">
+                        <span className="font-sans text-black text-md">
                           Ви відчуваєте себе нещасною людиною і не розумієте як з цим впоратись
-                        </p>
+                        </span>
                       </li>
                     </ul>
                   </>
@@ -104,8 +104,8 @@ export default function SectionFAQ() {
             <ul>
               <QuestionItem
                 question="Що потрібно для початку роботи зі мною?"
-                answer={
-                  <>
+                answerContent={
+                  <p className="font-sans text-black text-lg">
                     Потрібно залишити заявку на запис або зворотній зв’язок, або написати мені у
                     будь-який месенджер (див.{' '}
                     <Link className="text-green" href="/contacts">
@@ -118,7 +118,7 @@ export default function SectionFAQ() {
                     ). Після цього я зв'язуюсь з Вами і ми разом визначаємо формат проведення
                     консультації (онлайн/офлайн) та час. Далі в назначений час Ви приходите на
                     консультацію або підключаєтесь по відео зв'язку.
-                  </>
+                  </p>
                 }
               />
               <QuestionItem

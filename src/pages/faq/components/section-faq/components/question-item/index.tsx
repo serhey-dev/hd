@@ -4,7 +4,8 @@ import { mergeClasses } from '@/helpers/ui';
 
 interface IQuestionItemProps {
   question: string;
-  answer: string | React.ReactNode;
+  answer?: string;
+  answerContent?: React.ReactNode;
 }
 
 export default function QuestionItem(props: IQuestionItemProps) {
@@ -35,7 +36,9 @@ export default function QuestionItem(props: IQuestionItemProps) {
           isOpen ? 'opacity-100 sm:max-h-[600px] max-h-[1100px]' : '',
         )}
       >
-        <p className="font-sans text-black text-lg mt-2 mb-4 pl-5">{props.answer}</p>
+        <div className="mt-2 mb-4 pl-5">
+          {props.answerContent || <p className="font-sans text-black text-lg">{props.answer}</p>}
+        </div>
       </div>
     </li>
   );

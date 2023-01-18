@@ -1,4 +1,8 @@
+import Image from 'next/image';
+
 import MethodItem from '@/pages/home/components/section-methods/components/method-item';
+
+import MethodItemImage from '@/images/2.jpeg';
 
 export default function SectionMethods() {
   return (
@@ -10,7 +14,13 @@ export default function SectionMethods() {
         <ul className="flex flex-col items-center w-full">
           <MethodItem
             name="Когнітивно-поведінкова терапія (КПТ)"
-            image="/images/2.jpeg"
+            image={
+              <Image
+                src={MethodItemImage}
+                alt="Когнитивно-поведенческая терапия Днепр"
+                width={300}
+              />
+            }
             content={
               <>
                 <p className="font-sans italic text-black text-lg mb-3">
@@ -33,7 +43,7 @@ export default function SectionMethods() {
           />
           <MethodItem
             name="Гештальт терапія"
-            image="/images/2.jpeg"
+            image={<Image src={MethodItemImage} alt="Гештальт терапия Днепр" width={300} />}
             className="md:flex-row-reverse"
             content={
               <>
@@ -69,7 +79,7 @@ export default function SectionMethods() {
                 </p>
               </>
             }
-            image="/images/2.jpeg"
+            image={<Image src={MethodItemImage} alt="Арт терапия Дніпро" width={300} />}
             className="md:flex-row"
           />
           <MethodItem
@@ -87,7 +97,7 @@ export default function SectionMethods() {
                 </p>
               </>
             }
-            image="/images/2.jpeg"
+            image={<Image src={MethodItemImage} alt="Коучинг Днепр" width={300} />}
             className="md:flex-row-reverse mb-0"
           />
         </ul>

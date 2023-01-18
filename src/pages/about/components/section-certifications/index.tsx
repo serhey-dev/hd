@@ -11,22 +11,22 @@ const items = [
   {
     key: 'certification-1',
     image: Certification1,
-    alt: 'certification1',
+    alt: 'Сертификат психолог Днепр',
   },
   {
     key: 'certification-2',
     image: Certification2,
-    alt: 'certification2',
+    alt: 'Професійний психолог Дніпро',
   },
   {
     key: 'certification-3',
     image: Certification3,
-    alt: 'certification3',
+    alt: 'Психолог освіта',
   },
   {
     key: 'certification-4',
     image: Certification3,
-    alt: 'certification4',
+    alt: 'Психолог с образованием Днепр',
   },
 ];
 

@@ -3,6 +3,8 @@ import Image from 'next/image';
 import ButtonLink from '@/components/buttons/button-link';
 import ParallaxBackground from '@/components/parallax-background';
 
+import UkraineFlagImage from '@/images/icons/ukraine.png';
+
 export default function SectionHero() {
   return (
     <div className="h-screen flex items-center justify-center relative">
@@ -14,13 +16,7 @@ export default function SectionHero() {
         <p className="font-sans italic text-black px-3 md:text-lg">
           Перша консультація - за донат! (при навності скріну будь-якого донату на користь
           Армії/Волонтерів). Слава Україні!&nbsp;&nbsp;
-          <Image
-            src="/icons/ukraine.png"
-            alt="Ukraine flag"
-            className="inline mb-0.5"
-            width={28}
-            height={1}
-          />
+          <Image src={UkraineFlagImage} alt="Україна прапор" className="inline mb-0.5" width={28} />
         </p>
       </div>
       <div className="relative z-20 container w-full">

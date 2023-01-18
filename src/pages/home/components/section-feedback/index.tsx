@@ -1,6 +1,10 @@
+import Image from 'next/image';
+
 import Slider from '@/components/slider';
 import ParallaxBackground from '@/components/parallax-background';
 import FeedbackItem from '@/pages/home/components/section-feedback/components/feedback-item';
+
+import FeedbackItemImage from '@/images/2.jpeg';
 
 export default function SectionFeedback() {
   return (
@@ -20,25 +24,57 @@ export default function SectionFeedback() {
                 key="feedback-1"
                 name="Юлія"
                 text="Сьогодні в мене був перший такий досвід. Поставили ціль! А Аня дуже вміло направила мене своїми питаннями на самостійні роздуми про те, що мені заважає виконати всі бажані плани та мрії. Допомогла з висновками щодо їх реалізації! Прийшло усвідомлення багатьох речей! Дуже вдячна! Раджу спробувати!"
-                photo="/images/2.jpeg"
+                image={
+                  <Image
+                    className="rounded-full border-black border"
+                    src={FeedbackItemImage}
+                    alt="Психолог Дніпро відгук"
+                    height={100}
+                    width={100}
+                  />
+                }
               />,
               <FeedbackItem
                 key="feedback-2"
                 name="Александр"
                 text="Аня, выражаю тебе огромную благодарность за твою работу. Поставленны нужные вопросы, а главное с определенной значимостью заданы! Это, своего рода, искуство - видеть как целовек рисует целостность отвечая на свои же вопросы. Ну а я, более чем мотивирован и настроен решительно. Первые результати уже в действии!"
-                photo="/images/2.jpeg"
+                image={
+                  <Image
+                    className="rounded-full border-black border"
+                    src={FeedbackItemImage}
+                    alt="Коучинг Дніпро відгук"
+                    height={100}
+                    width={100}
+                  />
+                }
               />,
               <FeedbackItem
                 key="feedback-3"
                 name="Любов"
                 text="Добрий вечір. Ви знаєте, після нашої розмови у мене пішло прояснення і на пів року я вже склала план що робити далі. Дякую!"
-                photo="/images/2.jpeg"
+                image={
+                  <Image
+                    className="rounded-full border-black border"
+                    src={FeedbackItemImage}
+                    alt="Психолог Днепр отзыв"
+                    height={100}
+                    width={100}
+                  />
+                }
               />,
               <FeedbackItem
                 key="feedback-4"
                 name="Диана"
                 text="Хочу поблагодарить за сессию! Было очень комфортно, интересно, я смогла увидеть свою ситуацию под разными углами и понять что мне делать дальше и что для меня действительно ценно. Очень жду следующую сессию чтобы поделиться результатами!"
-                photo="/images/2.jpeg"
+                image={
+                  <Image
+                    className="rounded-full border-black border"
+                    src={FeedbackItemImage}
+                    alt="Коучинг Днепр отзыв"
+                    height={100}
+                    width={100}
+                  />
+                }
               />,
             ]}
           />

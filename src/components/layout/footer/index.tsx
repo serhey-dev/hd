@@ -10,6 +10,8 @@ import Facebook from '@/components/icons/facebook';
 import Instagram from '@/components/icons/instagram';
 import FooterLink from '@/components/layout/footer/components/footer-link';
 
+import LogoImage from '@/images/logo.png';
+
 export default function Footer() {
   return (
     <footer className="bg-white border-t border-black">
@@ -26,7 +28,7 @@ export default function Footer() {
             <FooterLink href="/about" text="Про мене" />
           </div>
           <Link href="/" className="mx-8 lg:mx-20">
-            <Image src="/images/logo.png" alt="logo" width={90} height={1} />
+            <Image src={LogoImage} alt="Ганна Динда Психолог" width={90} />
           </Link>
           <div>
             <FooterLink href="/faq" text="Питання" className="mb-3" />
