@@ -5,65 +5,56 @@ import AnimateOnScroll from '@/components/animate-on-scroll';
 
 export default function SectionReasons() {
   return (
-    <div className="min-h-screen border-t border-black py-16">
+    <div className="min-h-screen border-t border-black flex items-center justify-center pt-16 pb-20">
       <div className="container">
-        <h1 className="text-6xl mb-6 text-center font-serif text-black mb-10 lg:mb-16">
+        <h1 className="text-6xl text-center font-serif text-black mb-10 lg:mb-16">
           Коли звертатись до психолога?
         </h1>
         <div className="flex flex-col items-center justify-center px-5 lg:flex-row md:px-0">
           <Image src="/images/photos/home-d.jpg" alt="Reasons" width={400} height={1} />
           <div className="w-full mt-8 xl:w-1/3 lg:w-1/2 lg:ml-16 lg:mt-0">
-            <ul>
+            <p className="font-sans italic text-black text-md">
+              Звертатися до спеціаліста необхідно у разі емоційних, поведінкових або когнітивних
+              проблем.
+            </p>
+            <p className="text-3xl font-serif text-black mt-4 mb-6 lg:mb-6">
+              7 причин звернутись до психолога:
+            </p>
+            <ul className="list-disc">
               <li>
                 <p className="font-sans italic text-black text-md">
-                  Постійне роздратування та головний біль
+                  Якщо у вас підвищена тревожність і ви за все хвилюєтесь
                 </p>
               </li>
               <li>
                 <p className="font-sans italic text-black text-md">
-                  Тяжко пережіваєте розлучення, не знаєте що робити далі
+                  У вас з'явились панічні атаки або напади агресії
                 </p>
               </li>
               <li>
                 <p className="font-sans italic text-black text-md">
-                  Ви хочете заробляти більше, але Вам завжди щось заважає, и Ви не знаєте куди
-                  рухатись
+                  У вас є фобія, яка заважає вам будувати своє життя
                 </p>
               </li>
               <li>
                 <p className="font-sans italic text-black text-md">
-                  Панічні атаки, постійна тривожність
+                  Ви маєте труднощі у стосунках з оточуючими (партнер, батьки, дитина, друзі,
+                  колеги, тощо)
                 </p>
               </li>
               <li>
                 <p className="font-sans italic text-black text-md">
-                  Майже завжди сняться кошмари, не можете відпочити
+                  Ви пережили психотравмуючу подію
                 </p>
               </li>
               <li>
                 <p className="font-sans italic text-black text-md">
-                  Ви постійно сваретесь з дружіною/чоловіком. Думаєте про розлучення
+                  Ви відчуваєте хронічну втому або у вас є ознаки депресивного стану
                 </p>
               </li>
               <li>
                 <p className="font-sans italic text-black text-md">
-                  Нічого не тішить, постійно втомлені, немає бажання до життя
-                </p>
-              </li>
-              <li>
-                <p className="font-sans italic text-black text-md">
-                  Хочете стосунків та сім'ю, але не знаєте як їх розпочати. Боїтеся знайомства з
-                  дівчиною/хлопцем
-                </p>
-              </li>
-              <li>
-                <p className="font-sans italic text-black text-md">
-                  У Вас бувають напади агресії, Вас це лякає
-                </p>
-              </li>
-              <li>
-                <p className="font-sans italic text-black text-md">
-                  Хочете змінити роботу, але не знаєте як
+                  Ви відчуваєте себе нещасною людиною і не розумієте як з цим впоратись
                 </p>
               </li>
             </ul>
