@@ -11,7 +11,7 @@ export default function SectionReasons() {
           Коли звертатись до психолога?
         </h1>
         <div className="flex flex-col items-center justify-center px-5 lg:flex-row md:px-0">
-          <Image src="/images/photos/home-d.jpg" alt="Reasons" width={400} height={1} />
+          <Image src="/images/photos/home-reasons.jpg" alt="Reasons" width={400} height={1} />
           <div className="w-full mt-8 xl:w-1/3 lg:w-1/2 lg:ml-16 lg:mt-0">
             <p className="font-sans italic text-black text-md">
               Звертатися до спеціаліста необхідно у разі емоційних, поведінкових або когнітивних
