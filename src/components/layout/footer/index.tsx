@@ -36,14 +36,14 @@ export default function Footer() {
           </div>
         </div>
         <div className="flex flex-row items-center order-3">
-          <Link target="_blank" href={Config.LINK_TELEGRAM}>
+          <Link target="_blank" aria-label="Переглянути у Telegram" href={Config.LINK_TELEGRAM}>
             <Telegram className="fill-black hover:fill-green duration-300 mr-3" />
           </Link>
           <Viber className="fill-black mr-3" />
-          <Link target="_blank" href={Config.LINK_ISNTAGRAM}>
+          <Link target="_blank" aria-label="Переглянути у Instagram" href={Config.LINK_ISNTAGRAM}>
             <Instagram className="fill-black hover:fill-green duration-300 mr-3" />
           </Link>
-          <Link target="_blank" href={Config.LINK_FACEBOOK}>
+          <Link target="_blank" aria-label="Переглянути у Facebook" href={Config.LINK_FACEBOOK}>
             <Facebook className="fill-black hover:fill-green duration-300" />
           </Link>
         </div>

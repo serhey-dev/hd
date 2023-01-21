@@ -14,7 +14,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 Development:
 - SEO
-- optimization Google tool
 - analytics
 
 Product:
@@ -24,7 +23,7 @@ Product:
 - Methods:
     - Читати далі (послуги)
 - About
-    - Освіта нові сертифікати
+    - Освіта - нові сертифікати
 - Contacts - done
 - Questions - done
 - Schedule - done
@@ -33,3 +32,4 @@ TODO later:
 - (UI) Android date/time input right padding
 - (UX) iPhone date/time picker min/max
 - (UX) iPhone map marker
+- Lighthouse - performance (images)

@@ -8,6 +8,7 @@ interface IArrowProps {
   className?: string;
   iconClassName?: string;
   withBackground?: boolean;
+  isNext: boolean;
 }
 
 export default function Arrow(props: IArrowProps) {
@@ -15,6 +16,7 @@ export default function Arrow(props: IArrowProps) {
     <div
       tabIndex={0}
       role="button"
+      aria-label={props.isNext ? 'Наступний слайд' : 'Попередній слайд'}
       onClick={props.onClick}
       onKeyDown={props.onClick}
       className={mergeClasses(

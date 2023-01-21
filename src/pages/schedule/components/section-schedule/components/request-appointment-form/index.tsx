@@ -138,33 +138,40 @@ export default function RequestAppointmentForm(props: IRequestAppointmentFormPro
         }}
       />
       {/* Date */}
-      <label className="block mb-px font-sans mt-3" htmlFor="date">
-        Дата та час<span className="text-red font-sans">*</span>:
-      </label>
       <div className="flex flex-row">
-        <InputDate
-          name="date"
-          value={form.values.date}
-          onChange={(event) => {
-            form.handleChange(event);
-            form.setErrors({ ...form.errors, date: undefined });
-          }}
-          className="w-1/2 sm:w-3/4"
-          min={formatDateToISO(minDate)}
-          max={formatDateToISO(maxDate)}
-          error={!!form.errors.date}
-        />
-        <InputTime
-          name="time"
-          value={form.values.time}
-          onChange={(event) => {
-            form.handleChange(event);
-            form.setErrors({ ...form.errors, time: undefined });
-          }}
-          timeListName="appointment-time"
-          className="w-1/2 sm:w-1/4 ml-4"
-          error={!!form.errors.time}
-        />
+        <div className="flex-1 sm:w-1/2 w-3/4">
+          <label className="block mb-px font-sans mt-3" htmlFor="date">
+            Дата<span className="text-red font-sans">*</span>:
+          </label>
+          <InputDate
+            name="date"
+            value={form.values.date}
+            onChange={(event) => {
+              form.handleChange(event);
+              form.setErrors({ ...form.errors, date: undefined });
+            }}
+            min={formatDateToISO(minDate)}
+            max={formatDateToISO(maxDate)}
+            className="w-full"
+            error={!!form.errors.date}
+          />
+        </div>
+        <div className="flex-1 ml-4 sm:w-1/2 w-1/4">
+          <label className="block mb-px font-sans mt-3" htmlFor="time">
+            Час<span className="text-red font-sans">*</span>:
+          </label>
+          <InputTime
+            name="time"
+            value={form.values.time}
+            onChange={(event) => {
+              form.handleChange(event);
+              form.setErrors({ ...form.errors, time: undefined });
+            }}
+            timeListName="appointment-time"
+            // className="w-1/2 sm:w-1/4"
+            error={!!form.errors.time}
+          />
+        </div>
       </div>
       {!!dateError && <p className="text-red font-sans mt-1">{dateError}</p>}
       {/* Request */}

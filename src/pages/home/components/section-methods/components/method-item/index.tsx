@@ -20,7 +20,7 @@ export default function MethodItem(props: IMethodItemProps) {
     >
       {props.image}
       <div className="mx-0 mt-6 md:mx-6 md:mt-0">
-        <h4 className="text-4xl font-serif text-black mb-4">{props.name}</h4>
+        <h2 className="text-4xl font-serif text-black mb-4">{props.name}</h2>
         <AnimateOnScroll
           className="duration-500 mb-4"
           notScrolledClassName="w-0"

@@ -4,6 +4,7 @@ import InputMask from 'react-input-mask';
 import { mergeClasses } from '@/helpers/ui';
 
 interface IInputTextProps {
+  id?: string;
   name: string;
   mask?: string;
   value: string;
@@ -15,6 +16,7 @@ interface IInputTextProps {
 export default function InputText(props: IInputTextProps) {
   return props.mask ? (
     <InputMask
+      id={props.id || props.name}
       name={props.name}
       value={props.value}
       placeholder={props.placeholder}
@@ -28,6 +30,7 @@ export default function InputText(props: IInputTextProps) {
     />
   ) : (
     <input
+      id={props.id || props.name}
       type="text"
       name={props.name}
       value={props.value}

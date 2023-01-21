@@ -120,11 +120,13 @@ export default function Slider(props: ISliderProps) {
           onClick={onPreviousSlideClick}
           className="xl:-left-64 lg:-left-52 left-0"
           iconClassName="-rotate-180"
+          isNext={false}
         />
         <Arrow
           withBackground={props.withArrowsBackground}
           onClick={onNextSlideClick}
           className="xl:-right-64 lg:-right-52 right-0"
+          isNext
         />
       </div>
       <div className="flex flex-row items-center justify-center mt-4 lg:mt-8">

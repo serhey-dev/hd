@@ -2,6 +2,7 @@ import React from 'react';
 import { mergeClasses, isAndroid, isIPhone } from '@/helpers/ui';
 
 interface IInputDateProps {
+  id?: string;
   name: string;
   value: string;
   placeholder?: string;
@@ -15,6 +16,7 @@ export default function InputDate(props: IInputDateProps) {
   return (
     <>
       <input
+        id={props.id || props.name}
         name={props.name}
         value={props.value}
         placeholder={props.placeholder}

@@ -15,9 +15,9 @@ interface IServiceItemProps {
 
 export default function ServiceItem(props: IServiceItemProps) {
   return (
-    <li className={mergeClasses('mb-8 w-full lg:w-1/2 md:mb-12', props.className)}>
+    <div className={mergeClasses('mb-8 w-full lg:w-1/2 md:mb-12', props.className)}>
       <div className="mx-6 md:px-12">
-        <h4 className="font-serif text-3xl text-black mb-4 text-center">{props.name}</h4>
+        <p className="font-serif text-3xl text-black mb-4 text-center">{props.name}</p>
         <AnimateOnScroll
           className="duration-500 mx-auto"
           notScrolledClassName="w-0"
@@ -41,6 +41,6 @@ export default function ServiceItem(props: IServiceItemProps) {
           </p>
         </div>
       </div>
-    </li>
+    </div>
   );
 }

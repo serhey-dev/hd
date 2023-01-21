@@ -1,6 +1,7 @@
 import React from 'react';
 
 interface IInputTextAreaProps {
+  id?: string;
   name: string;
   value: string;
   placeholder?: string;
@@ -10,6 +11,7 @@ interface IInputTextAreaProps {
 export default function InputTextArea(props: IInputTextAreaProps) {
   return (
     <textarea
+      id={props.id || props.name}
       name={props.name}
       value={props.value}
       placeholder={props.placeholder}

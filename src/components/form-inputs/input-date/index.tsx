@@ -1,6 +1,7 @@
 import { mergeClasses, isAndroid, isIPhone } from '@/helpers/ui';
 
 interface IInputDateProps {
+  id?: string;
   name: string;
   value: string;
   placeholder?: string;
@@ -14,6 +15,7 @@ interface IInputDateProps {
 export default function InputDate(props: IInputDateProps) {
   return (
     <input
+      id={props.id || props.name}
       max={props.max}
       min={props.min}
       name={props.name}

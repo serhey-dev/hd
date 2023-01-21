@@ -20,7 +20,7 @@ export default function SectionInfo() {
           width={400}
         />
         <div className="px-5 text-center mt-6 w-full sm:w-3/4 md:w-1/2 xl:w-[40%] md:mt-0 md:text-left">
-          <h3 className="text-3xl font-serif text-black mb-6">Записуйся на консультацію!</h3>
+          <h2 className="text-3xl font-serif text-black mb-6">Записуйся на консультацію!</h2>
           <p className="font-sans italic text-black text-lg">
             Працювати в цій сфері - моє покликання! Я з великим задоволенням ділюся своїми знаннями
             та досвідом на наших консультаціях. Тож якщо Ви відчуваєте що вам потрібна допомога - не

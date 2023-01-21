@@ -72,7 +72,7 @@ export default function SectionServices() {
       <div className="container pt-16 pb-12 md:pt-32">
         <h1 className="text-6xl text-center font-serif text-black mb-10">Послуги</h1>
         <ul>
-          <div className="flex flex-row flex-wrap items-center justify-center">
+          <li className="flex flex-row flex-wrap items-center justify-center">
             {items.map((item) => (
               <ServiceItem
                 onClickDetails={() => onSelect(item)}
@@ -83,7 +83,7 @@ export default function SectionServices() {
                 timeout={item.timeout}
               />
             ))}
-          </div>
+          </li>
         </ul>
       </div>
     </div>
