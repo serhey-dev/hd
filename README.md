@@ -14,11 +14,19 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 Development:
 - SEO
-- analytics
+  - sitemap
+  - search console
+  - content:
+    - title +++++
+    - meta description ++++
+    - og, twitter +++++
+    - HTML check +++++
+    - favicon +++++
+- test spam
+- Text adjustments - записатись / ти або ви / офлайн
 
 Product:
 - Home:
-    - Напрямки - фото
     - Відгуки - нові відгуки + фото
 - Methods:
     - Читати далі (послуги)
@@ -33,3 +41,5 @@ TODO later:
 - (UX) iPhone date/time picker min/max
 - (UX) iPhone map marker
 - Lighthouse - performance (images)
+- Snippet markup
+- Better favicon

@@ -4,7 +4,7 @@ import Slider from '@/components/slider';
 import ParallaxBackground from '@/components/parallax-background';
 import FeedbackItem from '@/pages/home/components/section-feedback/components/feedback-item';
 
-import FeedbackItemImage from '@/images/2.jpeg';
+import FeedbackItemImage from '@/images/photos/home-hero.png';
 
 export default function SectionFeedback() {
   return (
@@ -14,7 +14,7 @@ export default function SectionFeedback() {
         className="bg-cover bg-center lg:bg-contain lg:bg-right-bottom"
       />
       <div className="relative z-20 container py-16 flex flex-col items-center lg:mb-24">
-        <h1 className="text-6xl font-serif text-black text-center mb-8 md:mb-10">Відгуки</h1>
+        <h2 className="text-6xl font-serif text-black text-center mb-8 md:mb-10">Відгуки</h2>
         <div className="xl:w-[750px] xl:h-[500px] lg:w-[600px] lg:h-[400px] w-full">
           <Slider
             keyName="feedback"
@@ -29,7 +29,6 @@ export default function SectionFeedback() {
                     className="rounded-full border-black border"
                     src={FeedbackItemImage}
                     alt="Психолог Дніпро відгук"
-                    height={100}
                     width={100}
                   />
                 }
@@ -43,7 +42,6 @@ export default function SectionFeedback() {
                     className="rounded-full border-black border"
                     src={FeedbackItemImage}
                     alt="Коучинг Дніпро відгук"
-                    height={100}
                     width={100}
                   />
                 }
@@ -57,7 +55,6 @@ export default function SectionFeedback() {
                     className="rounded-full border-black border"
                     src={FeedbackItemImage}
                     alt="Психолог Днепр отзыв"
-                    height={100}
                     width={100}
                   />
                 }
@@ -71,7 +68,6 @@ export default function SectionFeedback() {
                     className="rounded-full border-black border"
                     src={FeedbackItemImage}
                     alt="Коучинг Днепр отзыв"
-                    height={100}
                     width={100}
                   />
                 }

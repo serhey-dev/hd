@@ -9,9 +9,9 @@ export default function SectionReasons() {
   return (
     <div className="min-h-screen border-t border-black flex items-center justify-center pt-16 pb-20">
       <div className="container">
-        <h1 className="text-6xl text-center font-serif text-black mb-10 lg:mb-16">
+        <h2 className="text-6xl text-center font-serif text-black mb-10 lg:mb-16">
           Коли звертатись до психолога?
-        </h1>
+        </h2>
         <div className="flex flex-col items-center justify-center px-5 lg:flex-row md:px-0">
           <Image src={HomeReasonsImage} alt="Психолог Дніпро" width={400} />
           <div className="w-full mt-8 xl:w-1/3 lg:w-1/2 lg:ml-16 lg:mt-0">
@@ -19,9 +19,9 @@ export default function SectionReasons() {
               Звертатися до спеціаліста необхідно у разі емоційних, поведінкових або когнітивних
               проблем.
             </p>
-            <p className="text-3xl font-serif text-black mt-4 mb-6 lg:mb-6">
+            <h3 className="text-3xl font-serif text-black mt-4 mb-6 lg:mb-6">
               7 причин звернутись до психолога:
-            </p>
+            </h3>
             <ul className="list-disc">
               <li>
                 <p className="font-sans italic text-black text-md">

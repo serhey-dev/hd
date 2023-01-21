@@ -4,7 +4,9 @@ import ButtonLink from '@/components/buttons/button-link';
 export default function Page404() {
   return (
     <main>
-      <Head title="Page404" description="Page404" />
+      <Head title="Сторінка не знайдена">
+        <meta name="robots" content="noindex" />
+      </Head>
       <div className="h-screen">
         <div className="container h-full flex justify-center items-center">
           <div>

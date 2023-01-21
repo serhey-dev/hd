@@ -107,7 +107,7 @@ export default function SectionSchedule() {
           ) : (
             <>
               <h1 className="text-6xl text-center font-serif text-black mb-8">
-                Запис на консультацію
+                Записатись на консультацію
               </h1>
               <p className="text-lg mb-2 text-center font-sans text-black">
                 Після відправки форми я обовʼязково з вами звʼяжусь, уточню деталі та підтверджу

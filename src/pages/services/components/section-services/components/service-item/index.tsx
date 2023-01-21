@@ -17,7 +17,7 @@ export default function ServiceItem(props: IServiceItemProps) {
   return (
     <div className={mergeClasses('mb-8 w-full lg:w-1/2 md:mb-12', props.className)}>
       <div className="mx-6 md:px-12">
-        <p className="font-serif text-3xl text-black mb-4 text-center">{props.name}</p>
+        <h2 className="font-serif text-3xl text-black mb-4 text-center">{props.name}</h2>
         <AnimateOnScroll
           className="duration-500 mx-auto"
           notScrolledClassName="w-0"

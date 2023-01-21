@@ -1,4 +1,7 @@
+import Script from 'next/script';
 import { Html, Head, Main, NextScript } from 'next/document';
+
+import Config from '@/config';
 
 export default function Document() {
   return (
@@ -12,6 +15,19 @@ export default function Document() {
         />
       </Head>
       <body>
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=${Config.GOOGLE_ANALYTICS_ID}`}
+        ></Script>
+        <Script strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+  
+            gtag('config', '${Config.GOOGLE_ANALYTICS_ID}');
+          `}
+        </Script>
         <Main />
         <NextScript />
       </body>

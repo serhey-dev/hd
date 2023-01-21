@@ -65,7 +65,7 @@ export default function SectionServices() {
         className="bg-center opacity-20 bg-cover"
       />
       <div className="container z-20 py-16">
-        <h1 className="text-6xl text-center font-serif text-black mb-7">Зворотній звʼязок</h1>
+        <h2 className="text-6xl text-center font-serif text-black mb-7">Зворотній звʼязок</h2>
         <p className="text-lg font-sans text-black text-center mb-8 xl:px-72">
           Заповніть форму і я обовʼязково з вами звʼяжусь. Якщо вам зручніше спілкування у
           месенджері - оберіть відповідну опцію.

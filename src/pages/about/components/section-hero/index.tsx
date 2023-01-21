@@ -15,7 +15,7 @@ export default function SectionHero() {
       <div className="container z-20 relative py-16 flex flex-row items-center min-h-screen">
         <div className="px-2 w-full xl:w-1/2 lg:w-2/3">
           <div className="text-center px-5 md:px-0 xl:ml-12">
-            <h3 className="text-6xl font-serif text-black mb-8">Про мене</h3>
+            <h1 className="text-6xl font-serif text-black mb-8">Про мене</h1>
             <p className="font-sans italic text-black text-lg mb-3">
               Шановні, мене звуть Ганна Динда. Я - практикуючий психолог та коуч. Я сприймаю кожного
               клієнта як новий, унікальний, цікавий світ.

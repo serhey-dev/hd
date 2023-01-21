@@ -34,7 +34,7 @@ export default function SectionCertifications() {
   return (
     <div className="min-h-screen relative border-t border-black">
       <div className="container py-24 lg:pb-36 min-h-screen flex flex-col items-center justify-center">
-        <h1 className="text-6xl text-center font-serif text-black mb-7 leading-10">Освіта</h1>
+        <h2 className="text-6xl text-center font-serif text-black mb-7 leading-10">Освіта</h2>
         <p className="font-sans italic text-black text-center text-lg mb-8 px-5 md:px-12 xl:px-36">
           Мій шлях в психологію почався в 2011 році, і триває досі. Цей шлях включав в себе
           закінчення ВНЗ, міжнародного університету з коучингу та купу різноманітних додаткових

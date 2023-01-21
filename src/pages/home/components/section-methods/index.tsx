@@ -2,23 +2,27 @@ import Image from 'next/image';
 
 import MethodItem from '@/pages/home/components/section-methods/components/method-item';
 
-import MethodItemImage from '@/images/2.jpeg';
+import CognitiveItemImage from '@/images/methods/cognitive.png';
+import GestaltItemImage from '@/images/methods/gestalt.png';
+import ArtItemImage from '@/images/methods/art.png';
+import CoachItemImage from '@/images/methods/coach.png';
 
 export default function SectionMethods() {
   return (
     <div className="min-h-screen border-t border-black py-16">
       <div className="container">
-        <h1 className="text-6xl mb-6 text-center font-serif text-black mb-10">
+        <h2 className="text-6xl mb-6 text-center font-serif text-black mb-10">
           Напрями та підходи
-        </h1>
+        </h2>
         <ul className="flex flex-col items-center w-full">
           <MethodItem
+            className="md:flex-row"
             name="Когнітивно-поведінкова терапія (КПТ)"
             image={
               <Image
-                src={MethodItemImage}
+                src={CognitiveItemImage}
                 alt="Когнитивно-поведенческая терапия Днепр"
-                width={300}
+                width={320}
               />
             }
             content={
@@ -39,12 +43,18 @@ export default function SectionMethods() {
                 </p>
               </>
             }
-            className="md:flex-row"
           />
           <MethodItem
-            name="Гештальт терапія"
-            image={<Image src={MethodItemImage} alt="Гештальт терапия Днепр" width={300} />}
             className="md:flex-row-reverse"
+            name="Гештальт терапія"
+            image={
+              <Image
+                src={GestaltItemImage}
+                alt="Гештальт терапия Днепр"
+                className="lg:mt-4"
+                width={300}
+              />
+            }
             content={
               <>
                 <p className="font-sans italic text-black text-lg">
@@ -62,6 +72,25 @@ export default function SectionMethods() {
             }
           />
           <MethodItem
+            className="md:flex-row"
+            name="Коучинг"
+            content={
+              <>
+                <p className="font-sans italic text-black text-lg mb-3">
+                  Коучинг - метод здійснення консалтингу й тренінгу, в якому «коуч», допомагає тобі
+                  досягнути певної цілі в професії чи в особистому житті.
+                </p>
+                <p className="font-sans italic text-black text-lg">
+                  На відміну від наставництва, коучинг зосереджується на досягненні конкретної цілі
+                  способом, який людині належить зрозуміти самотужки. Коучинг - це про партнерство
+                  між коучем та клієнтом.
+                </p>
+              </>
+            }
+            image={<Image src={CoachItemImage} alt="Коучинг Днепр" width={300} />}
+          />
+          <MethodItem
+            className="md:flex-row-reverse"
             name="АРТ-терапія"
             content={
               <>
@@ -79,26 +108,7 @@ export default function SectionMethods() {
                 </p>
               </>
             }
-            image={<Image src={MethodItemImage} alt="Арт терапия Дніпро" width={300} />}
-            className="md:flex-row"
-          />
-          <MethodItem
-            name="Коучинг"
-            content={
-              <>
-                <p className="font-sans italic text-black text-lg mb-3">
-                  Коучинг - метод здійснення консалтингу й тренінгу, в якому «коуч», допомагає тобі
-                  досягнути певної цілі в професії чи в особистому житті.
-                </p>
-                <p className="font-sans italic text-black text-lg">
-                  На відміну від наставництва, коучинг зосереджується на досягненні конкретної цілі
-                  способом, який людині належить зрозуміти самотужки. Коучинг - це про партнерство
-                  між коучем та клієнтом.
-                </p>
-              </>
-            }
-            image={<Image src={MethodItemImage} alt="Коучинг Днепр" width={300} />}
-            className="md:flex-row-reverse mb-0"
+            image={<Image src={ArtItemImage} alt="Арт терапия Дніпро" width={280} />}
           />
         </ul>
       </div>
