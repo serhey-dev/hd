@@ -14,7 +14,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 Development:
 - SEO
-  - sitemap
+  - sitemap +++++
   - search console
   - content:
     - title +++++
@@ -22,12 +22,11 @@ Development:
     - og, twitter +++++
     - HTML check +++++
     - favicon +++++
-- test spam
+- test spam +++++++
 - Text adjustments - записатись / ти або ви / офлайн
 
 Product:
-- Home:
-    - Відгуки - нові відгуки + фото
+- Home - done
 - Methods:
     - Читати далі (послуги)
 - About

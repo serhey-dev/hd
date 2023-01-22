@@ -30,18 +30,21 @@ export default function SectionServices() {
     //     payload,
     //   )}`,
     // );
+    return { status: 200 };
   }
 
   async function onConfirmModalSubmit() {
     if (callbackInfo && formRef.current) {
       setIsConfirmModalOpen(false);
       try {
-        await requestCallback(callbackInfo);
+        const response = await requestCallback(callbackInfo);
+        if (response.status !== 200) {
+          throw new Error(`Failed to send a message to bot. Status - ${response.status}`);
+        }
         setIsResultModalOpen(true);
         setIsRequestSuccess(true);
         formRef.current.resetForm();
       } catch (error) {
-        console.error('Failed to send bot message.');
         console.error(error);
         setIsResultModalOpen(true);
         setIsRequestSuccess(false);

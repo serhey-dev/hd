@@ -31,24 +31,29 @@ export default function SectionSchedule() {
     // return Telegram.sendMessage(
     //   `Новий запис на зустріч! Ім'я: ${payload.name}. Телефон: ${payload.phone}. ${getMessengerText(
     //     payload,
-    //   )} Дата: ${payload.date}. Час: ${payload.time}. Запит: ${payload.request || 'Не заповнений'}.`,
+    //   )} Дата: ${payload.date}. Час: ${payload.time}. Запит: ${
+    //     payload.request || 'Не заповнений'
+    //   }.`,
     // );
+    return { status: 200 };
   }
 
   async function onConfirmModalSubmit() {
     if (appointmentInfo) {
       setIsConfirmModalOpen(false);
       try {
-        await requestAppointment({
+        const response = await requestAppointment({
           ...appointmentInfo,
           date: formatDateWithDots(appointmentInfo.date),
         });
+        if (response.status !== 200) {
+          throw new Error(`Failed to send a message to bot. Status - ${response.status}`);
+        }
         await appointmentInfoController.saveAppointmentInfo(appointmentInfo);
         await appointmentInfoController.refetchInfo();
         setIsResultModalOpen(true);
         setIsRequestSuccess(true);
       } catch (error) {
-        console.error('Failed to send bot message.');
         console.error(error);
         setIsResultModalOpen(true);
         setIsRequestSuccess(false);

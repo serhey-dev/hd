@@ -8,6 +8,8 @@ export function getMessengerText({ messenger }: { messenger?: Messengers }) {
   if (messenger === Messengers.Viber) {
     return 'Писати у Viber.';
   }
+
+  return '';
 }
 
 export function formatPhoneNumber(phoneNumber: string) {

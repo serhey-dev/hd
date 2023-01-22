@@ -37,7 +37,7 @@ export default function SectionFAQ() {
                     <ul className="list-disc ml-3">
                       <li>
                         <span className="font-sans text-black text-md">
-                          Якщо у вас підвищена тревожність і ви за все хвилюєтесь
+                          Якщо у вас підвищена тривожність і ви за все хвилюєтесь
                         </span>
                       </li>
                       <li>

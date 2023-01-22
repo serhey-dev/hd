@@ -4,7 +4,6 @@ interface IFeedbackItemProps {
   className?: string;
   name: string;
   text: string;
-  image: React.ReactNode;
 }
 
 export default function FeedbackItem(props: IFeedbackItemProps) {
@@ -15,7 +14,6 @@ export default function FeedbackItem(props: IFeedbackItemProps) {
         props.className,
       )}
     >
-      {props.image}
       <div className="w-full px-3 md:px-8">
         <p className="text-3xl font-serif text-green mb-2 text-center mt-8 lg:text-4xl">
           {props.name}

@@ -25,7 +25,7 @@ export default function SectionReasons() {
             <ul className="list-disc">
               <li>
                 <p className="font-sans italic text-black text-md">
-                  Якщо у вас підвищена тревожність і ви за все хвилюєтесь
+                  Якщо у вас підвищена тривожність і ви за все хвилюєтесь
                 </p>
               </li>
               <li>
