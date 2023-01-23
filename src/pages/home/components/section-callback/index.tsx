@@ -25,12 +25,12 @@ export default function SectionServices() {
 
   function requestCallback(payload: ICallbackInfo) {
     // DEV
-    // return Telegram.sendMessage(
-    //   `Новий запит на дзвінок! Ім'я: ${payload.name}. Телефон: ${payload.phone}. ${getMessengerText(
-    //     payload,
-    //   )}`,
-    // );
-    return { status: 200 };
+    // return { status: 200 };
+    return Telegram.sendMessage(
+      `Новий запит на дзвінок! Ім'я: ${payload.name}. Телефон: ${payload.phone}. ${getMessengerText(
+        payload,
+      )}`,
+    );
   }
 
   async function onConfirmModalSubmit() {

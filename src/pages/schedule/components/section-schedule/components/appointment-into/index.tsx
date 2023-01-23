@@ -3,10 +3,14 @@ import { getMessengerText } from '@/helpers/ui';
 import { formatDateWithDots } from '@/helpers/date';
 
 interface IAppointmentInfoProps {
-  appointmentInfo: IAppointmentInfo;
+  appointmentInfo?: IAppointmentInfo;
 }
 
 export default function AppointmentInfo(props: IAppointmentInfoProps) {
+  if (!props.appointmentInfo) {
+    return null;
+  }
+
   return (
     <>
       <p className="text-md text-center font-sans text-black mb-2">

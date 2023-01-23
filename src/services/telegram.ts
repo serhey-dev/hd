@@ -5,8 +5,6 @@ export function sendMessage(text: string) {
     method: 'POST',
     body: JSON.stringify({
       chat_id: Config.TELEGRAM_API_CHAT_ID,
-      // DEV
-      // chat_id: '338912613',
       text: text,
     }),
     headers: {

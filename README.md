@@ -12,29 +12,6 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Development:
-- SEO
-  - sitemap +++++
-  - search console
-  - content:
-    - title +++++
-    - meta description ++++
-    - og, twitter +++++
-    - HTML check +++++
-    - favicon +++++
-- test spam +++++++
-- Text adjustments - записатись / ти або ви / офлайн
-- Прблизна індивідуальна вартість
-
-Product:
-- Home - done
-- Methods:
-    - Читати далі (послуги)
-- About - done
-- Contacts - done
-- Questions - done
-- Schedule - done
-
 TODO later:
 - (UI) Android date/time input right padding
 - (UX) iPhone date/time picker min/max

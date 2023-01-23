@@ -28,14 +28,14 @@ export default function SectionSchedule() {
 
   function requestAppointment(payload: IAppointmentInfo) {
     // DEV
-    // return Telegram.sendMessage(
-    //   `Новий запис на зустріч! Ім'я: ${payload.name}. Телефон: ${payload.phone}. ${getMessengerText(
-    //     payload,
-    //   )} Дата: ${payload.date}. Час: ${payload.time}. Запит: ${
-    //     payload.request || 'Не заповнений'
-    //   }.`,
-    // );
-    return { status: 200 };
+    // return { status: 200 };
+    return Telegram.sendMessage(
+      `Новий запис на зустріч! Ім'я: ${payload.name}. Телефон: ${payload.phone}. ${getMessengerText(
+        payload,
+      )} Дата: ${payload.date}. Час: ${payload.time}. Запит: ${
+        payload.request || 'Не заповнений'
+      }.`,
+    );
   }
 
   async function onConfirmModalSubmit() {
@@ -93,7 +93,7 @@ export default function SectionSchedule() {
       />
       <div className="container min-h-screen relative z-20 flex flex-col justify-center items-center py-16 md:pt-32">
         <div className="px-5 w-full lg:w-1/2 md:w-2/3">
-          {appointmentInfoController.appointmentInfo ? (
+          {!!appointmentInfoController.appointmentInfo ? (
             <div>
               <h2 className="text-xl text-center font-sans text-black mb-2">Ви вже записались!</h2>
               <p className="text-xl text-center font-sans text-black mb-6">
@@ -126,7 +126,7 @@ export default function SectionSchedule() {
                 <div className="h-0.5 w-full bg-black" />
               </AnimateOnScroll>
               <p className="text-lg mb-4 text-center font-sans text-black">
-                У місті Дніпро є можливість для проведення оффлайн консультації.
+                У місті Дніпро є можливість для проведення офлайн консультації.
               </p>
               <RequestAppointmentForm onSubmit={onFormSubmit} />
             </>

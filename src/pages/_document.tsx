@@ -19,7 +19,7 @@ export default function Document() {
           strategy="afterInteractive"
           src={`https://www.googletagmanager.com/gtag/js?id=${Config.GOOGLE_ANALYTICS_ID}`}
         ></Script>
-        <Script strategy="afterInteractive">
+        <Script strategy="afterInteractive" id="google-analytics">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
