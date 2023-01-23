@@ -1,7 +1,7 @@
 import React from 'react';
 import { mergeClasses, isAndroid, isIPhone } from '@/helpers/ui';
 
-interface IInputDateProps {
+interface IInputTimeProps {
   id?: string;
   name: string;
   value: string;
@@ -12,7 +12,7 @@ interface IInputDateProps {
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export default function InputDate(props: IInputDateProps) {
+export default function InputTime(props: IInputTimeProps) {
   return (
     <>
       <input

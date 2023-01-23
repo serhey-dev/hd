@@ -139,7 +139,7 @@ export default function RequestAppointmentForm(props: IRequestAppointmentFormPro
       />
       {/* Date */}
       <div className="flex flex-row">
-        <div className="flex-1 sm:w-1/2 w-3/4">
+        <div className="sm:w-1/2 w-2/3 mr-2">
           <label className="block mb-px font-sans mt-3" htmlFor="date">
             Дата<span className="text-red font-sans">*</span>:
           </label>
@@ -152,11 +152,11 @@ export default function RequestAppointmentForm(props: IRequestAppointmentFormPro
             }}
             min={formatDateToISO(minDate)}
             max={formatDateToISO(maxDate)}
-            className="w-full"
+            className="min-w-[90%] w-full"
             error={!!form.errors.date}
           />
         </div>
-        <div className="flex-1 ml-4 sm:w-1/2 w-1/4">
+        <div className="sm:w-1/2 w-1/3">
           <label className="block mb-px font-sans mt-3" htmlFor="time">
             Час<span className="text-red font-sans">*</span>:
           </label>
@@ -168,7 +168,7 @@ export default function RequestAppointmentForm(props: IRequestAppointmentFormPro
               form.setErrors({ ...form.errors, time: undefined });
             }}
             timeListName="appointment-time"
-            // className="w-1/2 sm:w-1/4"
+            className="min-w-[85%] w-full"
             error={!!form.errors.time}
           />
         </div>
