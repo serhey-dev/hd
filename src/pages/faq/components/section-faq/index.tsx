@@ -139,7 +139,7 @@ export default function SectionFAQ() {
               />
               <QuestionItem
                 question="Де проходить онлайн консультація"
-                answer="Онлайн консультація проходить зі зручного для Вас місця, де є достатньо стійке інтернет з'єднання. Програми які я використовую - Zomm, Google Meet, Telegram, Viber."
+                answer="Онлайн консультація проходить зі зручного для Вас місця, де є достатньо стійке інтернет з'єднання. Програми які я використовую - Zoom, Google Meet, Telegram, Viber."
               />
               <QuestionItem
                 question="Оплата консультації"

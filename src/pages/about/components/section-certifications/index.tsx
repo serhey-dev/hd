@@ -2,16 +2,21 @@ import Image from 'next/image';
 
 import Slider from '@/components/slider';
 
-import Certification1 from '@/images/certifications/1.jpg';
-import Certification2 from '@/images/certifications/2.jpg';
-import Certification3 from '@/images/certifications/3.jpg';
-import Certification4 from '@/images/certifications/4.jpg';
+import Certification1 from '@/images/certifications/certification-1.jpg';
+import Certification2 from '@/images/certifications/certification-2.jpg';
+import Certification3 from '@/images/certifications/certification-3.jpg';
+import Certification4 from '@/images/certifications/certification-4.jpg';
+import Certification5 from '@/images/certifications/certification-5.jpg';
+import Certification6 from '@/images/certifications/certification-6.jpg';
+import Certification7 from '@/images/certifications/certification-7.jpg';
+import Certification8 from '@/images/certifications/certification-8.jpg';
+import Certification9 from '@/images/certifications/certification-9.jpg';
 
 const items = [
   {
     key: 'certification-1',
     image: Certification1,
-    alt: 'Сертификат психолог Днепр',
+    alt: 'Диплом психолог Дніпро',
   },
   {
     key: 'certification-2',
@@ -25,8 +30,28 @@ const items = [
   },
   {
     key: 'certification-4',
-    image: Certification3,
+    image: Certification4,
     alt: 'Психолог с образованием Днепр',
+  },
+  {
+    key: 'certification-5',
+    image: Certification5,
+    alt: 'Психолог з вищою освітою',
+  },
+  {
+    key: 'certification-6',
+    image: Certification6,
+    alt: 'Психолог в Днепре',
+  },
+  {
+    key: 'certification-7',
+    image: Certification7,
+    alt: 'Коучинг Дніпро',
+  },
+  {
+    key: 'certification-8',
+    image: Certification8,
+    alt: 'Психолог з вищою освітою у Дніпрі',
   },
 ];
 

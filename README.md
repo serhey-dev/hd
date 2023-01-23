@@ -24,13 +24,13 @@ Development:
     - favicon +++++
 - test spam +++++++
 - Text adjustments - записатись / ти або ви / офлайн
+- Прблизна індивідуальна вартість
 
 Product:
 - Home - done
 - Methods:
     - Читати далі (послуги)
-- About
-    - Освіта - нові сертифікати
+- About - done
 - Contacts - done
 - Questions - done
 - Schedule - done
