@@ -15,13 +15,11 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 TODO later:
 - (UI) Android date/time input right padding
 - (UX) iPhone date/time picker min/max
+- (UX) isAndroid / isIPhone remove (rework date/time inputs)
 - (UX) iPhone map marker
 - Lighthouse - performance (images)
 - Snippet markup
 - Better favicon
-- .htaccess fixes
-- Android date picker
-
 
 ## Deploy instruction (CPanel)
 1. Make sure you are using right credentials 
@@ -38,10 +36,12 @@ TODO later:
 RewriteOptions inherit
 
 RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [R=301,L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.+)$ $1.html [L,QSA]
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*\.html\ HTTP/
-RewriteRule ^(.*)\.html$ /$1 [R=301,L]
+RewriteRule ^(.+)$ $1.html [L]
+
 ```
