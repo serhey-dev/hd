@@ -4,7 +4,7 @@ import SectionSchedule from '@/routes/schedule/components/section-schedule';
 export default function Schedule() {
   return (
     <main>
-      <Head title="Записатись на консультацію онлайн">
+      <Head title="Запис на консультацію онлайн">
         <meta
           name="robots"
           content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
@@ -16,10 +16,7 @@ export default function Schedule() {
 
         <meta property="og:locale" content="uk_UA" />
         <meta property="og:type" content="article" />
-        <meta
-          property="og:title"
-          content="Записатись на консультацію онлайн | Психолог Ганна Динда"
-        />
+        <meta property="og:title" content="Запис на консультацію онлайн | Психолог Ганна Динда" />
         <meta
           property="og:description"
           content="Запис на консультацію. Я обовʼязково з вами звʼяжусь та підтверджу запис. У місті Дніпро є можливість для проведення офлайн консультації."
@@ -36,10 +33,7 @@ export default function Schedule() {
           name="twitter:description"
           content="Запис на консультацію. Я обовʼязково з вами звʼяжусь та підтверджу запис. У місті Дніпро є можливість для проведення офлайн консультації."
         />
-        <meta
-          name="twitter:title"
-          content="Записатись на консультацію онлайн | Психолог Ганна Динда"
-        />
+        <meta name="twitter:title" content="Запис на консультацію онлайн | Психолог Ганна Динда" />
         <meta name="twitter:image" content="https://hd-psychologist.com.ua/images/photos/me.jpg" />
       </Head>
       <SectionSchedule />

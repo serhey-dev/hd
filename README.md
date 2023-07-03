@@ -12,7 +12,7 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-TODO later:
+## TODO:
 - (UI) Android date/time input right padding
 - (UX) iPhone date/time picker min/max
 - (UX) isAndroid / isIPhone remove (rework date/time inputs)
@@ -20,6 +20,16 @@ TODO later:
 - Lighthouse - performance (images)
 - Snippet markup
 - Better favicon
+- .htaccess www. redirect
+- 06/03/2023 - change subscription plan (Головна > Панель клієнта > Деталі послуги > Змінити розрахунковий період)
+- New certification
+- Читати далі
+
+## Changelog:
+### v1.3
+- Changed "Записатись" to "Запис" (tag "Head")
+- Updated background color of mobile menu icon (white -> green light)
+- Updated prices (Services)
 
 ## Deploy instruction (CPanel)
 1. Make sure you are using right credentials 
