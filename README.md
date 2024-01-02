@@ -21,7 +21,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - Snippet markup
 - Better favicon
 - .htaccess www. redirect
-- New certification
 - Читати далі
 
 ## Changelog:
