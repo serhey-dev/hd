@@ -37,14 +37,14 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## Deploy instruction (CPanel)
 1. Make sure you are using right credentials 
 2. Run `yarn build`
-3. Compress content of `build` directory -> `Archive.zip`
-4. Login to CPanel
+3. Compress content of `build` directory -> `Archive.zip` (open `build` directory -> select all files -> right click -> "compress" them)
+4. Login to CPanel (Go to Hostiq -> "Мої послуги" -> "Віртуальний хостинг")
 5. Go to files manager
-6. Upload archive
-7. Eject it to the root of `public_html` directory
+6. Go to `public_html` directory and upload archive to the root
+7. Eject it to the root of `public_html` directory (Right click -> "Eject")
 8. Make sure all images have correct permissions - `0644`
-9. Rename `404.html` to `404.shtml`
-10. Make sure content of `.htaccess` file content is:
+9. Rename `404.html` to `404.shtml` if needed
+10. Make sure content of the `.htaccess` file content is:
 ```
 RewriteOptions inherit
 
