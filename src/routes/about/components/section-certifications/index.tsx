@@ -11,6 +11,7 @@ import Certification6 from '@/images/certifications/certification-6.jpg';
 import Certification7 from '@/images/certifications/certification-7.jpg';
 import Certification8 from '@/images/certifications/certification-8.jpg';
 import Certification9 from '@/images/certifications/certification-9.jpg';
+import Certification10 from '@/images/certifications/certification-10.jpg';
 
 const items = [
   {
@@ -52,6 +53,16 @@ const items = [
     key: 'certification-8',
     image: Certification8,
     alt: 'Психолог з вищою освітою у Дніпрі',
+  },
+  {
+    key: 'certification-9',
+    image: Certification9,
+    alt: 'Психологічна підтримка',
+  },
+  {
+    key: 'certification-10',
+    image: Certification10,
+    alt: 'Схема-терапія Дніпро',
   },
 ];
 

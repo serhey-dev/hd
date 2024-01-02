@@ -21,11 +21,14 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - Snippet markup
 - Better favicon
 - .htaccess www. redirect
-- 06/03/2023 - change subscription plan (Головна > Панель клієнта > Деталі послуги > Змінити розрахунковий період)
 - New certification
 - Читати далі
 
 ## Changelog:
+### v1.4
+- Updated prices (Services)
+- Added new certifications (About)
+
 ### v1.3
 - Changed "Записатись" to "Запис" (tag "Head")
 - Updated background color of mobile menu icon (white -> green light)
