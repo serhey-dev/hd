@@ -61,3 +61,5 @@ RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.+)$ $1.html [L]
 
 ```
+
+### If the content was changed - it's recommended to go to Google Search Console and request re-indexing of changed pages.
