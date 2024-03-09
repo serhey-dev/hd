@@ -65,7 +65,7 @@ export default function MobileMenu() {
           </div>
           <div className="flex flex-col items-center mt-12">
             <Link href="/">
-              <Image src={LogoImage} alt="Ганна Динда Психолог" width={120} />
+              <Image src={LogoImage} alt="Ганна Лищенко Психолог" width={120} />
             </Link>
             <HeaderLink className="ml-0 pt-6" href="/services" text="Послуги" />
             <HeaderLink className="ml-0 pt-6" href="/about" text="Про мене" />

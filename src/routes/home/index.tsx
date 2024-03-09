@@ -20,13 +20,13 @@ export default function Home() {
 
         <meta property="og:locale" content="uk_UA" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Психолог Дніпро | Психолог Ганна Динда" />
+        <meta property="og:title" content="Психолог Дніпро | Психолог Ганна Лищенко" />
         <meta
           property="og:description"
           content="Психолог який тобі допоможе. Підходи: когнітивно-поведінкова терапія, гештальт терапія, арт терапія, коучинг. Психолог з вищою освітою у місті Дніпро. Записатись на консультацію."
         />
         <meta property="og:url" content="https://hd-psychologist.com.ua/" />
-        <meta property="og:site_name" content="Психолог Ганна Динда" />
+        <meta property="og:site_name" content="Психолог Ганна Лищенко" />
         <meta property="og:image" content="https://hd-psychologist.com.ua/images/photos/me.jpg" />
         <meta property="og:image:width" content="1280" />
         <meta property="og:image:height" content="852" />
@@ -37,7 +37,7 @@ export default function Home() {
           name="twitter:description"
           content="Психолог який тобі допоможе. Підходи: когнітивно-поведінкова терапія, гештальт терапія, арт терапія, коучинг. Психолог з вищою освітою у місті Дніпро. Записатись на консультацію."
         />
-        <meta name="twitter:title" content="Психолог Дніпро | Психолог Ганна Динда" />
+        <meta name="twitter:title" content="Психолог Дніпро | Психолог Ганна Лищенко" />
         <meta name="twitter:image" content="https://hd-psychologist.com.ua/images/photos/me.jpg" />
       </Head>
       <SectionHero />

@@ -17,8 +17,8 @@ export default function SectionHero() {
           <div className="text-center px-5 md:px-0 xl:ml-12">
             <h1 className="text-6xl font-serif text-black mb-8">Про мене</h1>
             <p className="font-sans italic text-black text-lg mb-3">
-              Шановні, мене звуть Ганна Динда. Я - практикуючий психолог та коуч. Я сприймаю кожного
-              клієнта як новий, унікальний, цікавий світ.
+              Шановні, мене звуть Ганна Лищенко. Я - практикуючий психолог та коуч. Я сприймаю
+              кожного клієнта як новий, унікальний, цікавий світ.
             </p>
             <p className="font-sans italic text-black text-lg">
               Працювати в цій сфері - моє покликання! Я з великим задоволенням ділюся своїми

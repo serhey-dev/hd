@@ -16,13 +16,13 @@ export default function Schedule() {
 
         <meta property="og:locale" content="uk_UA" />
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Запис на консультацію онлайн | Психолог Ганна Динда" />
+        <meta property="og:title" content="Запис на консультацію онлайн | Психолог Ганна Лищенко" />
         <meta
           property="og:description"
           content="Запис на консультацію. Я обовʼязково з вами звʼяжусь та підтверджу запис. У місті Дніпро є можливість для проведення офлайн консультації."
         />
         <meta property="og:url" content="https://hd-psychologist.com.ua/about" />
-        <meta property="og:site_name" content="Психолог Ганна Динда" />
+        <meta property="og:site_name" content="Психолог Ганна Лищенко" />
         <meta property="og:image" content="https://hd-psychologist.com.ua/images/photos/me.jpg" />
         <meta property="og:image:width" content="1280" />
         <meta property="og:image:height" content="852" />
@@ -33,7 +33,10 @@ export default function Schedule() {
           name="twitter:description"
           content="Запис на консультацію. Я обовʼязково з вами звʼяжусь та підтверджу запис. У місті Дніпро є можливість для проведення офлайн консультації."
         />
-        <meta name="twitter:title" content="Запис на консультацію онлайн | Психолог Ганна Динда" />
+        <meta
+          name="twitter:title"
+          content="Запис на консультацію онлайн | Психолог Ганна Лищенко"
+        />
         <meta name="twitter:image" content="https://hd-psychologist.com.ua/images/photos/me.jpg" />
       </Head>
       <SectionSchedule />

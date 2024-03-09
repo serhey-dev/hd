@@ -19,11 +19,15 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - (UX) iPhone map marker
 - Lighthouse - performance (images)
 - Snippet markup
-- Better favicon
 - .htaccess www. redirect
 - Читати далі
 
 ## Changelog:
+### v1.5
+- Updated last name
+- Updated logo, favicon, images
+- Added some new sizes of platform-specific icons
+
 ### v1.4
 - Updated prices (Services)
 - Added new certifications (About)

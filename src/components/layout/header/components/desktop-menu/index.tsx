@@ -10,7 +10,7 @@ export default function DesktopMenu() {
     <header className="w-full absolute z-50 hidden md:block">
       <div className="flex flex-row items-center container p-6 xl:pl-24">
         <Link href="/">
-          <Image src={LogoImage} alt="Ганна Динда Психолог Дніпро" width={120} />
+          <Image src={LogoImage} alt="Ганна Лищенко Психолог Дніпро" width={120} />
         </Link>
         <nav className="flex flex-row items-center">
           <HeaderLink href="/services" text="Послуги" />

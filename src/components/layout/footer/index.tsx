@@ -28,7 +28,7 @@ export default function Footer() {
             <FooterLink href="/about" text="Про мене" />
           </div>
           <Link href="/" className="mx-8 lg:mx-20">
-            <Image src={LogoImage} alt="Ганна Динда Психолог" width={90} />
+            <Image src={LogoImage} alt="Ганна Лищенко Психолог" width={90} />
           </Link>
           <div>
             <FooterLink href="/faq" text="Питання" className="mb-3" />
