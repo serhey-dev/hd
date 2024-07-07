@@ -45,7 +45,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 5. Go to files manager
 6. Go to `public_html` directory and upload archive to the root
 7. Eject it to the root of `public_html` directory (Right click -> "Eject"). It will update all existing files. If there are some files that aren't used in the codebase - delete them.
-8. Make sure all images have correct permissions - `0644` (I do this manually).
+8. Make sure all images have correct permissions - `0666` (I do this manually).
 9. Rename `404.html` to `404.shtml` if needed
 10. Make sure content of the `.htaccess` file content is (https://hostiq.ua/wiki/ukr/301-redirect/):
 ```
