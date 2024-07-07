@@ -47,7 +47,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 7. Eject it to the root of `public_html` directory (Right click -> "Eject"). It will update all existing files. If there are some files that aren't used in the codebase - delete them.
 8. Make sure all images have correct permissions - `0644` (I do this manually).
 9. Rename `404.html` to `404.shtml` if needed
-10. Make sure content of the `.htaccess` file content is:
+10. Make sure content of the `.htaccess` file content is (https://hostiq.ua/wiki/ukr/301-redirect/):
 ```
 RewriteOptions inherit
 
@@ -61,5 +61,10 @@ RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.+)$ $1.html [L]
 
 ```
+
+## SSL certificate
+https://hostiq.ua/wiki/installation-ssl-certificate-cpanel/
+
+#### Private key is stored on the Google Drive.
 
 ### If the content was changed - it's recommended to go to Google Search Console and request re-indexing of changed pages.
