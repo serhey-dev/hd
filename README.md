@@ -23,6 +23,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - Читати далі
 
 ## Changelog:
+### v1.6
+- Updated city
+
 ### v1.5
 - Updated last name
 - Updated logo, favicon, images

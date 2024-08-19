@@ -126,7 +126,7 @@ export default function SectionSchedule() {
                 <div className="h-0.5 w-full bg-black" />
               </AnimateOnScroll>
               <p className="text-lg mb-4 text-center font-sans text-black">
-                У місті Дніпро є можливість для проведення офлайн консультації.
+                У місті Запоріжжя є можливість проведення офлайн консультацій.
               </p>
               <RequestAppointmentForm onSubmit={onFormSubmit} />
             </>

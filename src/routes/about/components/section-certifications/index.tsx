@@ -17,12 +17,12 @@ const items = [
   {
     key: 'certification-1',
     image: Certification1,
-    alt: 'Диплом психолог Дніпро',
+    alt: 'Диплом психолог Запоріжжя',
   },
   {
     key: 'certification-2',
     image: Certification2,
-    alt: 'Професійний психолог Дніпро',
+    alt: 'Професійний психолог Запоріжжя',
   },
   {
     key: 'certification-3',
@@ -32,7 +32,7 @@ const items = [
   {
     key: 'certification-4',
     image: Certification4,
-    alt: 'Психолог с образованием Днепр',
+    alt: 'Психолог с образованием Запорожье',
   },
   {
     key: 'certification-5',
@@ -42,17 +42,17 @@ const items = [
   {
     key: 'certification-6',
     image: Certification6,
-    alt: 'Психолог в Днепре',
+    alt: 'Психолог в Запорожье',
   },
   {
     key: 'certification-7',
     image: Certification7,
-    alt: 'Коучинг Дніпро',
+    alt: 'Коучинг Запоріжжя',
   },
   {
     key: 'certification-8',
     image: Certification8,
-    alt: 'Психолог з вищою освітою у Дніпрі',
+    alt: 'Психолог з вищою освітою у Запоріжжі',
   },
   {
     key: 'certification-9',
@@ -62,7 +62,7 @@ const items = [
   {
     key: 'certification-10',
     image: Certification10,
-    alt: 'Схема-терапія Дніпро',
+    alt: 'Схема-терапія Запоріжжя',
   },
 ];
 

@@ -15,7 +15,7 @@ export default function SectionInfo() {
       <div className="z-20 relative container min-h-screen py-12 flex flex-col items-center justify-center md:flex-row">
         <Image
           src={AboutInfoImage}
-          alt="Психолог Днепр"
+          alt="Психолог Запорожье"
           className="flex-none rounded-full border border-black w-72 lg:w-[400px] md:mr-12"
           width={400}
         />

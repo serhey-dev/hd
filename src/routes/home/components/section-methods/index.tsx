@@ -21,7 +21,7 @@ export default function SectionMethods() {
             image={
               <Image
                 src={CognitiveItemImage}
-                alt="Когнитивно-поведенческая терапия Днепр"
+                alt="Когнитивно-поведенческая терапия Запорожье"
                 width={320}
               />
             }
@@ -50,7 +50,7 @@ export default function SectionMethods() {
             image={
               <Image
                 src={GestaltItemImage}
-                alt="Гештальт терапия Днепр"
+                alt="Гештальт терапия Запорожье"
                 className="lg:mt-4"
                 width={300}
               />
@@ -87,7 +87,7 @@ export default function SectionMethods() {
                 </p>
               </>
             }
-            image={<Image src={CoachItemImage} alt="Коучинг Днепр" width={300} />}
+            image={<Image src={CoachItemImage} alt="Коучинг Запорожье" width={300} />}
           />
           <MethodItem
             className="md:flex-row-reverse"
@@ -108,7 +108,7 @@ export default function SectionMethods() {
                 </p>
               </>
             }
-            image={<Image src={ArtItemImage} alt="Арт терапия Дніпро" width={280} />}
+            image={<Image src={ArtItemImage} alt="Арт терапия Запоріжжя" width={280} />}
           />
         </ul>
       </div>

@@ -92,12 +92,15 @@ export default function SectionContacts() {
         >
           <div className="h-0.5 w-full bg-black" />
         </AnimateOnScroll>
-        <p className="font-sans text-lg text-black mb-8 px-4">
-          Якщо ви шукаєте психолога у місті Дніпро - у нас є можливість зустрітись офлайн за адресою{' '}
-          {Config.OFFICE_LOCATION_ADDRESS}:
+        <p className="font-sans text-lg text-black mb-6 px-4">
+          Якщо ви шукаєте психолога у місті Запоріжжя - у нас є можливість зустрітись офлайн.
         </p>
+        {/* <p className="font-sans text-lg text-black mb-8 px-4">
+          Якщо ви шукаєте психолога у місті Запоріжжя - у нас є можливість зустрітись офлайн за
+          адресою {Config.OFFICE_LOCATION_ADDRESS}:
+        </p> */}
       </div>
-      <Map />
+      {/* <Map /> */}
     </div>
   );
 }

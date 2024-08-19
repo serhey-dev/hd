@@ -11,7 +11,7 @@ export default function Contacts() {
         />
         <meta
           name="description"
-          content="Психолог у Дніпрі. Онлайн або офлайн консультації. Оберіть будь-який зручний для вас спосіб щоб звʼязатись зі мною та/або записатись на консультацію."
+          content="Психолог у Запоріжжі. Онлайн або офлайн консультації. Оберіть будь-який зручний для вас спосіб щоб звʼязатись зі мною та/або записатись на консультацію."
         />
 
         <meta property="og:locale" content="uk_UA" />
@@ -19,7 +19,7 @@ export default function Contacts() {
         <meta property="og:title" content="Контакти | Психолог Ганна Лищенко" />
         <meta
           property="og:description"
-          content="Психолог у Дніпрі. Онлайн або офлайн консультації. Оберіть будь-який зручний для вас спосіб щоб звʼязатись зі мною та/або записатись на консультацію."
+          content="Психолог у Запоріжжі. Онлайн або офлайн консультації. Оберіть будь-який зручний для вас спосіб щоб звʼязатись зі мною та/або записатись на консультацію."
         />
         <meta property="og:url" content="https://hd-psychologist.com.ua/about" />
         <meta property="og:site_name" content="Психолог Ганна Лищенко" />
@@ -31,7 +31,7 @@ export default function Contacts() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:description"
-          content="Психолог у Дніпрі. Онлайн або офлайн консультації. Оберіть будь-який зручний для вас спосіб щоб звʼязатись зі мною та/або записатись на консультацію."
+          content="Психолог у Запоріжжі. Онлайн або офлайн консультації. Оберіть будь-який зручний для вас спосіб щоб звʼязатись зі мною та/або записатись на консультацію."
         />
         <meta name="twitter:title" content="Контакти | Психолог Ганна Лищенко" />
         <meta name="twitter:image" content="https://hd-psychologist.com.ua/images/photos/me.jpg" />
