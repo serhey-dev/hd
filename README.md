@@ -23,6 +23,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - Читати далі
 
 ## Changelog:
+### v1.7
+- added canonical link to the home page
+
 ### v1.6
 - Updated city
 

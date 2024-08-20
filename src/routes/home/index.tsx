@@ -39,6 +39,8 @@ export default function Home() {
         />
         <meta name="twitter:title" content="Психолог Запоріжжя | Психолог Ганна Лищенко" />
         <meta name="twitter:image" content="https://hd-psychologist.com.ua/images/photos/me.jpg" />
+
+        <link rel="canonical" href="https://hd-psychologist.com.ua/"></link>
       </Head>
       <SectionHero />
       <SectionMethods />
