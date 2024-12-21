@@ -23,6 +23,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - Читати далі
 
 ## Changelog:
+### v1.8
+- changed domain (no 301 redirects)
+
 ### v1.7
 - added canonical link to the home page
 
@@ -68,9 +71,9 @@ RewriteRule ^(.+)$ $1.html [L]
 
 ```
 
+### If the content was changed - it's recommended to go to Google Search Console and request re-indexing of changed pages.
+
 ## SSL certificate
 https://hostiq.ua/wiki/installation-ssl-certificate-cpanel/
 
-#### Private key is stored on the Google Drive.
-
-### If the content was changed - it's recommended to go to Google Search Console and request re-indexing of changed pages.
+Certificate credentials stored on the Google Drive (personal primary)

@@ -8,7 +8,7 @@ interface IHeadProps {
 export default function Head(props: IHeadProps) {
   return (
     <NextHead>
-      <title>{props.title} | Психолог Ганна Лищенко</title>
+      <title>{props.title} - Психолог Ганна Лищенко</title>
       <link rel="icon" href="/favicon.ico" />
       <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
       <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
